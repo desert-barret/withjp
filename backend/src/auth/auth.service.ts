@@ -26,14 +26,19 @@ export class AuthService {
     const tokenId = randomUUID();
     const payload = { sub: user.id, email: user.email, role: user.role, jti: tokenId };
 
-    const session = this.sessionRepo.create({
-      userId: user.id,
-      token_id: tokenId,
-      ip,
-      user_agent: userAgent,
-      last_used_at: new Date(),
-    });
-    await this.sessionRepo.save(session);
+    // Non-blocking — login must never fail due to session tracking
+    try {
+      const session = this.sessionRepo.create({
+        userId: user.id,
+        token_id: tokenId,
+        ip,
+        user_agent: userAgent,
+        last_used_at: new Date(),
+      });
+      await this.sessionRepo.save(session);
+    } catch (err: any) {
+      console.warn('[Auth] Session tracking unavailable:', err?.message);
+    }
 
     return {
       access_token: this.jwtService.sign(payload),

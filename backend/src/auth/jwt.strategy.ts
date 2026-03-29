@@ -28,15 +28,20 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
 
     // If token has a jti, verify the session is not revoked
     if (payload.jti) {
-      const session = await this.sessionRepo.findOne({
-        where: { token_id: payload.jti },
-      });
-      if (session?.revoked) throw new UnauthorizedException('Session revoked');
-      // Update last_used_at asynchronously — don't block the request
-      if (session) {
-        this.sessionRepo
-          .update(session.id, { last_used_at: new Date() })
-          .catch(() => {});
+      try {
+        const session = await this.sessionRepo.findOne({
+          where: { token_id: payload.jti },
+        });
+        if (session?.revoked) throw new UnauthorizedException('Session revoked');
+        if (session) {
+          this.sessionRepo
+            .update(session.id, { last_used_at: new Date() })
+            .catch(() => {});
+        }
+      } catch (err: any) {
+        // Re-throw intentional auth errors, swallow DB errors gracefully
+        if (err instanceof UnauthorizedException) throw err;
+        console.warn('[Auth] Session check unavailable:', err?.message);
       }
     }
 
