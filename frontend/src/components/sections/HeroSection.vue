@@ -252,8 +252,8 @@
       </div>
     </div>
 
-    <!-- Scroll hint -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30 dark:opacity-40">
+    <!-- Scroll hint — hidden on mobile (touch users don't need it) -->
+    <div class="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 opacity-30 dark:opacity-40">
       <span class="text-[10px] tracking-[0.2em] uppercase text-slate-500 dark:text-slate-400">scroll</span>
       <div class="scroll-line w-[1px] h-10 bg-gradient-to-b from-primary-500 to-transparent" />
     </div>
