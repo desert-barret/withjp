@@ -1,4 +1,62 @@
+# ─────────────────────────────────────────────
+#  withjp.ai — robots.txt
+#  https://withjp.ai
+# ─────────────────────────────────────────────
+
+# General crawlers
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /admin/*
+
+# ── AI Training & LLM Bots ───────────────────
+
+# OpenAI GPT crawler
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+
+# Google Gemini / AI Overview
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin/
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+
+# Meta AI (LLaMA)
+User-agent: FacebookBot
+Allow: /
+Disallow: /admin/
+
+# Common Crawl (LLM training datasets)
+User-agent: CCBot
+Allow: /
+Disallow: /admin/
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+Disallow: /admin/
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+Disallow: /admin/
+
+# Diffbot (AI content extraction)
+User-agent: Diffbot
+Allow: /
+Disallow: /admin/
+
+# ── Sitemaps ──────────────────────────────────
 
 Sitemap: https://withjp.ai/sitemap.xml

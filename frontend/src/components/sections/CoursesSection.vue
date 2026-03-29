@@ -18,9 +18,9 @@
                   transition-all duration-300 hover:-translate-y-1
                   reveal reveal-delay-1" :class="{ visible: visible }">
           <div class="w-14 h-14 rounded-2xl bg-red-50 dark:bg-red-900/20
-                      flex items-center justify-center text-2xl flex-shrink-0
+                      flex items-center justify-center flex-shrink-0
                       group-hover:scale-110 transition-transform duration-300">
-            ▶️
+            <svg class="w-7 h-7 text-red-600 dark:text-red-400" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           </div>
           <div class="flex-1 min-w-0">
             <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-1.5
@@ -53,9 +53,9 @@
                   transition-all duration-300 hover:-translate-y-1
                   reveal reveal-delay-2" :class="{ visible: visible }">
           <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-900/20
-                      flex items-center justify-center text-2xl flex-shrink-0
+                      flex items-center justify-center flex-shrink-0
                       group-hover:scale-110 transition-transform duration-300">
-            🎓
+            <svg class="w-7 h-7 text-purple-600 dark:text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
           <div class="flex-1 min-w-0">
             <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-1.5

@@ -18,4 +18,20 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    // Target modern browsers — smaller bundle, native ESM
+    target: 'es2020',
+    // Warn when a chunk exceeds 400 kB (default is 500)
+    chunkSizeWarningLimit: 400,
+    rollupOptions: {
+      output: {
+        // Manual chunk splitting: vendor libs separate from app code
+        manualChunks: {
+          'vendor-vue':    ['vue', 'vue-router', 'pinia'],
+          'vendor-i18n':   ['vue-i18n'],
+          'vendor-http':   ['axios'],
+        },
+      },
+    },
+  },
 });

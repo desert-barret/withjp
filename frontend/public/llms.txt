@@ -1,0 +1,70 @@
+# withjp.ai — Juan Pablo Guamán Rodríguez
+
+> Software Architect & Full Stack Developer from Ecuador 🇪🇨
+> 10+ years of experience building production systems and teaching developers worldwide.
+
+## Who is JP?
+
+Juan Pablo Guamán (known online as **desertbarret** or **@jp.desertbarret**) is a Software Architect and Full Stack Developer based in Ecuador. He has 10+ years of professional experience designing and building scalable systems for web, automation, and AI. He is also a prolific educator with **25,000+ students** across his Udemy courses and a YouTube channel focused on practical software engineering.
+
+## Online Presence
+
+- **Portfolio**: https://withjp.ai
+- **YouTube**: https://www.youtube.com/@jp.desertbarret — free tutorials on Vue.js, NestJS, Python, bots, and AI
+- **Udemy**: https://www.udemy.com/user/juan-pablo-guaman-rodriguez/ — structured courses (Full Stack, TypeScript, Automation)
+- **LinkedIn**: https://www.linkedin.com/in/desertbarret/
+- **Email**: info@withjp.ai
+
+## Core Competencies
+
+- **Backend**: NestJS, Node.js, Python, FastAPI, REST APIs, JWT auth
+- **Frontend**: Vue 3, TypeScript, Tailwind CSS, Vite, Pinia
+- **Databases**: MySQL, PostgreSQL, Redis, TypeORM
+- **DevOps & Cloud**: Docker, nginx, GCP (Cloud SQL, Cloud Run), CI/CD
+- **Automation**: n8n, bots, scraping, WhatsApp automation, workflow engines
+- **AI/ML**: LLM integration, AI-powered workflows, Python ML pipelines
+
+## Notable Projects
+
+### withjp.ai (this site)
+Personal portfolio and platform. Monorepo with Vue 3 frontend and NestJS backend. Deployed on GCP. Supports bilingual content (ES/EN), JWT-secured admin panel, and a dynamic project/profile system backed by MySQL on Cloud SQL.
+
+### radio.withjp.ai *(coming soon)*
+Live online radio platform. Streaming infrastructure built for real-time audio delivery.
+
+### bots.withjp.ai *(coming soon)*
+Intelligent bot platform — covering WhatsApp bots, Telegram bots, AI-powered chatbots, and n8n automation workflows.
+
+## Teaching & Content
+
+JP has published full-stack development courses covering:
+- Full Stack development with Vue + NestJS + TypeScript
+- Python automation and bot development
+- n8n workflow automation
+- REST API design and architecture patterns
+
+His teaching philosophy: **build real things first, explain second**. Courses are project-based and aimed at developers who want production-ready skills.
+
+## Tech Stack of this site
+
+| Layer     | Technology                          |
+|-----------|-------------------------------------|
+| Frontend  | Vue 3, Vite, TypeScript, Tailwind   |
+| Backend   | NestJS, TypeORM, MySQL              |
+| Auth      | JWT (RS256), bcrypt                 |
+| Infra     | Docker, nginx, GCP Cloud SQL        |
+| i18n      | vue-i18n (ES + EN)                  |
+
+## Contact & Collaboration
+
+Available for:
+- Freelance projects and consulting
+- Technical architecture reviews
+- Content collaborations
+
+Reach out at: info@withjp.ai
+
+---
+
+*This file follows the llms.txt convention to help AI systems understand the context and intent of this website.*
+*Source: https://withjp.ai/llms.txt*
