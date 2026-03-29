@@ -13,17 +13,19 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
         <a v-for="(link, i) in contactLinks" :key="link.label"
-           :href="link.url" target="_blank" rel="noopener noreferrer"
+           :href="link.url"
+           :target="link.isEmail ? '_self' : '_blank'"
+           :rel="link.isEmail ? undefined : 'noopener noreferrer'"
            class="gradient-card group block p-6 cursor-pointer
                   bg-white dark:bg-transparent
                   transition-all duration-300 hover:-translate-y-1
                   reveal"
            :class="[{ visible: visible }, `reveal-delay-${i + 1}`]">
           <div class="mb-4">
-            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center
                         transition-transform duration-300 group-hover:scale-110"
                  :class="link.bgClass">
-              {{ link.icon }}
+              <span class="w-6 h-6 flex items-center justify-center" :class="link.iconColor" v-html="link.icon" />
             </div>
           </div>
           <p class="text-xs font-medium text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">
@@ -60,12 +62,13 @@
               ? 'Hablemos y construyamos algo increíble juntos.'
               : "Let's talk and build something incredible together." }}
           </p>
-          <a href="mailto:info@withjp.ai"
+          <a :href="`mailto:${contactEmail}`"
             class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl
                    bg-white text-indigo-700 font-bold text-base
                    hover:bg-indigo-50 hover:scale-105
                    transition-all duration-200 shadow-xl shadow-black/20">
-            ✉️ info@withjp.ai
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            {{ contactEmail }}
           </a>
         </div>
       </div>
@@ -83,13 +86,20 @@ const { t, locale } = useI18n();
 const { el: sectionEl, visible } = useReveal(0.1);
 const profileStore = useProfileStore();
 
+const contactEmail = computed(() => profileStore.profile?.email || 'info@withjp.ai');
+
+const ICON_LINKEDIN = `<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`;
+const ICON_YOUTUBE  = `<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`;
+const ICON_UDEMY    = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`;
+const ICON_EMAIL    = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`;
+
 const contactLinks = computed(() => {
   const p = profileStore.profile;
   return [
-    { label: 'LinkedIn', icon: '💼', url: p?.linkedin_url || 'https://www.linkedin.com/in/desertbarret/', handle: '/in/desertbarret',          bgClass: 'bg-blue-100 dark:bg-blue-900/20' },
-    { label: 'YouTube',  icon: '▶️', url: p?.youtube_url  || 'https://www.youtube.com/@jp.desertbarret',  handle: '@jp.desertbarret',           bgClass: 'bg-red-100 dark:bg-red-900/20' },
-    { label: 'Udemy',    icon: '🎓', url: p?.udemy_url    || 'https://www.udemy.com/user/juan-pablo-guaman-rodriguez/', handle: 'juan-pablo-guaman', bgClass: 'bg-purple-100 dark:bg-purple-900/20' },
-    { label: 'Email',    icon: '✉️', url: `mailto:${p?.email || 'info@withjp.ai'}`, handle: p?.email || 'info@withjp.ai', bgClass: 'bg-emerald-100 dark:bg-emerald-900/20' },
+    { label: 'LinkedIn', icon: ICON_LINKEDIN, iconColor: 'text-blue-600 dark:text-blue-400',    url: p?.linkedin_url || 'https://www.linkedin.com/in/desertbarret/', handle: '/in/desertbarret',          bgClass: 'bg-blue-100 dark:bg-blue-900/20',     isEmail: false },
+    { label: 'YouTube',  icon: ICON_YOUTUBE,  iconColor: 'text-red-600 dark:text-red-400',      url: p?.youtube_url  || 'https://www.youtube.com/@jp.desertbarret',  handle: '@jp.desertbarret',           bgClass: 'bg-red-100 dark:bg-red-900/20',        isEmail: false },
+    { label: 'Udemy',    icon: ICON_UDEMY,    iconColor: 'text-purple-600 dark:text-purple-400',url: p?.udemy_url    || 'https://www.udemy.com/user/juan-pablo-guaman-rodriguez/', handle: 'juan-pablo-guaman', bgClass: 'bg-purple-100 dark:bg-purple-900/20', isEmail: false },
+    { label: 'Email',    icon: ICON_EMAIL,    iconColor: 'text-emerald-600 dark:text-emerald-400', url: `mailto:${p?.email || 'info@withjp.ai'}`, handle: p?.email || 'info@withjp.ai', bgClass: 'bg-emerald-100 dark:bg-emerald-900/20', isEmail: true },
   ];
 });
 onMounted(() => { if (!profileStore.profile) profileStore.fetch(); });

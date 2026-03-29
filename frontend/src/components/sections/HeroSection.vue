@@ -64,18 +64,20 @@
             </Transition>
           </div>
 
-          <!-- Bio -->
+          <!-- Tagline -->
           <p class="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-lg mb-10
                      reveal reveal-delay-3" :class="{ visible: show }">
-            {{ profile ? (locale === 'es' ? profile.bio_es : profile.bio_en) : t('hero.description') }}
+            {{ t('hero.description') }}
           </p>
 
           <!-- CTAs -->
           <div class="flex flex-wrap gap-4 mb-12 reveal reveal-delay-4" :class="{ visible: show }">
-            <a href="#projects" class="btn-primary text-base px-7 py-3.5">
-              <span>🚀</span> {{ t('hero.cta_projects') }}
+            <a href="#projects" class="btn-primary text-base px-7 py-3.5 inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"/></svg>
+              {{ t('hero.cta_projects') }}
             </a>
-            <a href="#contact" class="btn-secondary text-base px-7 py-3.5">
+            <a href="#contact" class="btn-secondary text-base px-7 py-3.5 inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               {{ t('hero.cta_contact') }}
             </a>
           </div>
@@ -143,13 +145,17 @@
                      class="flex-1 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15
                             text-white text-xs font-medium flex items-center justify-center gap-1.5
                             transition-colors">
-                    ▶️ YouTube
+                    <!-- YouTube icon -->
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    YouTube
                   </a>
                   <a href="https://www.udemy.com/user/juan-pablo-guaman-rodriguez/" target="_blank"
                      class="flex-1 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15
                             text-white text-xs font-medium flex items-center justify-center gap-1.5
                             transition-colors">
-                    🎓 Udemy
+                    <!-- Book icon -->
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Udemy
                   </a>
                 </div>
               </div>
@@ -159,13 +165,15 @@
             <div class="absolute -top-5 -left-10 glass rounded-2xl px-4 py-2.5 float shadow-xl"
                  style="animation-delay:-2s; animation-duration:8s">
               <div class="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-200">
-                <span class="text-base">⭐</span> 10+ años
+                <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                10+ años
               </div>
             </div>
             <div class="absolute -bottom-4 -right-10 glass rounded-2xl px-4 py-2.5 float shadow-xl"
                  style="animation-delay:-4.5s; animation-duration:8s">
               <div class="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-200">
-                <span class="text-base">🎓</span> 25K+ alumnos
+                <svg class="w-4 h-4 text-violet-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                25K+ alumnos
               </div>
             </div>
           </div>
