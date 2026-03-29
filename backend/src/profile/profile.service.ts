@@ -8,7 +8,7 @@ export class ProfileService {
   constructor(
     @InjectRepository(Profile)
     private profileRepository: Repository<Profile>,
-  ) {}
+  ) { }
 
   async get(): Promise<Profile> {
     let profile = await this.profileRepository.findOne({ where: { id: 1 } });
@@ -23,7 +23,7 @@ export class ProfileService {
         avatar_url: 'https://yt3.googleusercontent.com/XVOs1QTXzcpx_vGVfYiX4_za9ZJ0e3rdU41tN4V-_fj1Zywhz2FBd6VZNBN4MQy288YA_Z9T=s900-c-k-c0x00ffffff-no-rj',
         location_es: 'Ecuador',
         location_en: 'Ecuador',
-        email: 'jp@withjp.ai',
+        email: 'info@withjp.ai',
         linkedin_url: 'https://www.linkedin.com/in/desertbarret/',
         youtube_url: 'https://www.youtube.com/@jp.desertbarret',
         udemy_url: 'https://www.udemy.com/user/juan-pablo-guaman-rodriguez/',

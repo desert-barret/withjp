@@ -132,7 +132,7 @@ const socialLinks = computed(() => {
 const statsItems = computed(() => [
   { value: '10+', label: t('about.experience') },
   { value: '5+',  label: t('about.courses_count') },
-  { value: '1K+', label: t('about.students') },
+  { value: '25K+', label: t('about.students') },
   { value: '∞',   label: 'Passion' },
 ]);
 const expertise = computed(() =>

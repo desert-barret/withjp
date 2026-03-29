@@ -165,7 +165,7 @@
             <div class="absolute -bottom-4 -right-10 glass rounded-2xl px-4 py-2.5 float shadow-xl"
                  style="animation-delay:-4.5s; animation-duration:8s">
               <div class="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-200">
-                <span class="text-base">🎓</span> 1K+ alumnos
+                <span class="text-base">🎓</span> 25K+ alumnos
               </div>
             </div>
           </div>
@@ -215,7 +215,7 @@ onUnmounted(() => clearInterval(roleTimer));
 const stats = computed(() => [
   { value: '10+', label: locale.value === 'es' ? 'Años de experiencia' : 'Years experience' },
   { value: '5+',  label: locale.value === 'es' ? 'Cursos publicados' : 'Published courses' },
-  { value: '1K+', label: locale.value === 'es' ? 'Estudiantes' : 'Students' },
+  { value: '25K+', label: locale.value === 'es' ? 'Estudiantes' : 'Students' },
 ]);
 </script>
 

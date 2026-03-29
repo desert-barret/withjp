@@ -60,12 +60,12 @@
               ? 'Hablemos y construyamos algo increíble juntos.'
               : "Let's talk and build something incredible together." }}
           </p>
-          <a href="mailto:jp@withjp.ai"
+          <a href="mailto:info@withjp.ai"
             class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl
                    bg-white text-indigo-700 font-bold text-base
                    hover:bg-indigo-50 hover:scale-105
                    transition-all duration-200 shadow-xl shadow-black/20">
-            ✉️ jp@withjp.ai
+            ✉️ info@withjp.ai
           </a>
         </div>
       </div>
@@ -89,7 +89,7 @@ const contactLinks = computed(() => {
     { label: 'LinkedIn', icon: '💼', url: p?.linkedin_url || 'https://www.linkedin.com/in/desertbarret/', handle: '/in/desertbarret',          bgClass: 'bg-blue-100 dark:bg-blue-900/20' },
     { label: 'YouTube',  icon: '▶️', url: p?.youtube_url  || 'https://www.youtube.com/@jp.desertbarret',  handle: '@jp.desertbarret',           bgClass: 'bg-red-100 dark:bg-red-900/20' },
     { label: 'Udemy',    icon: '🎓', url: p?.udemy_url    || 'https://www.udemy.com/user/juan-pablo-guaman-rodriguez/', handle: 'juan-pablo-guaman', bgClass: 'bg-purple-100 dark:bg-purple-900/20' },
-    { label: 'Email',    icon: '✉️', url: `mailto:${p?.email || 'jp@withjp.ai'}`, handle: p?.email || 'jp@withjp.ai', bgClass: 'bg-emerald-100 dark:bg-emerald-900/20' },
+    { label: 'Email',    icon: '✉️', url: `mailto:${p?.email || 'info@withjp.ai'}`, handle: p?.email || 'info@withjp.ai', bgClass: 'bg-emerald-100 dark:bg-emerald-900/20' },
   ];
 });
 onMounted(() => { if (!profileStore.profile) profileStore.fetch(); });
