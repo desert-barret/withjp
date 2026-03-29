@@ -23,23 +23,24 @@ api.interceptors.response.use(
 );
 
 export const authApi = {
-  login: (email: string, password: string) =>
-    api.post('/auth/login', { email, password }),
-  me: () => api.get('/auth/me'),
+  login:         (email: string, password: string) => api.post('/auth/login', { email, password }),
+  me:            () => api.get('/auth/me'),
+  sessions:      () => api.get('/auth/sessions'),
+  revokeSession: (id: number) => api.delete(`/auth/sessions/${id}`),
+  revokeOthers:  () => api.delete('/auth/sessions/others'),
 };
 
 export const projectsApi = {
-  getAll: (showAll = false) =>
-    api.get(`/projects${showAll ? '?all=true' : ''}`),
+  getAll:    (showAll = false) => api.get(`/projects${showAll ? '?all=true' : ''}`),
   getFeatured: () => api.get('/projects/featured'),
-  getOne: (id: number) => api.get(`/projects/${id}`),
-  create: (data: any) => api.post('/projects', data),
-  update: (id: number, data: any) => api.put(`/projects/${id}`, data),
-  remove: (id: number) => api.delete(`/projects/${id}`),
+  getOne:    (id: number) => api.get(`/projects/${id}`),
+  create:    (data: any) => api.post('/projects', data),
+  update:    (id: number, data: any) => api.put(`/projects/${id}`, data),
+  remove:    (id: number) => api.delete(`/projects/${id}`),
 };
 
 export const profileApi = {
-  get: () => api.get('/profile'),
+  get:    () => api.get('/profile'),
   update: (data: any) => api.put('/profile', data),
 };
 
