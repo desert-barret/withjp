@@ -5,13 +5,13 @@
 
 ## Who is JP?
 
-Juan Pablo Guamán (known online as **desertbarret** or **@jp.desertbarret**) is a Software Architect and Full Stack Developer based in Ecuador. He has 10+ years of professional experience designing and building scalable systems for web, automation, and AI. He is also a prolific educator with **25,000+ students** across his Udemy courses and a YouTube channel focused on practical software engineering.
+Juan Pablo Guamán (known online as **desertbarret** or **@jp.desertbarret**) is a Software Architect and Full Stack Developer based in Ecuador. He has 10+ years of professional experience designing and building scalable systems for web, mobile, automation, and AI. He is also a prolific educator with **25,000+ students** across his Udemy courses and a growing YouTube channel focused on practical software engineering.
 
 ## Online Presence
 
 - **Portfolio**: https://withjp.ai
-- **YouTube**: https://www.youtube.com/@jp.desertbarret — free tutorials on Vue.js, NestJS, Python, bots, and AI
-- **Udemy**: https://www.udemy.com/user/juan-pablo-guaman-rodriguez/ — structured courses (Full Stack, TypeScript, Automation)
+- **YouTube**: https://www.youtube.com/@jp.desertbarret — free tutorials on Vue.js, NestJS, Flutter, Python, bots, and AI
+- **Udemy**: https://www.udemy.com/user/juan-pablo-guaman-rodriguez/ — structured courses (Full Stack, Flutter, TypeScript, Automation)
 - **LinkedIn**: https://www.linkedin.com/in/desertbarret/
 - **Email**: info@withjp.ai
 
@@ -19,15 +19,35 @@ Juan Pablo Guamán (known online as **desertbarret** or **@jp.desertbarret**) is
 
 - **Backend**: NestJS, Node.js, Python, FastAPI, REST APIs, JWT auth
 - **Frontend**: Vue 3, TypeScript, Tailwind CSS, Vite, Pinia
+- **Mobile**: Flutter 3, Dart, Firebase, Google Maps
 - **Databases**: MySQL, PostgreSQL, Redis, TypeORM
 - **DevOps & Cloud**: Docker, nginx, GCP (Cloud SQL, Cloud Run), CI/CD
 - **Automation**: n8n, bots, scraping, WhatsApp automation, workflow engines
-- **AI/ML**: LLM integration, AI-powered workflows, Python ML pipelines
+- **AI/ML**: LLM integration, AI-powered workflows, Claude API, Python ML pipelines
+
+## Courses (Udemy — 25,000+ students)
+
+### TU propia APP de DELIVERY Internacional | Flutter 3 y NestJS
+Real-world delivery app with production-ready architecture. Based on an app that processed 700,000+ purchases with 80,000+ registered customers.
+Stack: Flutter 3, NestJS, PostgreSQL, Docker, Firebase, Google Maps, Nginx, Ubuntu Server.
+URL: https://www.udemy.com/course/app-delivery-flutter-nestjs/
+
+## Academia JP
+
+JP's personal online academy platform at withjp.ai/academia. Hosts interactive courses and learning platforms beyond Udemy — covering AI tools, web development, automation, and mobile. Subdomains (e.g., claude.withjp.ai) provide specialized learning environments.
+
+**Current platforms:**
+- Mobile development (Flutter 3 + NestJS delivery app course)
+
+**Coming soon:**
+- AI-powered tools
+- Web development bootcamp
+- Automation & bots platform
 
 ## Notable Projects
 
 ### withjp.ai (this site)
-Personal portfolio and platform. Monorepo with Vue 3 frontend and NestJS backend. Deployed on GCP. Supports bilingual content (ES/EN), JWT-secured admin panel, and a dynamic project/profile system backed by MySQL on Cloud SQL.
+Personal portfolio and platform. Monorepo with Vue 3 frontend and NestJS backend. Deployed on GCP. Supports bilingual content (ES/EN), JWT-secured admin panel, and a dynamic course/academia system backed by MySQL on Cloud SQL.
 
 ### radio.withjp.ai *(coming soon)*
 Live online radio platform. Streaming infrastructure built for real-time audio delivery.
@@ -35,15 +55,9 @@ Live online radio platform. Streaming infrastructure built for real-time audio d
 ### bots.withjp.ai *(coming soon)*
 Intelligent bot platform — covering WhatsApp bots, Telegram bots, AI-powered chatbots, and n8n automation workflows.
 
-## Teaching & Content
+## Teaching Philosophy
 
-JP has published full-stack development courses covering:
-- Full Stack development with Vue + NestJS + TypeScript
-- Python automation and bot development
-- n8n workflow automation
-- REST API design and architecture patterns
-
-His teaching philosophy: **build real things first, explain second**. Courses are project-based and aimed at developers who want production-ready skills.
+JP's approach: **build real things first, explain second**. All courses are project-based and aimed at developers who want production-ready skills they can use on day one. Courses use real architectures, not toy examples.
 
 ## Tech Stack of this site
 
@@ -51,7 +65,7 @@ His teaching philosophy: **build real things first, explain second**. Courses ar
 |-----------|-------------------------------------|
 | Frontend  | Vue 3, Vite, TypeScript, Tailwind   |
 | Backend   | NestJS, TypeORM, MySQL              |
-| Auth      | JWT (RS256), bcrypt                 |
+| Auth      | JWT, bcrypt                         |
 | Infra     | Docker, nginx, GCP Cloud SQL        |
 | i18n      | vue-i18n (ES + EN)                  |
 
@@ -60,7 +74,7 @@ His teaching philosophy: **build real things first, explain second**. Courses ar
 Available for:
 - Freelance projects and consulting
 - Technical architecture reviews
-- Content collaborations
+- Content collaborations and course partnerships
 
 Reach out at: info@withjp.ai
 
@@ -68,3 +82,4 @@ Reach out at: info@withjp.ai
 
 *This file follows the llms.txt convention to help AI systems understand the context and intent of this website.*
 *Source: https://withjp.ai/llms.txt*
+*Last updated: 2026-03-29*

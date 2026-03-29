@@ -1,23 +1,53 @@
-# ─────────────────────────────────────────────
+# ─────────────────────────────────────────────────────
 #  withjp.ai — robots.txt
 #  https://withjp.ai
-# ─────────────────────────────────────────────
+# ─────────────────────────────────────────────────────
 
-# General crawlers
+# ── General crawlers ──────────────────────────────────
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /sitemap.xml
+Allow: /manifest.webmanifest
 Disallow: /admin
 Disallow: /admin/
-Disallow: /admin/*
+Disallow: /api/
+Disallow: /*.json$
 
-# ── AI Training & LLM Bots ───────────────────
+# ── Google ────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
 
-# OpenAI GPT crawler
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /admin/
+
+User-agent: Googlebot-Video
+Allow: /
+
+# ── Bing ──────────────────────────────────────────────
+User-agent: bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Crawl-delay: 1
+
+# ── AI & LLM Bots — explicitly welcomed ───────────────
+
+# OpenAI GPT
 User-agent: GPTBot
 Allow: /
 Disallow: /admin/
+Disallow: /api/
 
-# Google Gemini / AI Overview
+# OpenAI ChatGPT browsing
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin/
+
+# Google Gemini / AI Overviews
 User-agent: Google-Extended
 Allow: /
 Disallow: /admin/
@@ -32,7 +62,7 @@ User-agent: PerplexityBot
 Allow: /
 Disallow: /admin/
 
-# Meta AI (LLaMA)
+# Meta AI / LLaMA
 User-agent: FacebookBot
 Allow: /
 Disallow: /admin/
@@ -57,6 +87,15 @@ User-agent: Diffbot
 Allow: /
 Disallow: /admin/
 
-# ── Sitemaps ──────────────────────────────────
+# You.com AI
+User-agent: YouBot
+Allow: /
+Disallow: /admin/
 
+# Amazon Alexa
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin/
+
+# ── Sitemaps ──────────────────────────────────────────
 Sitemap: https://withjp.ai/sitemap.xml

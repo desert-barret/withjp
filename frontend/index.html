@@ -2,26 +2,48 @@
 <html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Primary SEO -->
+    <!-- ── Favicons & PWA ──────────────────────────────────────── -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="withjp.ai" />
+    <meta name="application-name" content="withjp.ai" />
+    <meta name="msapplication-TileColor" content="#6366f1" />
+
+    <!-- ── Primary SEO ─────────────────────────────────────────── -->
     <title>Juan Pablo Guamán | Software Architect & Full Stack Developer</title>
-    <meta name="description" content="Juan Pablo Guamán Rodríguez — Software Architect y Full Stack Developer con 10+ años de experiencia. Más de 25 000 estudiantes en Udemy. Especialista en Vue 3, NestJS, TypeScript, Python y automatización." />
-    <meta name="keywords" content="Juan Pablo Guaman, Full Stack Developer, Software Architect, Vue.js, NestJS, TypeScript, Python, Docker, GCP, automatización, Ecuador, withjp.ai, cursos programación, Udemy, desarrollo web" />
+    <meta name="description" content="Juan Pablo Guamán Rodríguez — Software Architect y Full Stack Developer con 10+ años de experiencia. Más de 25 000 estudiantes en Udemy. Especialista en Vue 3, NestJS, TypeScript, Python, Flutter e IA." />
+    <meta name="keywords" content="Juan Pablo Guaman, Full Stack Developer, Software Architect, Vue.js, NestJS, TypeScript, Python, Flutter, Docker, GCP, automatización, Ecuador, withjp.ai, cursos programación, Udemy, desarrollo web, academia" />
     <meta name="author" content="Juan Pablo Guamán Rodríguez" />
-    <link rel="canonical" href="https://withjp.ai" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#6366f1" />
+    <link rel="canonical" href="https://withjp.ai/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
 
-    <!-- Open Graph -->
+    <!-- ── Geo & Language ──────────────────────────────────────── -->
+    <meta name="geo.region" content="EC" />
+    <meta name="geo.country" content="Ecuador" />
+    <meta name="language" content="es" />
+    <link rel="alternate" hreflang="es" href="https://withjp.ai/" />
+    <link rel="alternate" hreflang="en" href="https://withjp.ai/" />
+    <link rel="alternate" hreflang="x-default" href="https://withjp.ai/" />
+
+    <!-- ── Open Graph ──────────────────────────────────────────── -->
     <meta property="og:type" content="profile" />
     <meta property="og:title" content="Juan Pablo Guamán | Software Architect & Full Stack Developer" />
-    <meta property="og:description" content="Software Architect & Full Stack Developer — 10+ años de experiencia, 25 000+ estudiantes en Udemy. Vue, NestJS, Python, automatización e IA." />
+    <meta property="og:description" content="Software Architect & Full Stack Developer — 10+ años de experiencia, 25 000+ estudiantes en Udemy. Vue, NestJS, Flutter, Python, automatización e IA." />
     <meta property="og:image" content="https://withjp.ai/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://withjp.ai" />
+    <meta property="og:image:alt" content="Juan Pablo Guamán — Software Architect & Full Stack Developer" />
+    <meta property="og:url" content="https://withjp.ai/" />
     <meta property="og:site_name" content="withjp.ai" />
     <meta property="og:locale" content="es_EC" />
     <meta property="og:locale:alternate" content="en_US" />
@@ -29,31 +51,55 @@
     <meta property="profile:last_name" content="Guamán" />
     <meta property="profile:username" content="jp.desertbarret" />
 
-    <!-- Twitter / X Card -->
+    <!-- ── Twitter / X ─────────────────────────────────────────── -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@jp_desertbarret" />
     <meta name="twitter:creator" content="@jp_desertbarret" />
     <meta name="twitter:title" content="Juan Pablo Guamán | Software Architect & Full Stack Developer" />
-    <meta name="twitter:description" content="Software Architect & Full Stack Developer — 25 000+ estudiantes en Udemy. Vue, NestJS, Python, automatización e IA." />
+    <meta name="twitter:description" content="Software Architect & Full Stack Developer — 25 000+ estudiantes en Udemy. Vue, NestJS, Flutter, Python, automatización e IA." />
     <meta name="twitter:image" content="https://withjp.ai/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Juan Pablo Guamán — Software Architect & Full Stack Developer" />
 
-    <!-- AI discoverability -->
+    <!-- ── AI discoverability ──────────────────────────────────── -->
     <link rel="alternate" type="text/plain" title="LLMs.txt" href="/llms.txt" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- ── Performance: DNS prefetch → preconnect ─────────────── -->
+    <!--  dns-prefetch: fallback for browsers without preconnect support -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <!--  preconnect: early TLS handshake. crossorigin required for CORS fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- JSON-LD Structured Data -->
+    <!-- ── Fonts — non-blocking (loadCSS pattern) ─────────────── -->
+    <!--
+      Weights trimmed to only what's used (removed 300 from Inter, 400 from Space Grotesk).
+      display=swap → instant text render with system font fallback, no FOIT.
+      preload as="style" + onload trick → zero render-blocking.
+    -->
+    <link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" />
+    </noscript>
+
+    <!-- ── JSON-LD: Person ─────────────────────────────────────── -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://withjp.ai/#person",
       "name": "Juan Pablo Guamán Rodríguez",
-      "alternateName": ["JP Guamán", "desertbarret"],
-      "url": "https://withjp.ai",
-      "image": "https://withjp.ai/og-image.jpg",
+      "alternateName": ["JP Guamán", "desertbarret", "jp.desertbarret"],
+      "url": "https://withjp.ai/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://withjp.ai/og-image.jpg",
+        "width": 1200,
+        "height": 630
+      },
       "email": "info@withjp.ai",
       "sameAs": [
         "https://www.linkedin.com/in/desertbarret/",
@@ -64,22 +110,74 @@
       "worksFor": {
         "@type": "Organization",
         "name": "withjp.ai",
-        "url": "https://withjp.ai"
+        "url": "https://withjp.ai/"
       },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "EC"
-      },
-      "description": "Software Architect y Full Stack Developer con más de 10 años de experiencia. Creador de contenido con 25 000+ estudiantes en Udemy.",
+      "address": { "@type": "PostalAddress", "addressCountry": "EC" },
+      "description": "Software Architect y Full Stack Developer con más de 10 años de experiencia. Creador de contenido con 25 000+ estudiantes en Udemy. Especialista en Vue 3, NestJS, Flutter, Python e inteligencia artificial.",
       "knowsAbout": [
-        "Vue.js", "NestJS", "TypeScript", "Python", "FastAPI",
+        "Vue.js", "NestJS", "TypeScript", "Python", "Flutter", "FastAPI",
         "Docker", "Google Cloud Platform", "MySQL", "PostgreSQL",
-        "Automatización", "Inteligencia Artificial", "n8n"
+        "Automatización", "Inteligencia Artificial", "n8n", "REST APIs"
+      ]
+    }
+    </script>
+
+    <!-- ── JSON-LD: WebSite ────────────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://withjp.ai/#website",
+      "url": "https://withjp.ai/",
+      "name": "withjp.ai",
+      "description": "Portfolio y plataforma de Juan Pablo Guamán — Software Architect & Full Stack Developer con Academia de cursos online.",
+      "inLanguage": ["es", "en"],
+      "author": { "@id": "https://withjp.ai/#person" }
+    }
+    </script>
+
+    <!-- ── JSON-LD: Cursos (ItemList) ──────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Cursos de Juan Pablo Guamán en Udemy",
+      "description": "Cursos de desarrollo Full Stack, Flutter, NestJS y automatización por JP Guamán — 25 000+ estudiantes.",
+      "url": "https://withjp.ai/#courses",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Course",
+            "name": "TU propia APP de DELIVERY Internacional | Flutter 3 y NestJS",
+            "description": "Arquitectura de producción real. Más de 700 000 compras procesadas. Flutter 3, NestJS, PostgreSQL, Docker, Firebase, Google Maps.",
+            "provider": { "@type": "Organization", "name": "Udemy" },
+            "url": "https://www.udemy.com/course/app-delivery-flutter-nestjs/",
+            "inLanguage": "es",
+            "teaches": ["Flutter 3", "NestJS", "PostgreSQL", "Docker", "Firebase", "Google Maps"]
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ── JSON-LD: BreadcrumbList ─────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio",   "item": "https://withjp.ai/" },
+        { "@type": "ListItem", "position": 2, "name": "Sobre JP", "item": "https://withjp.ai/#about" },
+        { "@type": "ListItem", "position": 3, "name": "Cursos",   "item": "https://withjp.ai/#courses" },
+        { "@type": "ListItem", "position": 4, "name": "Academia", "item": "https://withjp.ai/#academia" },
+        { "@type": "ListItem", "position": 5, "name": "Contacto", "item": "https://withjp.ai/#contact" }
       ]
     }
     </script>
   </head>
-  <body class="bg-dark-950 text-white">
+  <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
