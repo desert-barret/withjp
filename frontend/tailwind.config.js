@@ -18,6 +18,17 @@ export default {
           900: '#312e81',
           950: '#1e1b4b',
         },
+        // Used for dark mode backgrounds across admin panel, footer, login
+        dark: {
+          900: '#0f1117',
+          950: '#080B14',
+        },
+        // Accent cyan — used in gradient buttons and sidebar logo
+        accent: {
+          400: '#22d3ee',
+          500: '#06b6d4',
+          600: '#0891b2',
+        },
       },
       fontFamily: {
         sans:    ['Inter', 'system-ui', 'sans-serif'],
