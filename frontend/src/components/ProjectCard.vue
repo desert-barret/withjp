@@ -3,7 +3,7 @@
     class="project-card gradient-card card-hover group w-full text-left cursor-pointer flex flex-col overflow-hidden">
 
     <!-- Thumbnail -->
-    <div class="relative h-44 overflow-hidden
+    <div class="relative h-36 sm:h-44 overflow-hidden
                 bg-gradient-to-br from-indigo-900/80 via-violet-900/60 to-slate-900">
       <div class="absolute inset-0 opacity-20"
         style="background-image: linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),

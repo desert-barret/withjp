@@ -25,6 +25,56 @@
 
         <!-- Left: text -->
         <div>
+          <!-- ── Mobile profile card (hidden on desktop) ───────── -->
+          <div class="lg:hidden hero-enter-1 flex items-center gap-4 mb-8
+                      px-4 py-3.5 rounded-2xl
+                      bg-gradient-to-r from-indigo-50 to-violet-50
+                      dark:from-indigo-950/40 dark:to-violet-950/40
+                      border border-indigo-100 dark:border-indigo-900/40">
+            <!-- Avatar -->
+            <div class="relative flex-shrink-0">
+              <div class="w-14 h-14 rounded-xl overflow-hidden shadow-lg ring-2 ring-indigo-400/30
+                          bg-gradient-to-br from-indigo-600 via-violet-700 to-[#0d0a2e]">
+                <!-- Skeleton -->
+                <div v-if="avatarLoading" class="absolute inset-0 bg-white/20 animate-pulse" />
+                <!-- Image -->
+                <img v-if="profile?.avatar_url && !avatarError"
+                     :src="profile.avatar_url"
+                     alt="JP"
+                     class="w-full h-full object-cover transition-opacity duration-500"
+                     :class="avatarLoading ? 'opacity-0' : 'opacity-100'"
+                     @load="avatarLoading = false"
+                     @error="avatarError = true; avatarLoading = false" />
+                <!-- Fallback -->
+                <div v-if="!profile?.avatar_url || avatarError"
+                     class="w-full h-full flex items-center justify-center">
+                  <span class="text-lg font-display font-bold text-white">JP</span>
+                </div>
+              </div>
+              <!-- Online dot -->
+              <span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-400
+                           ring-2 ring-white dark:ring-dark-950" />
+            </div>
+
+            <!-- Info -->
+            <div class="min-w-0 flex-1">
+              <p class="font-display font-bold text-slate-900 dark:text-white text-sm leading-tight truncate">
+                Juan Pablo Guamán
+              </p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 truncate">
+                @jp.desertbarret · Ecuador 🇪🇨
+              </p>
+              <div class="flex gap-1.5 mt-1.5">
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold
+                             bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300">Vue 3</span>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold
+                             bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300">NestJS</span>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold
+                             bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300">Python</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Availability pill -->
           <div class="hero-enter-1 inline-flex items-center gap-2.5 px-4 py-2 rounded-full mb-6 sm:mb-8
                       bg-emerald-50 dark:bg-emerald-950/60
@@ -68,25 +118,28 @@
           </p>
 
           <!-- CTAs -->
-          <div class="hero-enter-4 flex flex-wrap gap-4 mb-12">
-            <a href="#projects" class="btn-primary btn-glow text-base px-7 py-3.5 inline-flex items-center gap-2">
+          <div class="hero-enter-4 flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-12">
+            <a href="#projects" class="btn-primary btn-glow text-base px-7 py-3.5 inline-flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"/></svg>
               {{ t('hero.cta_projects') }}
             </a>
-            <a href="#contact" class="btn-secondary text-base px-7 py-3.5 inline-flex items-center gap-2">
+            <a href="#contact" class="btn-secondary text-base px-7 py-3.5 inline-flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               {{ t('hero.cta_contact') }}
             </a>
           </div>
 
           <!-- Stats -->
-          <div class="hero-enter-5 flex flex-wrap gap-6 sm:gap-8 pt-6 sm:pt-8 border-t border-slate-200 dark:border-white/[0.07]">
-            <div v-for="s in stats" :key="s.label" class="group cursor-default">
-              <p class="font-display font-bold text-2xl text-slate-900 dark:text-white
+          <div class="hero-enter-5 grid grid-cols-3 gap-2 sm:flex sm:gap-8 pt-5 sm:pt-8
+                      border-t border-slate-200 dark:border-white/[0.07]">
+            <div v-for="s in stats" :key="s.label" class="group cursor-default text-center sm:text-left">
+              <p class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white
                          group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                 {{ s.value }}
               </p>
-              <p class="text-xs text-slate-400 dark:text-slate-500 mt-0.5 tracking-wide">{{ s.label }}</p>
+              <p class="text-[10px] sm:text-xs text-slate-400 dark:text-slate-500 mt-0.5 tracking-wide leading-snug">
+                {{ s.label }}
+              </p>
             </div>
           </div>
         </div>

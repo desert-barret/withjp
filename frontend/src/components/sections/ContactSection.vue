@@ -11,12 +11,12 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-12">
         <a v-for="(link, i) in contactLinks" :key="link.label"
            :href="link.url"
            :target="link.isEmail ? '_self' : '_blank'"
            :rel="link.isEmail ? undefined : 'noopener noreferrer'"
-           class="gradient-card group block p-6 cursor-pointer
+           class="gradient-card group block p-4 sm:p-6 cursor-pointer
                   bg-white dark:bg-transparent
                   transition-all duration-300 hover:-translate-y-1
                   reveal"

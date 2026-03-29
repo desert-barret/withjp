@@ -52,13 +52,13 @@
           </div>
 
           <!-- Stats grid -->
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
             <div v-for="(s, i) in statsItems" :key="s.label"
-              class="gradient-card p-6 text-center
+              class="gradient-card p-4 sm:p-6 text-center
                      bg-slate-50 dark:bg-transparent
                      reveal" :class="[{ visible: visible }, `reveal-delay-${i + 2}`]">
-              <p class="font-display font-bold text-3xl gradient-text mb-1">{{ s.value }}</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400 tracking-wide">{{ s.label }}</p>
+              <p class="font-display font-bold text-2xl sm:text-3xl gradient-text mb-1">{{ s.value }}</p>
+              <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 tracking-wide leading-snug">{{ s.label }}</p>
             </div>
           </div>
         </div>
