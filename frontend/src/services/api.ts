@@ -39,6 +39,14 @@ export const coursesApi = {
   remove:      (id: number) => api.delete(`/courses/${id}`),
 };
 
+export const academiaApi = {
+  getAll:  (showAll = false) => api.get(`/academia${showAll ? '?all=true' : ''}`),
+  getOne:  (id: number) => api.get(`/academia/${id}`),
+  create:  (data: any) => api.post('/academia', data),
+  update:  (id: number, data: any) => api.put(`/academia/${id}`, data),
+  remove:  (id: number) => api.delete(`/academia/${id}`),
+};
+
 export const profileApi = {
   get:    () => api.get('/profile'),
   update: (data: any) => api.put('/profile', data),

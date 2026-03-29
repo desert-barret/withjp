@@ -177,13 +177,15 @@ const userInitial = computed(() =>
 );
 
 const ICON_DASHBOARD = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>`;
-const ICON_PROJECTS  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>`;
+const ICON_COURSES   = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>`;
+const ICON_ACADEMIA  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`;
 const ICON_PROFILE   = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`;
 
 const navItems = [
-  { to: '/admin',          icon: ICON_DASHBOARD, label: 'Dashboard' },
-  { to: '/admin/courses',  icon: ICON_PROJECTS,  label: 'Cursos' },
-  { to: '/admin/profile',  icon: ICON_PROFILE,   label: 'Mi Perfil' },
+  { to: '/admin',           icon: ICON_DASHBOARD, label: 'Dashboard' },
+  { to: '/admin/courses',   icon: ICON_COURSES,   label: 'Cursos' },
+  { to: '/admin/academia',  icon: ICON_ACADEMIA,  label: 'Academia' },
+  { to: '/admin/profile',   icon: ICON_PROFILE,   label: 'Mi Perfil' },
 ];
 
 function isActive(to: string) {

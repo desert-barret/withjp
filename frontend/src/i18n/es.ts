@@ -3,6 +3,7 @@ export default {
     home: 'Inicio',
     about: 'Sobre mí',
     courses: 'Cursos',
+    academia: 'Academia',
     contact: 'Contacto',
     admin: 'Admin',
   },
@@ -41,6 +42,14 @@ export default {
       automation: 'Automatización',
       ai: 'IA',
     },
+  },
+  academia: {
+    badge: 'Plataforma de aprendizaje',
+    title: 'Academia',
+    subtitle: 'Cursos propios con acceso directo. Aprende a tu ritmo con contenido exclusivo de withjp.',
+    access: 'Acceder al curso',
+    coming_soon: 'Próximamente',
+    no_items: 'No hay cursos disponibles',
   },
   contact: {
     title: 'Contacto',

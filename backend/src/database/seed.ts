@@ -421,12 +421,12 @@ async function seed() {
     console.log('ℹ️  Admin already exists');
   }
 
-  // Courses — drop all translations first, then courses
-  await AppDataSource.query('DELETE FROM course_translations');
-  await AppDataSource.query('DELETE FROM courses');
+  // Courses — drop all translations first, then projects
+  await AppDataSource.query('DELETE FROM project_translations');
+  await AppDataSource.query('DELETE FROM projects');
 
-  const courseRepo = AppDataSource.getRepository('courses');
-  const translationRepo = AppDataSource.getRepository('course_translations');
+  const courseRepo = AppDataSource.getRepository('projects');
+  const translationRepo = AppDataSource.getRepository('project_translations');
 
   for (const c of courses) {
     const { translations, ...base } = c;
@@ -437,6 +437,95 @@ async function seed() {
   }
 
   console.log(`✅ ${courses.length} cursos de Udemy sembrados`);
+
+  // Academia — seed
+  await AppDataSource.query('DELETE FROM academia_translations').catch(() => {});
+  await AppDataSource.query('DELETE FROM academia').catch(() => {});
+
+  const academiaRepo = AppDataSource.getRepository('academia');
+  const acadTransRepo = AppDataSource.getRepository('academia_translations');
+
+  const academiaItems = [
+    {
+      subdomain_url: 'https://claude.withjp.ai',
+      badge: 'NUEVO',
+      technologies: ['Claude Code', 'AI', 'Shell', 'CLI', 'Hooks'],
+      category: 'ai',
+      featured: true,
+      sort_order: 1,
+      active: true,
+      translations: [
+        {
+          locale: 'es',
+          title: 'Domina el Shell de Claude',
+          description: 'Aprende a usar Claude Code en la terminal como un profesional. Desde los comandos básicos hasta workflows avanzados con agentes de IA, hooks y automatizaciones que multiplicarán tu productividad.',
+          short_description: 'Domina Claude Code CLI: comandos, agentes, hooks y workflows con IA para multiplicar tu productividad.',
+        },
+        {
+          locale: 'en',
+          title: 'Master the Claude Shell',
+          description: 'Learn to use Claude Code in the terminal like a professional. From basic commands to advanced AI-powered workflows, agents, hooks and automations that will multiply your productivity.',
+          short_description: 'Master Claude Code CLI: commands, agents, hooks and AI workflows to multiply your productivity.',
+        },
+      ],
+    },
+    {
+      subdomain_url: '',
+      badge: 'PRONTO',
+      technologies: ['Claude API', 'TypeScript', 'NestJS', 'Anthropic SDK'],
+      category: 'ai',
+      featured: false,
+      sort_order: 2,
+      active: true,
+      translations: [
+        {
+          locale: 'es',
+          title: 'Agentes IA con Claude API',
+          description: 'Construye agentes de inteligencia artificial desde cero usando la API de Anthropic y el SDK oficial. Aprende tool use, memory, multi-step reasoning y despliega tu propio agente en producción.',
+          short_description: 'Crea agentes de IA reales con Claude API, tool use y razonamiento multi-paso.',
+        },
+        {
+          locale: 'en',
+          title: 'AI Agents with Claude API',
+          description: 'Build artificial intelligence agents from scratch using the Anthropic API and official SDK. Learn tool use, memory, multi-step reasoning, and deploy your own agent to production.',
+          short_description: 'Build real AI agents with Claude API, tool use, and multi-step reasoning.',
+        },
+      ],
+    },
+    {
+      subdomain_url: '',
+      badge: 'PRONTO',
+      technologies: ['NestJS', 'Flutter', 'OpenAI', 'Sockets', 'TypeScript'],
+      category: 'mobile',
+      featured: false,
+      sort_order: 3,
+      active: true,
+      translations: [
+        {
+          locale: 'es',
+          title: 'Apps Móviles con IA Integrada',
+          description: 'Integra inteligencia artificial directamente en tus apps Flutter con un backend NestJS potente. Chats en tiempo real con IA, generación de contenido, análisis de imágenes y mucho más.',
+          short_description: 'Flutter + NestJS + IA: integra modelos de lenguaje en apps móviles reales.',
+        },
+        {
+          locale: 'en',
+          title: 'Mobile Apps with Integrated AI',
+          description: 'Integrate artificial intelligence directly into your Flutter apps with a powerful NestJS backend. Real-time AI chats, content generation, image analysis, and much more.',
+          short_description: 'Flutter + NestJS + AI: integrate language models into real mobile apps.',
+        },
+      ],
+    },
+  ];
+
+  for (const a of academiaItems) {
+    const { translations, ...base } = a;
+    const item = await academiaRepo.save(academiaRepo.create(base));
+    for (const t of translations) {
+      await acadTransRepo.save(acadTransRepo.create({ ...t, academia: item }));
+    }
+  }
+
+  console.log(`✅ ${academiaItems.length} item(s) de Academia sembrados`);
 
   // Update profile
   await AppDataSource.query('UPDATE profile SET title_es = ?, title_en = ?, bio_es = ?, bio_en = ? WHERE id = 1', [

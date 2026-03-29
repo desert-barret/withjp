@@ -1,5 +1,5 @@
 <template>
-  <section id="courses" ref="sectionEl" class="section-mesh py-16 md:py-24 bg-[#f8f9ff] dark:bg-[#080B14]">
+  <section id="courses" ref="sectionEl" class="section-mesh pt-16 pb-6 md:pt-24 md:pb-8 bg-[#f8f9ff] dark:bg-[#080B14]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
       <!-- Header -->
