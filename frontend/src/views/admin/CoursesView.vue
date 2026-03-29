@@ -3,15 +3,15 @@
     <!-- Header -->
     <div class="flex items-start sm:items-center justify-between gap-4 mb-6 sm:mb-8">
       <div>
-        <h1 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">Proyectos</h1>
+        <h1 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">Cursos</h1>
         <p class="text-slate-500 dark:text-slate-400 mt-0.5 text-sm">
-          {{ projects.length }} curso{{ projects.length !== 1 ? 's' : '' }} registrado{{ projects.length !== 1 ? 's' : '' }}
+          {{ courses.length }} curso{{ courses.length !== 1 ? 's' : '' }} registrado{{ courses.length !== 1 ? 's' : '' }}
         </p>
       </div>
       <button @click="openModal()"
         class="btn-primary flex-shrink-0 text-sm py-2.5 gap-2">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        Nuevo proyecto
+        Nuevo curso
       </button>
     </div>
 
@@ -27,7 +27,7 @@
           <thead>
             <tr class="border-b border-slate-200/80 dark:border-white/[0.06] bg-slate-50/50 dark:bg-white/[0.01]">
               <th class="text-left px-5 py-3.5 text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                Proyecto
+                Curso
               </th>
               <th class="text-left px-5 py-3.5 text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider hidden md:table-cell">
                 Tecnologías
@@ -39,23 +39,23 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 dark:divide-white/[0.04]">
-            <tr v-for="project in projects" :key="project.id"
+            <tr v-for="course in courses" :key="course.id"
               class="group hover:bg-slate-50/80 dark:hover:bg-white/[0.025] transition-colors duration-150">
 
-              <!-- Project name -->
+              <!-- Course name -->
               <td class="px-5 py-4">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 rounded-xl flex-shrink-0 flex items-center justify-center text-lg
                               bg-gradient-to-br from-primary-500/15 to-violet-500/15
                               ring-1 ring-inset ring-primary-500/10">
-                    {{ catIcon(project.category) }}
+                    {{ catIcon(course.category) }}
                   </div>
                   <div class="min-w-0">
                     <p class="font-medium text-slate-900 dark:text-white text-sm leading-tight truncate max-w-[200px] sm:max-w-xs">
-                      {{ getTitle(project, 'es') }}
+                      {{ getTitle(course, 'es') }}
                     </p>
                     <p class="text-xs text-slate-400 dark:text-slate-500 mt-0.5 truncate max-w-[200px] sm:max-w-xs">
-                      {{ getTitle(project, 'en') }}
+                      {{ getTitle(course, 'en') }}
                     </p>
                   </div>
                 </div>
@@ -64,11 +64,11 @@
               <!-- Tech -->
               <td class="px-5 py-4 hidden md:table-cell">
                 <div class="flex flex-wrap gap-1">
-                  <span v-for="tech in (project.technologies || []).slice(0, 2)" :key="tech" class="tag text-[10px]">
+                  <span v-for="tech in (course.technologies || []).slice(0, 2)" :key="tech" class="tag text-[10px]">
                     {{ tech }}
                   </span>
-                  <span v-if="(project.technologies || []).length > 2" class="tag text-[10px] opacity-50">
-                    +{{ project.technologies.length - 2 }}
+                  <span v-if="(course.technologies || []).length > 2" class="tag text-[10px] opacity-50">
+                    +{{ course.technologies.length - 2 }}
                   </span>
                 </div>
               </td>
@@ -77,14 +77,14 @@
               <td class="px-5 py-4 hidden lg:table-cell">
                 <div class="flex items-center gap-2">
                   <span class="flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-full"
-                    :class="project.active
+                    :class="course.active
                       ? 'bg-emerald-100 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400'
                       : 'bg-slate-100 dark:bg-white/[0.05] text-slate-500 dark:text-slate-400'">
                     <span class="w-1.5 h-1.5 rounded-full"
-                          :class="project.active ? 'bg-emerald-500' : 'bg-slate-400'" />
-                    {{ project.active ? 'Activo' : 'Inactivo' }}
+                          :class="course.active ? 'bg-emerald-500' : 'bg-slate-400'" />
+                    {{ course.active ? 'Activo' : 'Inactivo' }}
                   </span>
-                  <span v-if="project.featured"
+                  <span v-if="course.featured"
                     class="flex items-center gap-1 px-2 py-1 text-xs font-semibold rounded-full
                            bg-amber-100 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400">
                     <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -96,13 +96,13 @@
               <!-- Actions -->
               <td class="px-5 py-4">
                 <div class="flex items-center gap-1 justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-150">
-                  <button @click="openModal(project)"
+                  <button @click="openModal(course)"
                     class="w-8 h-8 flex items-center justify-center rounded-lg
                            text-slate-400 hover:text-primary-600 dark:hover:text-primary-400
                            hover:bg-primary-50 dark:hover:bg-primary-500/10 transition-colors">
                     <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
                   </button>
-                  <button @click="confirmDelete(project)"
+                  <button @click="confirmDelete(course)"
                     class="w-8 h-8 flex items-center justify-center rounded-lg
                            text-slate-400 hover:text-red-600 dark:hover:text-red-400
                            hover:bg-red-50 dark:hover:bg-red-500/10 transition-colors">
@@ -118,7 +118,7 @@
                   <div class="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-white/[0.05] flex items-center justify-center">
                     <svg class="w-6 h-6 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
                   </div>
-                  <p class="text-sm text-slate-400 dark:text-slate-500">Sin proyectos todavía.</p>
+                  <p class="text-sm text-slate-400 dark:text-slate-500">Sin cursos todavía.</p>
                   <button @click="openModal()" class="text-sm text-primary-600 dark:text-primary-400 hover:underline font-medium">
                     Crear el primero →
                   </button>
@@ -149,7 +149,7 @@
               <!-- Drag handle (mobile) -->
               <div class="absolute top-2 left-1/2 -translate-x-1/2 w-8 h-1 rounded-full bg-slate-300 dark:bg-slate-600 sm:hidden" />
               <h2 class="font-display font-bold text-base text-slate-900 dark:text-white">
-                {{ form.id ? 'Editar proyecto' : 'Nuevo proyecto' }}
+                {{ form.id ? 'Editar curso' : 'Nuevo curso' }}
               </h2>
               <button @click="closeModal"
                 class="w-8 h-8 flex items-center justify-center rounded-xl
@@ -280,7 +280,7 @@
             <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-900/20 flex items-center justify-center mx-auto mb-4">
               <svg class="w-6 h-6 text-red-600 dark:text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
             </div>
-            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">¿Eliminar proyecto?</h3>
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">¿Eliminar curso?</h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">{{ getTitle(deleteTarget, 'es') }}</p>
             <div class="flex gap-3">
               <button @click="handleDelete" :disabled="saving"
@@ -300,9 +300,9 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { projectsApi } from '@/services/api';
+import { coursesApi } from '@/services/api';
 
-const projects    = ref<any[]>([]);
+const courses     = ref<any[]>([]);
 const loading     = ref(true);
 const showModal   = ref(false);
 const saving      = ref(false);
@@ -331,19 +331,19 @@ function emptyForm() {
 }
 const form = ref(emptyForm());
 
-function openModal(project?: any) {
+function openModal(course?: any) {
   activeLocale.value = 'es';
   saveError.value = '';
   saveSuccess.value = false;
-  if (project) {
-    const tEs = project.translations?.find((t: any) => t.locale === 'es') || {};
-    const tEn = project.translations?.find((t: any) => t.locale === 'en') || {};
+  if (course) {
+    const tEs = course.translations?.find((t: any) => t.locale === 'es') || {};
+    const tEn = course.translations?.find((t: any) => t.locale === 'en') || {};
     form.value = {
-      id: project.id,
-      image_url: project.image_url || '', demo_url: project.demo_url || '',
-      github_url: project.github_url || '', technologies: project.technologies || [],
-      category: project.category || '', featured: project.featured || false,
-      active: project.active !== false, sort_order: project.sort_order || 0,
+      id: course.id,
+      image_url: course.image_url || '', demo_url: course.demo_url || '',
+      github_url: course.github_url || '', technologies: course.technologies || [],
+      category: course.category || '', featured: course.featured || false,
+      active: course.active !== false, sort_order: course.sort_order || 0,
       translations: {
         es: { locale: 'es', title: tEs.title || '', description: tEs.description || '', short_description: tEs.short_description || '' },
         en: { locale: 'en', title: tEn.title || '', description: tEn.description || '', short_description: tEn.short_description || '' },
@@ -374,12 +374,12 @@ async function handleSave() {
       translations: [form.value.translations.es, form.value.translations.en].filter(t => t.title.trim()),
     };
     if (form.value.id) {
-      await projectsApi.update(form.value.id, payload);
+      await coursesApi.update(form.value.id, payload);
     } else {
-      await projectsApi.create(payload);
+      await coursesApi.create(payload);
     }
     saveSuccess.value = true;
-    await loadProjects();
+    await loadCourses();
     setTimeout(closeModal, 900);
   } catch (e: any) {
     saveError.value = e.response?.data?.message || 'Error al guardar';
@@ -394,25 +394,25 @@ async function handleDelete() {
   if (!deleteTarget.value) return;
   saving.value = true;
   try {
-    await projectsApi.remove(deleteTarget.value.id);
-    await loadProjects();
+    await coursesApi.remove(deleteTarget.value.id);
+    await loadCourses();
     deleteTarget.value = null;
   } finally {
     saving.value = false;
   }
 }
 
-async function loadProjects() {
+async function loadCourses() {
   loading.value = true;
   try {
-    const { data } = await projectsApi.getAll(true);
-    projects.value = data;
+    const { data } = await coursesApi.getAll(true);
+    courses.value = data;
   } finally {
     loading.value = false;
   }
 }
 
-onMounted(loadProjects);
+onMounted(loadCourses);
 </script>
 
 <style scoped>

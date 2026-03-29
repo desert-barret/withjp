@@ -6,10 +6,10 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { ProjectTranslation } from './project-translation.entity';
+import { CourseTranslation } from './course-translation.entity';
 
-@Entity('projects')
-export class Project {
+@Entity('courses')
+export class Course {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -37,11 +37,11 @@ export class Project {
   @Column({ default: true })
   active: boolean;
 
-  @OneToMany(() => ProjectTranslation, (t) => t.project, {
+  @OneToMany(() => CourseTranslation, (t) => t.course, {
     cascade: true,
     eager: true,
   })
-  translations: ProjectTranslation[];
+  translations: CourseTranslation[];
 
   @CreateDateColumn()
   createdAt: Date;

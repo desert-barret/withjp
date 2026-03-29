@@ -3,7 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { ProjectsModule } from './projects/projects.module';
+import { CoursesModule } from './courses/courses.module';
 import { ProfileModule } from './profile/profile.module';
 
 @Module({
@@ -26,7 +26,7 @@ import { ProfileModule } from './profile/profile.module';
     }),
     AuthModule,
     UsersModule,
-    ProjectsModule,
+    CoursesModule,
     ProfileModule,
   ],
 })

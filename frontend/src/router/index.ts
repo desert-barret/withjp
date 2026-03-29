@@ -38,10 +38,10 @@ const router = createRouter({
           meta: { title: 'Dashboard | withjp.ai', requiresAuth: true },
         },
         {
-          path: 'projects',
-          name: 'AdminProjects',
-          component: () => import('@/views/admin/ProjectsView.vue'),
-          meta: { title: 'Proyectos | withjp.ai', requiresAuth: true },
+          path: 'courses',
+          name: 'AdminCourses',
+          component: () => import('@/views/admin/CoursesView.vue'),
+          meta: { title: 'Cursos | withjp.ai', requiresAuth: true },
         },
         {
           path: 'profile',

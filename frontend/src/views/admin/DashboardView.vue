@@ -49,7 +49,7 @@
           Acciones rápidas
         </h2>
         <div class="space-y-2">
-          <router-link to="/admin/projects"
+          <router-link to="/admin/courses"
             class="group flex items-center gap-4 p-4 rounded-xl transition-all duration-200
                    bg-slate-50 dark:bg-white/[0.03]
                    hover:bg-primary-50 dark:hover:bg-primary-500/10
@@ -59,7 +59,7 @@
             </div>
             <div class="flex-1 min-w-0">
               <p class="text-sm font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors">
-                Gestionar proyectos
+                Gestionar cursos
               </p>
               <p class="text-xs text-slate-400 dark:text-slate-500 mt-0.5">Añade, edita o elimina cursos</p>
             </div>
@@ -149,7 +149,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { useAuthStore } from '@/stores/auth';
-import { projectsApi } from '@/services/api';
+import { coursesApi } from '@/services/api';
 
 const auth = useAuthStore();
 
@@ -159,15 +159,15 @@ const ICON_GLOBE   = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
 const ICON_SERVER  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>`;
 
 const stats = ref([
-  { label: 'Proyectos totales',   value: '—', icon: ICON_LAYERS, iconBg: 'bg-indigo-100 dark:bg-indigo-500/15',  iconColor: 'text-indigo-600 dark:text-indigo-400',  badge: 'Total',   badgeCls: 'bg-indigo-100 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400' },
-  { label: 'Proyectos destacados',value: '—', icon: ICON_STAR,   iconBg: 'bg-amber-100 dark:bg-amber-500/15',   iconColor: 'text-amber-600 dark:text-amber-400',   badge: 'Featured', badgeCls: 'bg-amber-100 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400' },
+  { label: 'Cursos totales',      value: '—', icon: ICON_LAYERS, iconBg: 'bg-indigo-100 dark:bg-indigo-500/15',  iconColor: 'text-indigo-600 dark:text-indigo-400',  badge: 'Total',   badgeCls: 'bg-indigo-100 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400' },
+  { label: 'Cursos destacados',   value: '—', icon: ICON_STAR,   iconBg: 'bg-amber-100 dark:bg-amber-500/15',   iconColor: 'text-amber-600 dark:text-amber-400',   badge: 'Featured', badgeCls: 'bg-amber-100 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400' },
   { label: 'Idiomas activos',     value: '2', icon: ICON_GLOBE,  iconBg: 'bg-emerald-100 dark:bg-emerald-500/15',iconColor: 'text-emerald-600 dark:text-emerald-400',badge: 'ES · EN',  badgeCls: 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' },
   { label: 'Subdominios',         value: '2', icon: ICON_SERVER, iconBg: 'bg-cyan-100 dark:bg-cyan-500/15',     iconColor: 'text-cyan-600 dark:text-cyan-400',     badge: 'Pronto',   badgeCls: 'bg-cyan-100 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400' },
 ]);
 
 onMounted(async () => {
   try {
-    const { data } = await projectsApi.getAll(true);
+    const { data } = await coursesApi.getAll(true);
     stats.value[0].value = String(data.length);
     stats.value[1].value = String(data.filter((p: any) => p.featured).length);
   } catch {}

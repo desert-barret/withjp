@@ -97,10 +97,9 @@ const scrolled = ref(false);
 const mobileOpen = ref(false);
 
 const navItems = [
-  { href: '#about',    key: 'nav.about'    },
-  { href: '#projects', key: 'nav.projects' },
-  { href: '#courses',  key: 'nav.courses'  },
-  { href: '#contact',  key: 'nav.contact'  },
+  { href: '#about',   key: 'nav.about'   },
+  { href: '#courses', key: 'nav.courses' },
+  { href: '#contact', key: 'nav.contact' },
 ];
 
 function toggleLang() {

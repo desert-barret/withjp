@@ -9,7 +9,7 @@ import {
 import { Type } from 'class-transformer';
 import { TranslationDto } from './translation.dto';
 
-export class CreateProjectDto {
+export class CreateCourseDto {
   @IsOptional()
   @IsString()
   image_url?: string;

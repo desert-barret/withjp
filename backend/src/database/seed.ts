@@ -421,18 +421,18 @@ async function seed() {
     console.log('ℹ️  Admin already exists');
   }
 
-  // Courses — drop all translations first, then projects
-  await AppDataSource.query('DELETE FROM project_translations');
-  await AppDataSource.query('DELETE FROM projects');
+  // Courses — drop all translations first, then courses
+  await AppDataSource.query('DELETE FROM course_translations');
+  await AppDataSource.query('DELETE FROM courses');
 
-  const projectRepo = AppDataSource.getRepository('projects');
-  const translationRepo = AppDataSource.getRepository('project_translations');
+  const courseRepo = AppDataSource.getRepository('courses');
+  const translationRepo = AppDataSource.getRepository('course_translations');
 
   for (const c of courses) {
     const { translations, ...base } = c;
-    const project = await projectRepo.save(projectRepo.create(base));
+    const course = await courseRepo.save(courseRepo.create(base));
     for (const t of translations) {
-      await translationRepo.save(translationRepo.create({ ...t, project }));
+      await translationRepo.save(translationRepo.create({ ...t, course }));
     }
   }
 

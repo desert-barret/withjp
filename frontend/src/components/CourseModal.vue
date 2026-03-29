@@ -1,11 +1,11 @@
 <template>
   <Teleport to="body">
     <Transition name="backdrop">
-      <div v-if="project" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6">
+      <div v-if="course" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6">
         <div class="absolute inset-0 bg-black/60 dark:bg-black/75 backdrop-blur-md" @click="$emit('close')" />
 
         <Transition name="modal-slide">
-          <div v-if="project"
+          <div v-if="course"
             class="relative z-10 w-full sm:max-w-2xl max-h-[92vh] sm:max-h-[85vh] overflow-y-auto
                    bg-white dark:bg-[#0d1322]
                    rounded-t-3xl sm:rounded-3xl
@@ -35,9 +35,9 @@
               <div class="absolute top-4 left-4 flex gap-2">
                 <span class="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide
                              bg-black/40 backdrop-blur-sm text-white/90 border border-white/15">
-                  {{ project.category || 'curso' }}
+                  {{ course.category || 'curso' }}
                 </span>
-                <span v-if="project.featured"
+                <span v-if="course.featured"
                   class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-400/90 text-amber-900">
                   ⭐ Destacado
                 </span>
@@ -63,12 +63,12 @@
               </p>
 
               <!-- Technologies -->
-              <div v-if="project.technologies?.length" class="mb-6">
+              <div v-if="course.technologies?.length" class="mb-6">
                 <h4 class="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3">
                   {{ locale === 'es' ? 'Tecnologías' : 'Technologies' }}
                 </h4>
                 <div class="flex flex-wrap gap-2">
-                  <span v-for="tech in project.technologies" :key="tech"
+                  <span v-for="tech in course.technologies" :key="tech"
                     class="px-3 py-1.5 rounded-xl text-sm font-medium
                            bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300
                            border border-primary-100 dark:border-primary-800/30">
@@ -96,7 +96,7 @@
 
               <!-- CTAs -->
               <div class="flex flex-col sm:flex-row gap-3">
-                <a v-if="project.demo_url" :href="project.demo_url"
+                <a v-if="course.demo_url" :href="course.demo_url"
                    target="_blank" rel="noopener noreferrer"
                    class="btn-primary flex-1 justify-center py-3.5 text-base"
                    @click="$emit('close')">
@@ -121,34 +121,34 @@ import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useTranslation } from '@/composables/useTranslation';
 
-const props = defineProps<{ project: any | null }>();
+const props = defineProps<{ course: any | null }>();
 defineEmits<{ close: [] }>();
 
 const { locale } = useI18n();
-const { t: tr } = useTranslation(computed(() => props.project));
+const { t: tr } = useTranslation(computed(() => props.course));
 
 const categoryIcon = computed(() => ({
   web: '🌐', automation: '🤖', ai: '🧠', mobile: '📱',
-}[props.project?.category] || '🚀'));
+}[props.course?.category] || '🚀'));
 
 const learnings = computed(() => {
-  if (!props.project) return [];
-  const techs = props.project.technologies || [];
+  if (!props.course) return [];
+  const techs = props.course.technologies || [];
   return locale.value === 'es'
     ? [
         `Dominar ${techs.slice(0, 2).join(' y ')}`,
         'Construir proyectos reales desde cero',
         'Arquitectura profesional y escalable',
         'Desplegar en producción',
-        props.project.category === 'mobile' ? 'Publicar en Google Play / App Store' : 'APIs REST y seguridad',
+        props.course.category === 'mobile' ? 'Publicar en Google Play / App Store' : 'APIs REST y seguridad',
         techs.length > 3 ? `Integrar ${techs[3]}` : 'Testing y buenas prácticas',
       ]
     : [
         `Master ${techs.slice(0, 2).join(' and ')}`,
-        'Build real projects from scratch',
+        'Build real courses from scratch',
         'Professional and scalable architecture',
         'Deploy to production',
-        props.project.category === 'mobile' ? 'Publish to Google Play / App Store' : 'REST APIs and security',
+        props.course.category === 'mobile' ? 'Publish to Google Play / App Store' : 'REST APIs and security',
         techs.length > 3 ? `Integrate ${techs[3]}` : 'Testing and best practices',
       ];
 });

@@ -182,7 +182,7 @@ const ICON_PROFILE   = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColo
 
 const navItems = [
   { to: '/admin',          icon: ICON_DASHBOARD, label: 'Dashboard' },
-  { to: '/admin/projects', icon: ICON_PROJECTS,  label: 'Proyectos' },
+  { to: '/admin/courses',  icon: ICON_PROJECTS,  label: 'Cursos' },
   { to: '/admin/profile',  icon: ICON_PROFILE,   label: 'Mi Perfil' },
 ];
 

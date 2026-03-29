@@ -6,20 +6,20 @@ import {
   JoinColumn,
   Index,
 } from 'typeorm';
-import { Project } from './project.entity';
+import { Course } from './course.entity';
 
-@Entity('project_translations')
-@Index(['project', 'locale'], { unique: true })
-export class ProjectTranslation {
+@Entity('course_translations')
+@Index(['course', 'locale'], { unique: true })
+export class CourseTranslation {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne(() => Project, (project) => project.translations, {
+  @ManyToOne(() => Course, (course) => course.translations, {
     onDelete: 'CASCADE',
     nullable: false,
   })
-  @JoinColumn({ name: 'project_id' })
-  project: Project;
+  @JoinColumn({ name: 'course_id' })
+  course: Course;
 
   @Column({ length: 5 })
   locale: string; // 'es' | 'en'

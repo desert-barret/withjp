@@ -1,5 +1,5 @@
 <template>
-  <button @click="$emit('open', project)" type="button"
+  <button @click="$emit('open', course)" type="button"
     class="project-card gradient-card card-hover group w-full text-left cursor-pointer flex flex-col overflow-hidden">
 
     <!-- Thumbnail -->
@@ -20,12 +20,12 @@
       <div class="absolute top-3 left-3">
         <span class="px-2.5 py-1 rounded-lg text-[11px] font-semibold uppercase tracking-wide
                      bg-black/50 backdrop-blur-sm text-white/90 border border-white/10">
-          {{ project.category || 'curso' }}
+          {{ course.category || 'curso' }}
         </span>
       </div>
 
       <!-- Featured star -->
-      <div v-if="project.featured" class="absolute top-3 right-3">
+      <div v-if="course.featured" class="absolute top-3 right-3">
         <div class="w-7 h-7 rounded-full bg-amber-400/90 flex items-center justify-center shadow-lg
                     group-hover:scale-110 transition-transform duration-300">
           <svg class="w-3.5 h-3.5 text-amber-900" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -55,12 +55,12 @@
       </p>
 
       <!-- Tech tags -->
-      <div v-if="project.technologies?.length" class="flex flex-wrap gap-1.5">
-        <span v-for="tech in project.technologies.slice(0, 3)" :key="tech" class="tag text-[11px]">
+      <div v-if="course.technologies?.length" class="flex flex-wrap gap-1.5">
+        <span v-for="tech in course.technologies.slice(0, 3)" :key="tech" class="tag text-[11px]">
           {{ tech }}
         </span>
-        <span v-if="project.technologies.length > 3" class="tag text-[11px] opacity-60">
-          +{{ project.technologies.length - 3 }}
+        <span v-if="course.technologies.length > 3" class="tag text-[11px] opacity-60">
+          +{{ course.technologies.length - 3 }}
         </span>
       </div>
     </div>
@@ -71,14 +71,14 @@
 import { computed } from 'vue';
 import { useTranslation } from '@/composables/useTranslation';
 
-const props = defineProps<{ project: any }>();
-defineEmits<{ open: [project: any] }>();
+const props = defineProps<{ course: any }>();
+defineEmits<{ open: [course: any] }>();
 
-const { t: tr } = useTranslation(props.project);
+const { t: tr } = useTranslation(props.course);
 
 const categoryIcon = computed(() => ({
   web: '🌐', automation: '🤖', ai: '🧠', mobile: '📱',
-}[props.project.category] || '🚀'));
+}[props.course.category] || '🚀'));
 </script>
 
 <style scoped>

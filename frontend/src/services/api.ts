@@ -30,13 +30,13 @@ export const authApi = {
   revokeOthers:  () => api.delete('/auth/sessions/others'),
 };
 
-export const projectsApi = {
-  getAll:    (showAll = false) => api.get(`/projects${showAll ? '?all=true' : ''}`),
-  getFeatured: () => api.get('/projects/featured'),
-  getOne:    (id: number) => api.get(`/projects/${id}`),
-  create:    (data: any) => api.post('/projects', data),
-  update:    (id: number, data: any) => api.put(`/projects/${id}`, data),
-  remove:    (id: number) => api.delete(`/projects/${id}`),
+export const coursesApi = {
+  getAll:      (showAll = false) => api.get(`/courses${showAll ? '?all=true' : ''}`),
+  getFeatured: () => api.get('/courses/featured'),
+  getOne:      (id: number) => api.get(`/courses/${id}`),
+  create:      (data: any) => api.post('/courses', data),
+  update:      (id: number, data: any) => api.put(`/courses/${id}`, data),
+  remove:      (id: number) => api.delete(`/courses/${id}`),
 };
 
 export const profileApi = {

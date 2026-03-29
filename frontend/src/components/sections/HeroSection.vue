@@ -119,9 +119,9 @@
 
           <!-- CTAs -->
           <div class="hero-enter-4 flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-12">
-            <a href="#projects" class="btn-primary btn-glow text-base px-7 py-3.5 inline-flex items-center justify-center gap-2">
+            <a href="#courses" class="btn-primary btn-glow text-base px-7 py-3.5 inline-flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"/></svg>
-              {{ t('hero.cta_projects') }}
+              {{ t('hero.cta_courses') }}
             </a>
             <a href="#contact" class="btn-secondary text-base px-7 py-3.5 inline-flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>

@@ -20,7 +20,6 @@
           <h4 class="font-semibold text-slate-900 dark:text-white mb-4">Links</h4>
           <div class="space-y-2">
             <a href="#about" class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.about') }}</a>
-            <a href="#projects" class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.projects') }}</a>
             <a href="#courses" class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.courses') }}</a>
             <a href="#contact" class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.contact') }}</a>
           </div>
