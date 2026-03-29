@@ -4,7 +4,7 @@
       ? 'bg-white/80 dark:bg-[#080B14]/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-white/[0.06] shadow-sm'
       : 'bg-transparent'">
 
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
 
       <!-- Logo -->
       <router-link to="/" class="flex items-center gap-2.5 group">
@@ -33,7 +33,7 @@
       <div class="flex items-center gap-1.5">
         <!-- Lang toggle -->
         <button @click="toggleLang"
-          class="h-8 px-3 flex items-center gap-1.5 text-xs font-semibold rounded-xl
+          class="h-9 px-3 flex items-center gap-1.5 text-xs font-semibold rounded-xl
                  border border-slate-200 dark:border-white/[0.08]
                  text-slate-600 dark:text-slate-400
                  hover:border-primary-400 dark:hover:border-primary-500/50
@@ -72,7 +72,7 @@
     <Transition name="slide-down">
       <div v-if="mobileOpen"
         class="md:hidden bg-white/95 dark:bg-[#080B14]/95 backdrop-blur-xl
-               border-b border-slate-200/60 dark:border-white/[0.06] px-6 py-3 space-y-1">
+               border-b border-slate-200/60 dark:border-white/[0.06] px-4 py-2 space-y-0.5">
         <a v-for="item in navItems" :key="item.href" :href="item.href"
           @click="mobileOpen = false"
           class="block px-4 py-3 text-sm font-medium rounded-xl

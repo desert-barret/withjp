@@ -1,6 +1,6 @@
 <template>
-  <section id="courses" ref="sectionEl" class="py-24 bg-slate-50/50 dark:bg-[#080B14]">
-    <div class="max-w-6xl mx-auto px-6">
+  <section id="courses" ref="sectionEl" class="py-16 md:py-24 bg-[#f4f6ff] dark:bg-[#080B14]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
       <!-- Header -->
       <div class="text-center mb-14 reveal" :class="{ visible: visible }">

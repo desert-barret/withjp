@@ -1,12 +1,12 @@
 <template>
   <div>
     <!-- Header -->
-    <div class="flex items-center justify-between mb-8">
+    <div class="flex items-start sm:items-center justify-between gap-4 mb-6 sm:mb-8">
       <div>
-        <h1 class="font-display font-bold text-2xl text-slate-900 dark:text-white">{{ t('admin.projects') }}</h1>
-        <p class="text-slate-500 dark:text-slate-400 mt-1">{{ projects.length }} cursos registrados</p>
+        <h1 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">{{ t('admin.projects') }}</h1>
+        <p class="text-slate-500 dark:text-slate-400 mt-1 text-sm sm:text-base">{{ projects.length }} cursos registrados</p>
       </div>
-      <button @click="openModal()" class="btn-primary">+ {{ t('admin.new_project') }}</button>
+      <button @click="openModal()" class="btn-primary flex-shrink-0 text-sm">+ {{ t('admin.new_project') }}</button>
     </div>
 
     <!-- Loading -->
@@ -103,7 +103,7 @@
                       border border-slate-200 dark:border-white/[0.08]">
 
             <!-- Modal header -->
-            <div class="sticky top-0 z-10 flex items-center justify-between px-6 py-4
+            <div class="sticky top-0 z-10 flex items-center justify-between px-4 sm:px-6 py-4
                         bg-white dark:bg-[#0d1322]
                         border-b border-slate-200 dark:border-white/[0.08]">
               <h2 class="font-display font-bold text-lg text-slate-900 dark:text-white">
@@ -115,7 +115,7 @@
                        hover:bg-slate-100 dark:hover:bg-white/[0.08] transition-colors text-sm">✕</button>
             </div>
 
-            <form @submit.prevent="handleSave" class="p-6 space-y-6">
+            <form @submit.prevent="handleSave" class="p-4 sm:p-6 space-y-6">
 
               <!-- ── Translations tabs ── -->
               <div>

@@ -1,25 +1,27 @@
 <template>
-  <section id="projects" ref="sectionEl" class="py-24 bg-slate-50/50 dark:bg-[#080B14]">
-    <div class="max-w-6xl mx-auto px-6">
+  <section id="projects" ref="sectionEl" class="section-mesh py-16 md:py-24 bg-[#f8f9ff] dark:bg-[#080B14]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
       <!-- Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-4 md:gap-6
                   reveal" :class="{ visible: visible }">
         <div>
-          <span class="tag text-xs mb-4 inline-flex">{{ t('projects.subtitle') }}</span>
+          <span class="tag text-xs mb-3 md:mb-4 inline-flex">{{ t('projects.subtitle') }}</span>
           <h2 class="section-title">{{ t('projects.title') }}</h2>
         </div>
 
-        <!-- Category filter -->
-        <div class="flex flex-wrap gap-2">
-          <button v-for="cat in categories" :key="cat.value"
-            @click="activeCategory = cat.value"
-            class="px-4 py-2 text-sm font-medium rounded-xl transition-all duration-200"
-            :class="activeCategory === cat.value
-              ? 'bg-gradient-to-r from-primary-600 to-violet-600 text-white shadow-lg shadow-primary-500/20'
-              : 'border border-slate-200 dark:border-white/[0.08] text-slate-600 dark:text-slate-400 hover:border-primary-400 dark:hover:border-primary-500/50 bg-white dark:bg-white/[0.03]'">
-            {{ cat.label }}
-          </button>
+        <!-- Category filter — horizontal scroll on mobile -->
+        <div class="-mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto pb-1 sm:pb-0">
+          <div class="flex gap-2 w-max sm:w-auto sm:flex-wrap">
+            <button v-for="cat in categories" :key="cat.value"
+              @click="activeCategory = cat.value"
+              class="px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 whitespace-nowrap"
+              :class="activeCategory === cat.value
+                ? 'bg-gradient-to-r from-primary-600 to-violet-600 text-white shadow-lg shadow-primary-500/20'
+                : 'border border-slate-200 dark:border-white/[0.08] text-slate-600 dark:text-slate-400 hover:border-primary-400 dark:hover:border-primary-500/50 bg-white dark:bg-white/[0.03]'">
+              {{ cat.label }}
+            </button>
+          </div>
         </div>
       </div>
 

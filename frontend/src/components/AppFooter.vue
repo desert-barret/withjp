@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-white dark:bg-dark-900 border-t border-slate-200 dark:border-slate-800">
-    <div class="max-w-6xl mx-auto px-6 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8">
         <!-- Brand -->
         <div>
           <div class="flex items-center gap-2 mb-4">

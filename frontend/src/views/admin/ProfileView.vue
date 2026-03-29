@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="mb-8">
-      <h1 class="font-display font-bold text-2xl text-slate-900 dark:text-white">{{ t('admin.profile') }}</h1>
-      <p class="text-slate-500 dark:text-slate-400 mt-1">Información pública del portafolio</p>
+    <div class="mb-6 sm:mb-8">
+      <h1 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">{{ t('admin.profile') }}</h1>
+      <p class="text-slate-500 dark:text-slate-400 mt-1 text-sm sm:text-base">Información pública del portafolio</p>
     </div>
 
     <div v-if="loading" class="flex justify-center py-20">
@@ -11,7 +11,7 @@
 
     <form v-else @submit.prevent="handleSave" class="space-y-6 max-w-3xl">
       <!-- Basic info -->
-      <div class="card p-6">
+      <div class="card p-4 sm:p-6">
         <h2 class="font-semibold text-slate-900 dark:text-white mb-5">Información básica</h2>
         <div class="space-y-4">
           <div>
@@ -58,7 +58,7 @@
       </div>
 
       <!-- Social links -->
-      <div class="card p-6">
+      <div class="card p-4 sm:p-6">
         <h2 class="font-semibold text-slate-900 dark:text-white mb-5">Redes sociales</h2>
         <div class="space-y-4">
           <div>
@@ -81,7 +81,7 @@
       </div>
 
       <!-- Skills & Technologies -->
-      <div class="card p-6">
+      <div class="card p-4 sm:p-6">
         <h2 class="font-semibold text-slate-900 dark:text-white mb-5">Habilidades y tecnologías</h2>
         <div class="space-y-4">
           <div>

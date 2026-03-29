@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="mb-8">
-      <h1 class="font-display font-bold text-2xl text-slate-900 dark:text-white">Dashboard</h1>
-      <p class="text-slate-500 dark:text-slate-400 mt-1">Bienvenido, {{ auth.user?.email }}</p>
+    <div class="mb-6 sm:mb-8">
+      <h1 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">Dashboard</h1>
+      <p class="text-slate-500 dark:text-slate-400 mt-1 text-sm sm:text-base truncate">Bienvenido, {{ auth.user?.email }}</p>
     </div>
 
     <!-- Stats -->

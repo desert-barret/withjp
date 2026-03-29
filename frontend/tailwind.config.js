@@ -2,6 +2,12 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: 'class',
+  safelist: [
+    // Dynamic stagger classes used in ProjectsSection
+    { pattern: /reveal-delay-[1-6]/ },
+    { pattern: /stagger-[1-6]/ },
+    { pattern: /hero-enter-[1-6]/ },
+  ],
   theme: {
     extend: {
       colors: {

@@ -1,6 +1,6 @@
 <template>
   <button @click="$emit('open', project)" type="button"
-    class="gradient-card card-hover group w-full text-left cursor-pointer flex flex-col overflow-hidden">
+    class="project-card gradient-card card-hover group w-full text-left cursor-pointer flex flex-col overflow-hidden">
 
     <!-- Thumbnail -->
     <div class="relative h-44 overflow-hidden
@@ -10,10 +10,10 @@
                linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px);
                background-size: 24px 24px" />
 
-      <!-- Icon -->
+      <!-- Category icon -->
       <div class="absolute inset-0 flex items-center justify-center">
-        <span class="text-5xl opacity-25 group-hover:opacity-40 group-hover:scale-110
-                     transition-all duration-300 select-none">{{ categoryIcon }}</span>
+        <span class="text-5xl opacity-25 group-hover:opacity-45 group-hover:scale-110
+                     transition-all duration-500 ease-out select-none">{{ categoryIcon }}</span>
       </div>
 
       <!-- Category badge -->
@@ -24,17 +24,21 @@
         </span>
       </div>
 
+      <!-- Featured star -->
       <div v-if="project.featured" class="absolute top-3 right-3">
-        <div class="w-7 h-7 rounded-full bg-amber-400/90 flex items-center justify-center text-xs shadow-lg">⭐</div>
+        <div class="w-7 h-7 rounded-full bg-amber-400/90 flex items-center justify-center shadow-lg
+                    group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-3.5 h-3.5 text-amber-900" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
       </div>
 
       <!-- Hover overlay -->
       <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/90 via-transparent to-transparent
                   opacity-0 group-hover:opacity-100 transition-opacity duration-300
                   flex items-end justify-center pb-4">
-        <span class="text-white text-sm font-semibold flex items-center gap-1.5">
+        <span class="text-white text-sm font-semibold flex items-center gap-1.5 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
           Ver detalle
-          <span class="group-hover:translate-x-1 transition-transform inline-block">→</span>
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </span>
       </div>
     </div>
@@ -42,7 +46,7 @@
     <!-- Body -->
     <div class="flex flex-col flex-1 p-5">
       <h3 class="font-display font-semibold text-slate-900 dark:text-white text-sm leading-snug mb-2
-                 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors line-clamp-2">
+                 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-200 line-clamp-2">
         {{ tr.title }}
       </h3>
 
@@ -76,3 +80,15 @@ const categoryIcon = computed(() => ({
   web: '🌐', automation: '🤖', ai: '🧠', mobile: '📱',
 }[props.project.category] || '🚀'));
 </script>
+
+<style scoped>
+.project-card {
+  transition:
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform  0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+}
+</style>

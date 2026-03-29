@@ -1,9 +1,9 @@
 <template>
-  <section id="contact" ref="sectionEl" class="py-24 bg-white dark:bg-[#0a0f1e] overflow-hidden">
-    <div class="max-w-6xl mx-auto px-6">
+  <section id="contact" ref="sectionEl" class="section-mesh py-16 md:py-24 bg-[#f8f9ff] dark:bg-[#0a0f1e] overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
       <!-- Header -->
-      <div class="text-center mb-14 reveal" :class="{ visible: visible }">
+      <div class="text-center mb-10 md:mb-14 reveal" :class="{ visible: visible }">
         <span class="tag text-xs mb-4 inline-flex">{{ t('contact.subtitle') }}</span>
         <h2 class="section-title mb-3">{{ t('contact.title') }}</h2>
         <p class="text-slate-500 dark:text-slate-400 text-lg max-w-md mx-auto">

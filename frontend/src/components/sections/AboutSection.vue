@@ -1,18 +1,18 @@
 <template>
-  <section id="about" ref="sectionEl" class="py-24 bg-white dark:bg-[#0a0f1e]">
-    <div class="max-w-6xl mx-auto px-6">
+  <section id="about" ref="sectionEl" class="section-mesh py-16 md:py-24 bg-[#f4f6ff] dark:bg-[#0a0f1e]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
       <!-- Header -->
-      <div class="text-center mb-16 reveal" :class="{ visible: visible }">
+      <div class="text-center mb-10 md:mb-16 reveal" :class="{ visible: visible }">
         <span class="tag text-xs mb-4 inline-flex">{{ t('about.subtitle') }}</span>
         <h2 class="section-title">{{ t('about.title') }}</h2>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
         <!-- Left: bio + links -->
         <div class="reveal reveal-delay-1" :class="{ visible: visible }">
-          <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-8">
+          <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
             {{ profile ? (locale === 'es' ? profile.bio_es : profile.bio_en) : t('about.description') }}
           </p>
 
