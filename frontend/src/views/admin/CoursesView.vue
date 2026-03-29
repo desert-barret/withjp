@@ -112,7 +112,7 @@
               </td>
             </tr>
 
-            <tr v-if="projects.length === 0">
+            <tr v-if="courses.length === 0">
               <td colspan="4" class="px-6 py-16 text-center">
                 <div class="flex flex-col items-center gap-3">
                   <div class="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-white/[0.05] flex items-center justify-center">
