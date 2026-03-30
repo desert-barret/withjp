@@ -3,7 +3,7 @@
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="scrolled
       ? 'bg-white/90 dark:bg-[#080B14] backdrop-blur-xl border-b border-slate-200/60 dark:border-white/[0.08] shadow-sm dark:shadow-black/40'
-      : 'bg-white/75 dark:bg-[#080B14]/95 backdrop-blur-md border-b border-slate-100/60 dark:border-white/[0.06]'"
+      : 'bg-white/75 dark:bg-[#080B14]/95 backdrop-blur-md border-b border-slate-100/60 dark:border-white/[0.06]'">
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
 
@@ -78,7 +78,7 @@
                  bg-white/70 dark:bg-white/[0.04]
                  transition-all duration-200"
           :aria-label="mobileOpen ? 'Cerrar menú' : 'Abrir menú'"
-          aria-expanded="mobileOpen">
+          :aria-expanded="mobileOpen">
           <svg v-if="mobileOpen" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
