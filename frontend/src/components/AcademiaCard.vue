@@ -5,13 +5,12 @@
       ? { href: item.subdomain_url, target: '_blank', rel: 'noopener noreferrer' }
       : {}"
     class="academia-card group relative flex flex-col w-full h-[320px] rounded-2xl overflow-hidden
-           select-none outline-none"
-    :class="item.subdomain_url ? 'cursor-pointer' : 'cursor-default'"
+           select-none outline-none cursor-pointer"
     :style="`--accent: ${c.mid}`">
 
     <!-- Gradient border (1 px) -->
     <div class="absolute inset-0 rounded-2xl transition-opacity duration-400"
-      :class="item.subdomain_url ? 'opacity-40 group-hover:opacity-100' : 'opacity-20'"
+      :class="item.subdomain_url ? 'opacity-50 group-hover:opacity-100' : 'opacity-25 group-hover:opacity-40'"
       :style="`background:linear-gradient(145deg,${c.from},${c.mid},${c.to})`">
       <div class="absolute inset-[1px] rounded-[15px] bg-white dark:bg-[#0d1025]" />
     </div>
@@ -84,16 +83,19 @@
       <!-- CTA -->
       <div class="flex items-center justify-between">
         <span v-if="item.subdomain_url"
-          class="flex items-center gap-1 text-[11px] font-semibold transition-all duration-300"
+          class="flex items-center gap-1.5 text-[11px] font-semibold transition-all duration-300
+                 group-hover:gap-2"
           :style="`color:${c.mid}`">
           {{ t('academia.access') }}
-          <svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform"
+          <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"
             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
           </svg>
         </span>
-        <span v-else class="text-[10px] text-slate-400 dark:text-white/25">
+        <span v-else class="text-[10px] text-slate-400 dark:text-white/25 italic">
           {{ t('academia.coming_soon') }}
         </span>
 

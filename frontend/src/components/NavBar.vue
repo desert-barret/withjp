@@ -2,8 +2,8 @@
   <header
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="scrolled
-      ? 'bg-white/85 dark:bg-[#080B14]/85 backdrop-blur-xl border-b border-slate-200/60 dark:border-white/[0.06] shadow-sm'
-      : 'bg-white/60 dark:bg-[#080B14]/60 backdrop-blur-md border-b border-transparent'"
+      ? 'bg-white/90 dark:bg-[#080B14]/95 backdrop-blur-xl border-b border-slate-200/60 dark:border-white/[0.08] shadow-sm'
+      : 'bg-white/75 dark:bg-[#080B14]/90 backdrop-blur-md border-b border-slate-100/60 dark:border-white/[0.06]'"
     style="transform:translateZ(0);-webkit-transform:translateZ(0)">
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
@@ -128,7 +128,7 @@ const mobileOpen  = ref(false);
 const navItems = [
   { href: '#about',    key: 'nav.about'    },
   { href: '#courses',  key: 'nav.courses'  },
-  { href: '#academia', key: 'nav.academia' },
+  { href: '#academy', key: 'nav.academia' },
   { href: '#contact',  key: 'nav.contact'  },
 ];
 

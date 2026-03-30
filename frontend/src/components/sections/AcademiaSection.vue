@@ -1,5 +1,5 @@
 <template>
-  <section id="academia" class="section-mesh relative pt-4 pb-12 md:pt-5 md:pb-16 bg-[#f8f9ff] dark:bg-[#080B14]">
+  <section id="academy" class="section-mesh relative pt-4 pb-12 md:pt-5 md:pb-16 bg-[#f8f9ff] dark:bg-[#080B14]">
 
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
 
