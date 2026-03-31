@@ -16,41 +16,47 @@
     </div>
 
     <!-- Banner -->
-    <div class="relative z-10 h-[140px] flex-shrink-0 flex items-center justify-center overflow-hidden"
+    <div class="relative z-10 h-[145px] flex-shrink-0 flex items-center justify-center overflow-hidden"
       :style="`background:linear-gradient(145deg,${c.bg1},${c.bg2})`">
 
-      <!-- Dot texture -->
-      <div class="absolute inset-0 opacity-[0.07]"
-        style="background-image:radial-gradient(circle,rgba(255,255,255,0.9)_1px,transparent_1px);background-size:16px_16px" />
-
-      <!-- Glow -->
-      <div class="absolute inset-0 opacity-30 group-hover:opacity-55 transition-opacity duration-400"
-        :style="`background:radial-gradient(circle at 50% 70%,${c.glow},transparent 60%)`" />
-
-      <!-- Academy image (when provided) -->
+      <!-- Image (base layer when provided) -->
       <img v-if="item.image_url"
         :src="item.image_url"
         :alt="tr.title"
-        class="absolute inset-0 w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
+        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
 
-      <!-- Icon (fallback when no image) -->
-      <span v-else class="relative text-[56px] z-10 transition-transform duration-400 ease-out
-                   group-hover:scale-110 group-hover:-translate-y-1"
+      <!-- Colour wash over image (bottom gradient) -->
+      <div v-if="item.image_url"
+        class="absolute inset-0"
+        :style="`background:linear-gradient(to top, ${c.bg1}f0 0%, ${c.bg1}80 38%, ${c.bg1}22 70%, transparent 100%)`" />
+
+      <!-- Dot texture (on top of image) -->
+      <div class="absolute inset-0 opacity-[0.06]"
+        style="background-image:radial-gradient(circle,rgba(255,255,255,0.9)_1px,transparent_1px);background-size:16px_16px" />
+
+      <!-- Atmospheric glow (on top of image) -->
+      <div class="absolute inset-0 opacity-30 group-hover:opacity-60 transition-opacity duration-400"
+        :style="`background:radial-gradient(circle at 50% 80%,${c.glow},transparent 55%)`" />
+
+      <!-- Icon (fallback — only when no image) -->
+      <span v-if="!item.image_url"
+        class="relative text-[56px] z-10 transition-transform duration-400 ease-out
+               group-hover:scale-110 group-hover:-translate-y-1"
         :style="`filter:drop-shadow(0 0 16px ${c.glow})`">
         {{ icon }}
       </span>
 
       <!-- Badge -->
       <span v-if="item.badge"
-        class="absolute top-3 right-3 px-2 py-0.5 rounded-md text-[9px] font-bold uppercase tracking-widest border"
+        class="absolute top-3 right-3 px-2 py-0.5 rounded-md text-[9px] font-bold uppercase tracking-widest border z-20"
         :style="`background:${c.badgeBg};border-color:${c.badgeBorder};color:${c.badgeText}`">
         {{ item.badge }}
       </span>
 
       <!-- Coming soon overlay -->
       <div v-if="!item.subdomain_url"
-        class="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex items-center justify-center">
+        class="absolute inset-0 bg-black/45 backdrop-blur-[2px] flex items-center justify-center z-20">
         <span class="text-[10px] font-bold uppercase tracking-widest text-white/60
                      border border-white/20 px-3 py-1 rounded-lg bg-black/20">
           {{ t('academia.coming_soon') }}
@@ -130,7 +136,7 @@ const { t: tr } = useTranslation(props.item);
 
 const icon = computed(() => ({
   ai: '🧠', web: '🌐', mobile: '📱', automation: '🤖',
-}[props.item.category] || '🎓'));
+} as Record<string, string>)[props.item.category] || '🎓');
 
 const PALETTES: Record<string, any> = {
   ai: {
@@ -179,7 +185,6 @@ const c = computed(() => PALETTES[props.item.category] ?? PALETTES.ai);
   box-shadow: 0 24px 48px -12px rgba(0,0,0,0.55);
 }
 
-/* Title accent on hover */
 .academia-card:hover .academia-card__title {
   color: var(--accent);
 }
