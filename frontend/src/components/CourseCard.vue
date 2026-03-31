@@ -10,8 +10,15 @@
                linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px);
                background-size: 24px 24px" />
 
-      <!-- Category icon -->
-      <div class="absolute inset-0 flex items-center justify-center">
+      <!-- Course image (when provided) -->
+      <img v-if="course.image_url"
+        :src="course.image_url"
+        :alt="tr.title"
+        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+
+      <!-- Category icon (fallback when no image) -->
+      <div v-else class="absolute inset-0 flex items-center justify-center">
         <span class="text-5xl opacity-25 group-hover:opacity-45 group-hover:scale-110
                      transition-all duration-500 ease-out select-none">{{ categoryIcon }}</span>
       </div>
@@ -78,7 +85,7 @@ const { t: tr } = useTranslation(props.course);
 
 const categoryIcon = computed(() => ({
   web: '🌐', automation: '🤖', ai: '🧠', mobile: '📱',
-}[props.course.category] || '🚀'));
+} as Record<string, string>)[props.course.category] || '🚀');
 </script>
 
 <style scoped>

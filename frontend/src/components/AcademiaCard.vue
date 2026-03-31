@@ -27,8 +27,15 @@
       <div class="absolute inset-0 opacity-30 group-hover:opacity-55 transition-opacity duration-400"
         :style="`background:radial-gradient(circle at 50% 70%,${c.glow},transparent 60%)`" />
 
-      <!-- Icon -->
-      <span class="relative text-[56px] z-10 transition-transform duration-400 ease-out
+      <!-- Academy image (when provided) -->
+      <img v-if="item.image_url"
+        :src="item.image_url"
+        :alt="tr.title"
+        class="absolute inset-0 w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
+      />
+
+      <!-- Icon (fallback when no image) -->
+      <span v-else class="relative text-[56px] z-10 transition-transform duration-400 ease-out
                    group-hover:scale-110 group-hover:-translate-y-1"
         :style="`filter:drop-shadow(0 0 16px ${c.glow})`">
         {{ icon }}
