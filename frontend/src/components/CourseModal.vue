@@ -6,7 +6,7 @@
 
         <Transition name="modal">
           <div v-if="course"
-            class="relative z-10 w-full sm:max-w-2xl max-h-[94vh] sm:max-h-[88vh] overflow-hidden
+            class="relative z-10 w-full sm:max-w-xl max-h-[94vh] sm:max-h-[88vh] overflow-hidden
                    bg-white dark:bg-[#0c1020]
                    rounded-t-[28px] sm:rounded-[28px]
                    border border-white/[0.08]
@@ -33,31 +33,32 @@
               <div class="absolute -bottom-16 -left-8 w-56 h-56 rounded-full blur-3xl opacity-30 pointer-events-none"
                    :style="`background: ${c.glow2}`" />
 
-              <!-- Emoji background (always) -->
-              <div class="absolute inset-0 flex items-center justify-center">
+              <!-- Emoji background (fallback) -->
+              <div v-if="!course.image_url" class="absolute inset-0 flex items-center justify-center">
                 <span class="text-[120px] opacity-10 select-none">{{ categoryIcon }}</span>
               </div>
 
-              <!-- Image as contained thumbnail (no full-bleed stretch) -->
-              <div v-if="course.image_url"
-                class="absolute inset-0 flex items-center justify-center">
-                <div class="relative h-[110px] sm:h-[130px] rounded-2xl overflow-hidden shadow-2xl
-                            ring-1 ring-white/20 transition-all duration-700"
-                     :class="imgLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'"
-                     style="aspect-ratio: 16/9">
-                  <img :src="course.image_url" :alt="tr.title"
-                    class="w-full h-full object-cover"
-                    @load="imgLoaded = true"
-                  />
-                </div>
-              </div>
+              <!-- Full-bleed image (narrower modal = image downscaled = crisp) -->
+              <img v-if="course.image_url"
+                :src="course.image_url"
+                :alt="tr.title"
+                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                :class="imgLoaded ? 'opacity-100' : 'opacity-0'"
+                @load="imgLoaded = true"
+              />
 
-              <!-- Shimmer while image loads -->
+              <!-- Overlays on image -->
+              <template v-if="course.image_url">
+                <div class="absolute inset-0"
+                  style="background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, transparent 45%, rgba(0,0,0,0.5) 100%)" />
+                <div class="absolute inset-0 opacity-40"
+                  :style="`background: linear-gradient(135deg, ${c.bg1}cc 0%, transparent 50%)`" />
+              </template>
+
+              <!-- Shimmer while loading -->
               <div v-if="course.image_url && !imgLoaded"
-                class="absolute inset-0 flex items-center justify-center">
-                <div class="h-[110px] sm:h-[130px] rounded-2xl animate-pulse bg-white/10"
-                     style="aspect-ratio: 16/9" />
-              </div>
+                class="absolute inset-0 animate-pulse"
+                :style="`background: linear-gradient(145deg, ${c.bg1}, ${c.bg2})`" />
 
               <!-- Top accent line -->
               <div class="absolute top-0 left-0 right-0 h-px"
