@@ -33,32 +33,31 @@
               <div class="absolute -bottom-16 -left-8 w-56 h-56 rounded-full blur-3xl opacity-30 pointer-events-none"
                    :style="`background: ${c.glow2}`" />
 
-              <!-- Course image -->
-              <img v-if="course.image_url"
-                :src="course.image_url"
-                :alt="tr.title"
-                class="absolute inset-0 w-full h-full object-cover transition-all duration-700"
-                :class="imgLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'"
-                @load="imgLoaded = true"
-              />
-
-              <!-- Gradient overlays on image -->
-              <template v-if="course.image_url">
-                <div class="absolute inset-0"
-                  style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, transparent 35%, rgba(0,0,0,0.65) 100%)" />
-                <div class="absolute inset-0 opacity-50"
-                  :style="`background: linear-gradient(145deg, ${c.bg1}cc, transparent 55%)`" />
-              </template>
-
-              <!-- Emoji fallback -->
-              <div v-if="!course.image_url" class="absolute inset-0 flex items-center justify-center">
+              <!-- Emoji background (always) -->
+              <div class="absolute inset-0 flex items-center justify-center">
                 <span class="text-[120px] opacity-10 select-none">{{ categoryIcon }}</span>
+              </div>
+
+              <!-- Image as contained thumbnail (no full-bleed stretch) -->
+              <div v-if="course.image_url"
+                class="absolute inset-0 flex items-center justify-center">
+                <div class="relative h-[110px] sm:h-[130px] rounded-2xl overflow-hidden shadow-2xl
+                            ring-1 ring-white/20 transition-all duration-700"
+                     :class="imgLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'"
+                     style="aspect-ratio: 16/9">
+                  <img :src="course.image_url" :alt="tr.title"
+                    class="w-full h-full object-cover"
+                    @load="imgLoaded = true"
+                  />
+                </div>
               </div>
 
               <!-- Shimmer while image loads -->
               <div v-if="course.image_url && !imgLoaded"
-                class="absolute inset-0 animate-pulse"
-                :style="`background: linear-gradient(145deg, ${c.bg1}, ${c.bg2})`" />
+                class="absolute inset-0 flex items-center justify-center">
+                <div class="h-[110px] sm:h-[130px] rounded-2xl animate-pulse bg-white/10"
+                     style="aspect-ratio: 16/9" />
+              </div>
 
               <!-- Top accent line -->
               <div class="absolute top-0 left-0 right-0 h-px"
