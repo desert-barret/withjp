@@ -6,7 +6,7 @@
 
         <Transition name="modal">
           <div v-if="course"
-            class="relative z-10 w-full sm:max-w-xl max-h-[94vh] sm:max-h-[88vh] overflow-hidden
+            class="relative z-10 w-full sm:max-w-[490px] max-h-[94vh] sm:max-h-[88vh] overflow-hidden
                    bg-white dark:bg-[#0c1020]
                    rounded-t-[28px] sm:rounded-[28px]
                    border border-white/[0.08]
@@ -18,7 +18,7 @@
             </div>
 
             <!-- ===== BANNER ===== -->
-            <div class="relative flex-shrink-0 h-40 sm:h-48 overflow-hidden"
+            <div class="relative flex-shrink-0 h-44 sm:h-60 overflow-hidden"
                  :style="`background: linear-gradient(145deg, ${c.bg1}, ${c.bg2})`">
 
               <!-- Grid texture (always) -->
@@ -181,7 +181,7 @@ const props = defineProps<{ course: any | null }>();
 defineEmits<{ close: [] }>();
 
 const { locale } = useI18n();
-const { t: tr } = useTranslation(computed(() => props.course));
+const { t: tr } = useTranslation(props.course);
 const imgLoaded = ref(false);
 
 watch(() => props.course, () => { imgLoaded.value = false; });
