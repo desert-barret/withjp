@@ -47,7 +47,7 @@
         <div ref="trackEl"
           class="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 md:mx-0 md:px-0"
           :class="isCentered ? 'justify-center' : ''"
-          style="scrollbar-width:none;-ms-overflow-style:none"
+          style="scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior-x:contain"
           @scroll="onScroll">
           <div v-for="item in items" :key="item.id"
             class="flex-shrink-0 w-[280px] snap-start">

@@ -1,12 +1,13 @@
 <template>
   <Teleport to="body">
     <Transition name="backdrop">
-      <div v-if="course" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6">
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-lg" @click="$emit('close')" />
+      <div v-if="course" class="fixed inset-0 z-[60] flex items-end sm:items-center justify-center p-0 sm:p-6">
+        <!-- Sin backdrop-blur: evita bug de compositing GPU en iOS dark mode -->
+        <div class="absolute inset-0 bg-black/80" @click="$emit('close')" />
 
         <Transition name="modal">
-          <div v-if="course"
-            class="relative z-10 w-full sm:max-w-[490px] max-h-[94vh] sm:max-h-[88vh] overflow-hidden
+          <div
+            class="relative z-10 w-full sm:max-w-[490px] max-h-[92dvh] sm:max-h-[88vh] overflow-hidden
                    bg-white dark:bg-[#0c1020]
                    rounded-t-[28px] sm:rounded-[28px]
                    border border-white/[0.08]
@@ -92,7 +93,7 @@
             </div>
 
             <!-- ===== CONTENT ===== -->
-            <div class="overflow-y-auto flex-1">
+            <div class="overflow-y-auto flex-1 overscroll-contain">
               <div class="px-6 py-5">
 
                 <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-5">
@@ -168,7 +169,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue';
+import { ref, computed, watch, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useTranslation } from '@/composables/useTranslation';
 
@@ -179,7 +180,13 @@ const { locale } = useI18n();
 const { t: tr } = useTranslation(computed(() => props.course));
 const imgLoaded = ref(false);
 
-watch(() => props.course, () => { imgLoaded.value = false; });
+// Body scroll lock: evita que la página de fondo se mueva mientras el modal está abierto
+watch(() => props.course, (val) => {
+  imgLoaded.value = false;
+  document.body.style.overflow = val ? 'hidden' : '';
+});
+
+onUnmounted(() => { document.body.style.overflow = ''; });
 
 const categoryIcon = computed(() => ({
   web: '🌐', automation: '🤖', ai: '🧠', mobile: '📱',
@@ -240,16 +247,22 @@ const learnings = computed(() => {
 </script>
 
 <style scoped>
-.backdrop-enter-active, .backdrop-leave-active { transition: opacity 0.3s ease; }
-.backdrop-enter-from, .backdrop-leave-to       { opacity: 0; }
+/* Backdrop */
+.backdrop-enter-active { transition: opacity 0.22s ease; }
+.backdrop-leave-active { transition: opacity 0.18s ease; }
+.backdrop-enter-from, .backdrop-leave-to { opacity: 0; }
 
-.modal-enter-active { transition: all 0.45s cubic-bezier(0.34, 1.4, 0.64, 1); }
-.modal-leave-active { transition: all 0.22s cubic-bezier(0.4, 0, 1, 1); }
-.modal-enter-from   { opacity: 0; transform: translateY(48px) scale(0.96); }
-.modal-leave-to     { opacity: 0; transform: translateY(24px) scale(0.98); }
+/* Modal card — desktop: fade + sube suavemente, sin overshoot */
+.modal-enter-active { transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease; }
+.modal-leave-active { transition: transform 0.18s ease-in, opacity 0.15s ease; }
+.modal-enter-from   { opacity: 0; transform: translateY(20px) scale(0.97); }
+.modal-leave-to     { opacity: 0; transform: translateY(10px) scale(0.98); }
 
+/* Móvil: bottom sheet — solo desliza Y, opacity siempre 1 para evitar glitch */
 @media (max-width: 640px) {
-  .modal-enter-from,
-  .modal-leave-to { transform: translateY(100%); }
+  .modal-enter-active { transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1); }
+  .modal-leave-active { transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1); }
+  .modal-enter-from { opacity: 1; transform: translateY(100%); }
+  .modal-leave-to   { opacity: 1; transform: translateY(100%); }
 }
 </style>
