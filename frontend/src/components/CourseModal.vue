@@ -181,7 +181,7 @@ const props = defineProps<{ course: any | null }>();
 defineEmits<{ close: [] }>();
 
 const { locale } = useI18n();
-const { t: tr } = useTranslation(props.course);
+const { t: tr } = useTranslation(computed(() => props.course));
 const imgLoaded = ref(false);
 
 watch(() => props.course, () => { imgLoaded.value = false; });

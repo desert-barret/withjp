@@ -1,4 +1,4 @@
-import { computed } from 'vue';
+import { computed, toValue, type MaybeRefOrGetter } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 export interface Translation {
@@ -12,11 +12,11 @@ export interface Translatable {
   translations?: Translation[];
 }
 
-export function useTranslation(item: Translatable | null | undefined) {
+export function useTranslation(item: MaybeRefOrGetter<Translatable | null | undefined>) {
   const { locale } = useI18n();
 
   const t = computed<Translation>(() => {
-    const list = item?.translations ?? [];
+    const list = toValue(item)?.translations ?? [];
     return (
       list.find((t) => t.locale === locale.value) ||
       list.find((t) => t.locale === 'es') ||
