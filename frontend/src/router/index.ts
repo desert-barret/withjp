@@ -65,19 +65,22 @@ const router = createRouter({
   ],
 });
 
-router.beforeEach((to, _from, next) => {
+router.beforeEach(async (to) => {
   const auth = useAuthStore();
 
   if (to.meta.title) {
     document.title = to.meta.title as string;
   }
 
-  if (to.meta.requiresAuth && !auth.isAuthenticated) {
-    next({ name: 'AdminLogin' });
+  if (to.meta.requiresAuth) {
+    if (!auth.isAuthenticated) return { name: 'AdminLogin' };
+    // On cold start, validate that the stored token is still accepted by the server
+    if (!auth.user) {
+      await auth.fetchMe();
+      if (!auth.isAuthenticated) return { name: 'AdminLogin' };
+    }
   } else if (to.meta.guestOnly && auth.isAuthenticated) {
-    next({ name: 'Dashboard' });
-  } else {
-    next();
+    return { name: 'Dashboard' };
   }
 });
 

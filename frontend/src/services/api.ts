@@ -11,12 +11,26 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
+let isHandling401 = false;
+
 api.interceptors.response.use(
   (res) => res,
-  (err) => {
-    if (err.response?.status === 401) {
+  async (err) => {
+    if (err.response?.status === 401 && !isHandling401) {
+      isHandling401 = true;
       localStorage.removeItem('withjp_token');
-      window.location.href = '/admin/login';
+      try {
+        const [{ useAuthStore }, { default: router }] = await Promise.all([
+          import('@/stores/auth'),
+          import('@/router'),
+        ]);
+        useAuthStore().logout();
+        if (router.currentRoute.value.name !== 'AdminLogin') {
+          router.push({ name: 'AdminLogin' });
+        }
+      } finally {
+        isHandling401 = false;
+      }
     }
     return Promise.reject(err);
   },
