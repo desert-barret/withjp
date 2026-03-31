@@ -18,7 +18,7 @@
             </div>
 
             <!-- ===== BANNER ===== -->
-            <div class="relative flex-shrink-0 h-56 sm:h-64 overflow-hidden"
+            <div class="relative flex-shrink-0 h-40 sm:h-48 overflow-hidden"
                  :style="`background: linear-gradient(145deg, ${c.bg1}, ${c.bg2})`">
 
               <!-- Grid texture (always) -->
