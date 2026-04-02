@@ -118,10 +118,10 @@
 </template>
 
 <script setup lang="ts">
+import { useReveal } from '@/composables/useReveal';
+import { useProfileStore } from '@/stores/profile';
 import { computed, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useProfileStore } from '@/stores/profile';
-import { useReveal } from '@/composables/useReveal';
 
 const { t, locale } = useI18n();
 
@@ -132,7 +132,7 @@ const contactEmail = computed(() => profileStore.profile?.email || 'info@withjp.
 
 // WhatsApp: update WHATSAPP_NUMBER with your international number (no + or spaces)
 // Example: '593987654321' for Ecuador +593 987 654 321
-const WHATSAPP_NUMBER = '593';
+const WHATSAPP_NUMBER = '593986603811';
 const whatsappUrl = computed(() => {
   const msg = encodeURIComponent(locale.value === 'es'
     ? 'Hola JP, quiero saber más sobre tus servicios de automatización.'
