@@ -19,6 +19,12 @@ const router = createRouter({
           component: () => import('@/views/HomeView.vue'),
           meta: { title: 'Juan Pablo Guaman | withjp.ai' },
         },
+        {
+          path: 'whatsapp-automation',
+          name: 'WhatsAppAutomation',
+          component: () => import('@/views/WhatsAppAutomationView.vue'),
+          meta: { title: 'WhatsApp Automation Policy | withjp.ai' },
+        },
       ],
     },
     {

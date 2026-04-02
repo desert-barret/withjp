@@ -2,6 +2,8 @@ export default {
   nav: {
     home: 'Inicio',
     about: 'Sobre mí',
+    services: 'Servicios',
+    how_i_work: 'Cómo trabajo',
     courses: 'Cursos',
     academia: 'Academia',
     contact: 'Contacto',
@@ -10,16 +12,91 @@ export default {
   hero: {
     greeting: 'Hola, soy',
     title: 'Juan Pablo Guaman',
-    role: 'Full Stack Developer & Creador de Contenido',
-    description: 'Construyo productos digitales modernos y comparto conocimiento sobre desarrollo web, automatización e inteligencia artificial.',
-    cta_courses: 'Ver Cursos',
-    cta_contact: 'Contactarme',
-    available: 'Disponible para proyectos',
+    role: 'Desarrollador de Software',
+    description: 'Desarrollo bots con IA, automatizo procesos y construyo integraciones backend para empresas que quieren operar mejor.',
+    cta_services: 'Ver Servicios',
+    cta_contact: 'Contáctame',
+    available: 'Disponible para nuevos proyectos',
+  },
+  services: {
+    tag: 'Qué hago',
+    title: 'Servicios',
+    subtitle: 'Soluciones técnicas concretas para negocios reales',
+    bot: {
+      title: 'Bots con IA',
+      description: 'Desarrollo bots conversacionales que entienden lenguaje natural, responden preguntas frecuentes y automatizan tareas repetitivas dentro de tu operación.',
+    },
+    whatsapp: {
+      title: 'Automatización de WhatsApp',
+      description: 'Integro WhatsApp Business API para enviar notificaciones, gestionar conversaciones y atender clientes automáticamente, respetando las políticas de Meta.',
+    },
+    api: {
+      title: 'Integraciones y APIs',
+      description: 'Conecto tus sistemas internos con servicios externos mediante APIs y microservicios robustos. NestJS, FastAPI o lo que mejor se adapte a tu stack.',
+    },
+    custom: {
+      title: 'Software a medida',
+      description: 'Diseño y desarrollo soluciones completas adaptadas a tu negocio: desde la base de datos hasta la interfaz de usuario, pensadas para escalar.',
+    },
+  },
+  use_cases: {
+    tag: 'Casos de uso',
+    title: 'Cómo lo usan mis clientes',
+    subtitle: 'Ejemplos reales de lo que puedes automatizar o construir',
+    items: {
+      whatsapp_support: {
+        title: 'Atención automática por WhatsApp',
+        description: 'El bot responde preguntas frecuentes, califica prospectos y escala al equipo humano cuando es necesario, todo sin intervención manual.',
+      },
+      notifications: {
+        title: 'Notificaciones automáticas',
+        description: 'Confirmaciones de pedidos, recordatorios de citas o alertas de pago enviadas directamente al WhatsApp o email del cliente.',
+      },
+      lead_qualification: {
+        title: 'Calificación automática de leads',
+        description: 'El bot hace las preguntas clave, filtra contactos y entrega solo los prospectos calificados a tu equipo de ventas.',
+      },
+      integrations: {
+        title: 'Integración con sistemas internos',
+        description: 'Conexión con tu CRM, ERP, base de datos o cualquier plataforma externa mediante APIs REST o webhooks.',
+      },
+      admin_panel: {
+        title: 'Panel de administración personalizado',
+        description: 'Dashboard a medida para gestionar tu operación: clientes, pedidos, reportes o lo que tu equipo necesite ver en tiempo real.',
+      },
+      ai_assistant: {
+        title: 'Asistente con IA para tu equipo',
+        description: 'Herramienta interna que responde preguntas sobre tus procesos, documentos o datos usando modelos de lenguaje como GPT o Claude.',
+      },
+    },
+  },
+  how_i_work: {
+    tag: 'Proceso',
+    title: 'Cómo trabajo',
+    subtitle: 'Sin burocracia. Directo al punto.',
+    steps: {
+      discovery: {
+        title: 'Entiendo tu necesidad',
+        description: 'Hablamos de tu problema, tu contexto y lo que quieres lograr. Sin tecnicismos innecesarios.',
+      },
+      proposal: {
+        title: 'Propongo una solución',
+        description: 'Te presento un plan claro: qué voy a construir, cómo lo voy a hacer y cuánto te va a costar.',
+      },
+      development: {
+        title: 'Desarrollo e implemento',
+        description: 'Construyo la solución y la integro en tu entorno real. Te mantengo informado en cada etapa.',
+      },
+      delivery: {
+        title: 'Entrega y soporte',
+        description: 'Te acompaño en el lanzamiento y resuelvo cualquier duda post-entrega. El objetivo es que funcione, no solo que se vea bien.',
+      },
+    },
   },
   about: {
     title: 'Sobre Mí',
-    subtitle: 'Desarrollador apasionado por la tecnología',
-    description: 'Soy un desarrollador full stack con experiencia en tecnologías modernas. Me especializo en crear soluciones escalables y compartir conocimiento a través de cursos y contenido digital.',
+    subtitle: 'Desarrollador de software enfocado en resultados',
+    description: 'Soy desarrollador full stack con más de 10 años de experiencia. Me especializo en automatización de procesos, bots con IA e integración de sistemas. También creo cursos técnicos: más de 25.000 estudiantes han aprendido conmigo en Udemy y YouTube.',
     skills_title: 'Habilidades',
     tech_title: 'Tecnologías',
     experience: 'Años de experiencia',
@@ -53,12 +130,16 @@ export default {
   },
   contact: {
     title: 'Contacto',
-    subtitle: '¿Tienes un proyecto en mente?',
-    description: 'Estoy disponible para proyectos freelance, consultoría y colaboraciones.',
+    subtitle: '¿Hablamos?',
+    description: 'Cuéntame tu proyecto. Respondo en menos de 24 horas.',
+    cta_banner_title: '¿Tienes un proyecto en mente?',
+    cta_banner_subtitle: 'Cuéntame qué necesitas y lo resolvemos juntos.',
+    cta_button: 'Escríbeme',
     email: 'Correo',
     linkedin: 'LinkedIn',
     github: 'GitHub',
     youtube: 'YouTube',
+    whatsapp: 'WhatsApp',
   },
   footer: {
     rights: 'Todos los derechos reservados',
@@ -66,6 +147,7 @@ export default {
     by: 'por',
     terms: 'Términos y Condiciones',
     privacy: 'Política de Privacidad',
+    whatsapp_policy: 'Política de WhatsApp',
   },
   admin: {
     login: 'Iniciar Sesión',

@@ -1,6 +1,9 @@
 <template>
   <div>
     <HeroSection />
+    <ServicesSection />
+    <UseCasesSection />
+    <HowIWorkSection />
     <AboutSection />
     <CoursesSection />
 
@@ -52,6 +55,9 @@
 
 <script setup lang="ts">
 import HeroSection from '@/components/sections/HeroSection.vue';
+import ServicesSection from '@/components/sections/ServicesSection.vue';
+import UseCasesSection from '@/components/sections/UseCasesSection.vue';
+import HowIWorkSection from '@/components/sections/HowIWorkSection.vue';
 import AboutSection from '@/components/sections/AboutSection.vue';
 import CoursesSection from '@/components/sections/CoursesSection.vue';
 import AcademiaSection from '@/components/sections/AcademiaSection.vue';

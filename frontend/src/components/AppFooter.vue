@@ -19,10 +19,10 @@
         <div>
           <h4 class="font-semibold text-slate-900 dark:text-white mb-4">Links</h4>
           <div class="space-y-2">
-            <a href="#about" class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.about') }}</a>
-            <a href="#courses"  class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.courses') }}</a>
-            <a href="#academy" class="block text-sm text-slate-600 dark:text-slate-400 hover:text-violet-500 dark:hover:text-violet-400 transition-colors">{{ t('nav.academia') }}</a>
-            <a href="#contact"  class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.contact') }}</a>
+            <a href="#services"   class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.services') }}</a>
+            <a href="#about"      class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.about') }}</a>
+            <a href="#courses"    class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.courses') }}</a>
+            <a href="#contact"    class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.contact') }}</a>
           </div>
         </div>
 
@@ -59,6 +59,10 @@
             <a href="/privacidad.html" class="text-sm text-slate-400 dark:text-slate-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
               {{ t('footer.privacy') }}
             </a>
+            <span class="text-slate-300 dark:text-slate-700">·</span>
+            <router-link to="/whatsapp-automation" class="text-sm text-slate-400 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              {{ t('footer.whatsapp_policy') }}
+            </router-link>
           </div>
         </div>
         <p class="text-sm text-slate-500 dark:text-slate-500 flex items-center gap-1">

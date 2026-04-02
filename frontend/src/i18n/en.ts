@@ -2,6 +2,8 @@ export default {
   nav: {
     home: 'Home',
     about: 'About',
+    services: 'Services',
+    how_i_work: 'How I work',
     courses: 'Courses',
     academia: 'Academy',
     contact: 'Contact',
@@ -10,16 +12,91 @@ export default {
   hero: {
     greeting: "Hi, I'm",
     title: 'Juan Pablo Guaman',
-    role: 'Full Stack Developer & Content Creator',
-    description: 'I build modern digital products and share knowledge about web development, automation, and artificial intelligence.',
-    cta_courses: 'View Courses',
+    role: 'Software Developer',
+    description: 'I build AI-powered bots, automate business processes, and develop backend integrations for companies that want to operate smarter.',
+    cta_services: 'View Services',
     cta_contact: 'Contact Me',
-    available: 'Available for projects',
+    available: 'Available for new projects',
+  },
+  services: {
+    tag: 'What I do',
+    title: 'Services',
+    subtitle: 'Concrete technical solutions for real businesses',
+    bot: {
+      title: 'AI-Powered Bots',
+      description: 'I build conversational bots that understand natural language, answer common questions, and automate repetitive tasks inside your operation.',
+    },
+    whatsapp: {
+      title: 'WhatsApp Automation',
+      description: 'I integrate the WhatsApp Business API to send notifications, manage conversations, and handle customer support automatically — fully compliant with Meta policies.',
+    },
+    api: {
+      title: 'Integrations & APIs',
+      description: 'I connect your internal systems with external services through robust APIs and microservices. NestJS, FastAPI, or whatever fits your stack.',
+    },
+    custom: {
+      title: 'Custom Software',
+      description: 'I design and build complete solutions tailored to your business — from the database to the user interface, built to scale.',
+    },
+  },
+  use_cases: {
+    tag: 'Use cases',
+    title: 'How my clients use it',
+    subtitle: 'Real examples of what you can automate or build',
+    items: {
+      whatsapp_support: {
+        title: 'Automated WhatsApp Support',
+        description: 'The bot answers FAQs, qualifies leads, and escalates to a human agent when needed — all without manual intervention.',
+      },
+      notifications: {
+        title: 'Automated Notifications',
+        description: 'Order confirmations, appointment reminders, or payment alerts sent directly to your customer\'s WhatsApp or email.',
+      },
+      lead_qualification: {
+        title: 'Automatic Lead Qualification',
+        description: 'The bot asks the right questions, filters contacts, and delivers only qualified prospects to your sales team.',
+      },
+      integrations: {
+        title: 'Internal System Integration',
+        description: 'Connect your CRM, ERP, database, or any external platform through REST APIs or webhooks.',
+      },
+      admin_panel: {
+        title: 'Custom Admin Panel',
+        description: 'A tailored dashboard to manage your operation: customers, orders, reports — whatever your team needs to see in real time.',
+      },
+      ai_assistant: {
+        title: 'AI Assistant for Your Team',
+        description: 'An internal tool that answers questions about your processes, documents, or data using language models like GPT or Claude.',
+      },
+    },
+  },
+  how_i_work: {
+    tag: 'Process',
+    title: 'How I work',
+    subtitle: 'No bureaucracy. Straight to the point.',
+    steps: {
+      discovery: {
+        title: 'I understand your need',
+        description: 'We talk about your problem, your context, and what you want to achieve. No unnecessary jargon.',
+      },
+      proposal: {
+        title: 'I propose a solution',
+        description: 'I present a clear plan: what I\'ll build, how I\'ll do it, and what it will cost.',
+      },
+      development: {
+        title: 'I develop and implement',
+        description: 'I build the solution and integrate it into your real environment. I keep you informed at every stage.',
+      },
+      delivery: {
+        title: 'Delivery and support',
+        description: 'I support you through launch and answer any post-delivery questions. The goal is for it to work, not just look good.',
+      },
+    },
   },
   about: {
     title: 'About Me',
-    subtitle: 'Developer passionate about technology',
-    description: "I'm a full stack developer with experience in modern technologies. I specialize in building scalable solutions and sharing knowledge through courses and digital content.",
+    subtitle: 'Software developer focused on results',
+    description: "I'm a full stack developer with over 10 years of experience. I specialize in process automation, AI bots, and system integrations. I also create technical courses — more than 25,000 students have learned with me on Udemy and YouTube.",
     skills_title: 'Skills',
     tech_title: 'Technologies',
     experience: 'Years of experience',
@@ -53,12 +130,16 @@ export default {
   },
   contact: {
     title: 'Contact',
-    subtitle: 'Got a project in mind?',
-    description: "I'm available for freelance projects, consulting, and collaborations.",
+    subtitle: "Let's talk",
+    description: 'Tell me about your project. I respond in under 24 hours.',
+    cta_banner_title: 'Got a project in mind?',
+    cta_banner_subtitle: "Tell me what you need and we'll figure it out together.",
+    cta_button: 'Write to me',
     email: 'Email',
     linkedin: 'LinkedIn',
     github: 'GitHub',
     youtube: 'YouTube',
+    whatsapp: 'WhatsApp',
   },
   footer: {
     rights: 'All rights reserved',
@@ -66,6 +147,7 @@ export default {
     by: 'by',
     terms: 'Terms & Conditions',
     privacy: 'Privacy Policy',
+    whatsapp_policy: 'WhatsApp Policy',
   },
   admin: {
     login: 'Login',

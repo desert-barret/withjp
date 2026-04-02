@@ -119,9 +119,9 @@
 
           <!-- CTAs -->
           <div class="hero-enter-4 flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-12">
-            <a href="#courses" class="btn-primary btn-glow text-base px-7 py-3.5 inline-flex items-center justify-center gap-2">
+            <a href="#services" class="btn-primary btn-glow text-base px-7 py-3.5 inline-flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"/></svg>
-              {{ t('hero.cta_courses') }}
+              {{ t('hero.cta_services') }}
             </a>
             <a href="#contact" class="btn-secondary text-base px-7 py-3.5 inline-flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -285,8 +285,8 @@ watch(
 const stack = ['Vue 3', 'NestJS', 'TypeScript', 'Python', 'Docker'];
 
 const roles = computed(() => locale.value === 'es'
-  ? ['Full Stack Developer', 'Ingeniero en Sistemas', 'Creador de Contenido', 'Automation Engineer']
-  : ['Full Stack Developer', 'Systems Engineer', 'Content Creator', 'Automation Engineer']
+  ? ['Desarrollador de Software', 'Automatización con IA', 'WhatsApp Business', 'Integraciones Backend']
+  : ['Software Developer', 'AI Automation', 'WhatsApp Business', 'Backend Integrations']
 );
 const roleIndex = ref(0);
 let roleTimer: ReturnType<typeof setInterval>;
