@@ -64,6 +64,8 @@ export default {
     rights: 'Todos los derechos reservados',
     made_with: 'Hecho con',
     by: 'por',
+    terms: 'Términos y Condiciones',
+    privacy: 'Política de Privacidad',
   },
   admin: {
     login: 'Iniciar Sesión',

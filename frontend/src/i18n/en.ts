@@ -64,6 +64,8 @@ export default {
     rights: 'All rights reserved',
     made_with: 'Made with',
     by: 'by',
+    terms: 'Terms & Conditions',
+    privacy: 'Privacy Policy',
   },
   admin: {
     login: 'Login',

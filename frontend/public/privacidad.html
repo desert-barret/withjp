@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad / Privacy Policy — withjp.ai</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f9ff;
+      --surface: #ffffff;
+      --border: rgba(99,102,241,0.12);
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --indigo: #6366f1;
+      --indigo-dark: #4f46e5;
+      --cyan: #22d3ee;
+      --shadow: 0 2px 8px rgba(0,0,0,0.04), 0 8px 32px rgba(99,102,241,0.07);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #080b14;
+        --surface: rgba(255,255,255,0.03);
+        --border: rgba(99,102,241,0.15);
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --shadow: 0 2px 8px rgba(0,0,0,0.3), 0 8px 32px rgba(99,102,241,0.1);
+      }
+    }
+
+    html[data-theme="dark"] {
+      --bg: #080b14;
+      --surface: rgba(255,255,255,0.03);
+      --border: rgba(99,102,241,0.15);
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --shadow: 0 2px 8px rgba(0,0,0,0.3), 0 8px 32px rgba(99,102,241,0.1);
+    }
+
+    html[data-theme="light"] {
+      --bg: #f8f9ff;
+      --surface: #ffffff;
+      --border: rgba(99,102,241,0.12);
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --shadow: 0 2px 8px rgba(0,0,0,0.04), 0 8px 32px rgba(99,102,241,0.07);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      min-height: 100vh;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(99,102,241,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(34,211,238,0.05) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-weight: 700;
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #6366f1, #22d3ee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .logo-accent { color: var(--indigo); }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      font-size: 0.85rem;
+    }
+
+    .btn-icon:hover {
+      background: rgba(99,102,241,0.08);
+      color: var(--indigo);
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .lang-btn {
+      padding: 0 0.75rem;
+      width: auto;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-family: 'Inter', sans-serif;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .page-header {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(34,211,238,0.1);
+      border: 1px solid rgba(34,211,238,0.25);
+      color: #0891b2;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    html[data-theme="dark"] .page-badge {
+      color: var(--cyan);
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #22d3ee 0%, #818cf8 50%, #6366f1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-meta {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #22d3ee, #6366f1);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    ul li {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+      padding: 0.3rem 0 0.3rem 1.5rem;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #22d3ee, #6366f1);
+    }
+
+    .highlight-box {
+      background: rgba(34,211,238,0.06);
+      border: 1px solid rgba(34,211,238,0.2);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-top: 0.75rem;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 0.875rem;
+    }
+
+    .contact-link {
+      color: var(--indigo);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-link:hover { text-decoration: underline; }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .footer-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--indigo); }
+
+    .footer-copy {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    [data-lang] { display: none; }
+    body[data-active-lang="es"] [data-lang="es"] { display: block; }
+    body[data-active-lang="en"] [data-lang="en"] { display: block; }
+
+    @media (max-width: 640px) {
+      .section { padding: 1.25rem 1.25rem; }
+      main { padding: 2rem 1rem 4rem; }
+    }
+  </style>
+</head>
+<body data-active-lang="es">
+
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-icon">JP</div>
+        <span>withjp<span class="logo-accent">.ai</span></span>
+      </a>
+      <div class="header-controls">
+        <button class="btn-icon lang-btn" onclick="toggleLang()" id="lang-toggle" aria-label="Switch language">EN</button>
+        <button class="btn-icon" onclick="toggleTheme()" id="theme-toggle" aria-label="Toggle theme">
+          <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page header ES -->
+    <div class="page-header" data-lang="es">
+      <div class="page-badge">Legal</div>
+      <h1>Política de Privacidad</h1>
+      <p class="page-meta">Última actualización: 2 de abril de 2025 &nbsp;·&nbsp; withjp.ai</p>
+    </div>
+
+    <!-- Page header EN -->
+    <div class="page-header" data-lang="en">
+      <div class="page-badge">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="page-meta">Last updated: April 2, 2025 &nbsp;·&nbsp; withjp.ai</p>
+    </div>
+
+    <!-- ── ESPAÑOL ─────────────────────────────────────────── -->
+    <div data-lang="es">
+
+      <div class="section">
+        <h2><span class="num">1</span> Datos que Recopilamos</h2>
+        <p>Cuando interactúas con withjp.ai o con el bot de WhatsApp, podemos recopilar los siguientes datos personales:</p>
+        <ul>
+          <li><strong>Nombre</strong>: para personalizar la comunicación.</li>
+          <li><strong>Número de teléfono</strong>: cuando el contacto se realiza vía WhatsApp.</li>
+          <li><strong>Correo electrónico</strong>: si lo proporcionas voluntariamente a través del formulario de contacto.</li>
+          <li><strong>Contenido de los mensajes</strong>: preguntas, solicitudes e información compartida durante la interacción.</li>
+          <li><strong>Datos de navegación</strong>: dirección IP, tipo de navegador y páginas visitadas (a través de herramientas de análisis anónimas).</li>
+        </ul>
+        <div class="highlight-box">
+          <p>No recopilamos datos sensibles como contraseñas, información financiera o documentos de identidad.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">2</span> Cómo Usamos tus Datos</h2>
+        <p>La información recopilada se utiliza exclusivamente para:</p>
+        <ul>
+          <li>Responder a tus consultas y solicitudes de asesoría.</li>
+          <li>Coordinar y gestionar sesiones de consultoría o proyectos freelance.</li>
+          <li>Mejorar la experiencia de usuario y los servicios ofrecidos.</li>
+          <li>Enviar información relevante sobre cursos, servicios o novedades, solo si has dado tu consentimiento.</li>
+        </ul>
+        <p>No utilizamos tus datos para tomar decisiones automatizadas ni para perfilado comercial masivo.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">3</span> Almacenamiento y Protección</h2>
+        <p>Los datos se almacenan en servidores seguros con acceso restringido. Aplicamos medidas técnicas razonables para proteger la información contra accesos no autorizados, pérdida o alteración.</p>
+        <p>Los mensajes intercambiados a través de WhatsApp están sujetos también a la <a href="https://www.whatsapp.com/legal/privacy-policy" class="contact-link" target="_blank" rel="noopener">Política de Privacidad de WhatsApp / Meta</a>.</p>
+        <p>Conservamos los datos únicamente durante el tiempo necesario para los fines descritos o mientras la relación de servicio esté activa.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">4</span> Compartición de Datos</h2>
+        <p><strong>No vendemos, alquilamos ni compartimos</strong> tu información personal con terceros con fines comerciales.</p>
+        <p>Podríamos compartir datos únicamente en las siguientes circunstancias excepcionales:</p>
+        <ul>
+          <li>Cumplimiento de una obligación legal o requerimiento judicial.</li>
+          <li>Con proveedores de servicios tecnológicos estrictamente necesarios para operar el sitio (ej. hosting, análisis), bajo acuerdos de confidencialidad.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">5</span> Cookies y Seguimiento</h2>
+        <p>Este sitio puede utilizar cookies técnicas necesarias para su funcionamiento (sesión, preferencias de idioma y tema). No utilizamos cookies de seguimiento publicitario de terceros.</p>
+        <p>Puedes configurar tu navegador para rechazar cookies, aunque esto podría afectar algunas funcionalidades del sitio.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">6</span> Tus Derechos</h2>
+        <p>De acuerdo con la normativa de protección de datos aplicable, tienes derecho a:</p>
+        <ul>
+          <li><strong>Acceder</strong> a los datos personales que tenemos sobre ti.</li>
+          <li><strong>Rectificar</strong> información incorrecta o desactualizada.</li>
+          <li><strong>Solicitar la eliminación</strong> de tus datos cuando ya no sean necesarios.</li>
+          <li><strong>Oponerte</strong> al tratamiento de tus datos para fines de comunicación.</li>
+          <li><strong>Retirar tu consentimiento</strong> en cualquier momento sin que ello afecte la licitud del tratamiento previo.</li>
+        </ul>
+        <p>Para ejercer cualquiera de estos derechos, contacta a: <a href="mailto:hola@withjp.ai" class="contact-link">hola@withjp.ai</a></p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">7</span> Cambios en esta Política</h2>
+        <p>Nos reservamos el derecho de actualizar esta Política de Privacidad cuando sea necesario. La fecha de la última actualización siempre estará indicada al inicio de esta página. Te recomendamos revisarla periódicamente.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">8</span> Contacto</h2>
+        <p>Para consultas sobre privacidad o ejercicio de derechos:</p>
+        <p>
+          Correo electrónico: <a href="mailto:hola@withjp.ai" class="contact-link">hola@withjp.ai</a><br />
+          Responsable: Juan Pablo Guamán Rodríguez — withjp.ai
+        </p>
+      </div>
+
+    </div><!-- /es -->
+
+    <!-- ── ENGLISH ─────────────────────────────────────────── -->
+    <div data-lang="en">
+
+      <div class="section">
+        <h2><span class="num">1</span> Data We Collect</h2>
+        <p>When you interact with withjp.ai or the WhatsApp bot, we may collect the following personal data:</p>
+        <ul>
+          <li><strong>Name</strong>: to personalize communication.</li>
+          <li><strong>Phone number</strong>: when contact is made via WhatsApp.</li>
+          <li><strong>Email address</strong>: if voluntarily provided through the contact form.</li>
+          <li><strong>Message content</strong>: questions, requests, and information shared during interaction.</li>
+          <li><strong>Browsing data</strong>: IP address, browser type, and pages visited (via anonymous analytics tools).</li>
+        </ul>
+        <div class="highlight-box">
+          <p>We do not collect sensitive data such as passwords, financial information, or identity documents.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">2</span> How We Use Your Data</h2>
+        <p>Collected information is used exclusively to:</p>
+        <ul>
+          <li>Respond to your inquiries and advisory requests.</li>
+          <li>Coordinate and manage consulting sessions or freelance projects.</li>
+          <li>Improve user experience and services offered.</li>
+          <li>Send relevant information about courses, services, or updates, only with your consent.</li>
+        </ul>
+        <p>We do not use your data for automated decision-making or mass commercial profiling.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">3</span> Storage and Protection</h2>
+        <p>Data is stored on secure servers with restricted access. We apply reasonable technical measures to protect information against unauthorized access, loss, or alteration.</p>
+        <p>Messages exchanged through WhatsApp are also subject to <a href="https://www.whatsapp.com/legal/privacy-policy" class="contact-link" target="_blank" rel="noopener">WhatsApp / Meta's Privacy Policy</a>.</p>
+        <p>We retain data only as long as necessary for the described purposes or while the service relationship is active.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">4</span> Data Sharing</h2>
+        <p><strong>We do not sell, rent, or share</strong> your personal information with third parties for commercial purposes.</p>
+        <p>Data may be shared only in the following exceptional circumstances:</p>
+        <ul>
+          <li>Compliance with a legal obligation or court order.</li>
+          <li>With technology service providers strictly necessary to operate the site (e.g. hosting, analytics), under confidentiality agreements.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">5</span> Cookies and Tracking</h2>
+        <p>This site may use technical cookies necessary for its operation (session, language and theme preferences). We do not use third-party advertising tracking cookies.</p>
+        <p>You can configure your browser to reject cookies, although this may affect some site functionality.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">6</span> Your Rights</h2>
+        <p>In accordance with applicable data protection regulations, you have the right to:</p>
+        <ul>
+          <li><strong>Access</strong> the personal data we hold about you.</li>
+          <li><strong>Rectify</strong> incorrect or outdated information.</li>
+          <li><strong>Request deletion</strong> of your data when no longer necessary.</li>
+          <li><strong>Object</strong> to the processing of your data for communication purposes.</li>
+          <li><strong>Withdraw your consent</strong> at any time without affecting the lawfulness of prior processing.</li>
+        </ul>
+        <p>To exercise any of these rights, contact: <a href="mailto:hola@withjp.ai" class="contact-link">hola@withjp.ai</a></p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">7</span> Changes to This Policy</h2>
+        <p>We reserve the right to update this Privacy Policy when necessary. The date of the last update will always be indicated at the top of this page. We recommend reviewing it periodically.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">8</span> Contact</h2>
+        <p>For privacy inquiries or to exercise your rights:</p>
+        <p>
+          Email: <a href="mailto:hola@withjp.ai" class="contact-link">hola@withjp.ai</a><br />
+          Controller: Juan Pablo Guamán Rodríguez — withjp.ai
+        </p>
+      </div>
+
+    </div><!-- /en -->
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/">← withjp.ai</a>
+        <a href="/terminos.html" data-lang="es">Términos y Condiciones</a>
+        <a href="/terminos.html" data-lang="en">Terms &amp; Conditions</a>
+      </div>
+      <span class="footer-copy">© <span id="year"></span> Juan Pablo Guamán</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function() {
+      const stored = localStorage.getItem('withjp_theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = stored === 'dark' || (!stored && prefersDark);
+      if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.getElementById('icon-sun').style.display = '';
+        document.getElementById('icon-moon').style.display = 'none';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+
+    function toggleTheme() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('withjp_theme', next);
+      document.getElementById('icon-sun').style.display = next === 'light' ? '' : 'none';
+      document.getElementById('icon-moon').style.display = next === 'dark' ? '' : 'none';
+    }
+
+    (function() {
+      const stored = localStorage.getItem('withjp_locale');
+      const lang = stored === 'en' ? 'en' : 'es';
+      document.body.setAttribute('data-active-lang', lang);
+      document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
+      document.documentElement.lang = lang;
+    })();
+
+    function toggleLang() {
+      const current = document.body.getAttribute('data-active-lang');
+      const next = current === 'es' ? 'en' : 'es';
+      document.body.setAttribute('data-active-lang', next);
+      document.getElementById('lang-toggle').textContent = next === 'es' ? 'EN' : 'ES';
+      document.documentElement.lang = next;
+      localStorage.setItem('withjp_locale', next);
+    }
+  </script>
+</body>
+</html>
