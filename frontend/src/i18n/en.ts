@@ -70,6 +70,64 @@ export default {
       },
     },
   },
+  trust: {
+    tag: 'Why work with me',
+    title: 'How I can help you',
+    subtitle: 'I work with real clients and build solutions that run in production.',
+    pillars: {
+      clients: {
+        title: 'Real clients',
+        description: "I'm not an agency. I work directly with you. Every project gets my full attention.",
+      },
+      custom: {
+        title: 'Custom solutions',
+        description: "I don't sell templates or generic solutions. I analyze your business and build what you actually need.",
+      },
+      direct: {
+        title: 'Direct communication',
+        description: "You talk to me, not a middleman. You'll always know the status of your project.",
+      },
+    },
+    stats: {
+      experience: 'Years of experience',
+      students: 'Students trained',
+      courses: 'Published courses',
+      custom: 'Custom projects',
+    },
+  },
+  faq: {
+    tag: 'Frequently asked questions',
+    title: 'Your questions answered',
+    subtitle: 'The questions I get asked before starting a project.',
+    cta_label: 'Have another question?',
+    cta_button: 'Contact me',
+    items: {
+      q1: {
+        question: 'How does an AI bot work?',
+        answer: 'The bot understands your customers\' messages in natural language and responds automatically. It\'s trained with your business information: FAQs, catalog, processes. It works 24/7 without manual intervention and can escalate to a human agent when needed.',
+      },
+      q2: {
+        question: 'Do I need technical knowledge to use the bot?',
+        answer: 'No. I handle all the development, configuration, and implementation. You just need to explain how your business works and what you want to automate. The system is ready for you to use without any technical skills.',
+      },
+      q3: {
+        question: 'How much does it cost to develop a bot or automation?',
+        answer: "It depends on the scope and complexity of the project. Every solution is different, which is why I do a free evaluation before giving you a price. Contact me, tell me your case, and I'll propose something concrete.",
+      },
+      q4: {
+        question: 'How long does development take?',
+        answer: 'A basic bot can be ready in 1 to 2 weeks. More complex projects with multiple integrations take between 3 and 6 weeks. Before we start, I give you a clear and realistic estimate.',
+      },
+      q5: {
+        question: "Does the WhatsApp bot comply with Meta's policies?",
+        answer: "Yes. I work exclusively with the official WhatsApp Business API from Meta. Messages are only sent to users who have given their consent (opt-in), Meta-approved templates are used, and the right to unsubscribe is always respected.",
+      },
+      q6: {
+        question: 'Can I see how it works before hiring?',
+        answer: "Yes. If the project allows it, I can do a demo or basic prototype so you can see how it works before committing. Tell me your case and we'll evaluate it.",
+      },
+    },
+  },
   how_i_work: {
     tag: 'Process',
     title: 'How I work',

@@ -25,6 +25,12 @@ const router = createRouter({
           component: () => import('@/views/WhatsAppAutomationView.vue'),
           meta: { title: 'WhatsApp Automation Policy | withjp.ai' },
         },
+        {
+          path: 'whatsapp-business',
+          name: 'WhatsAppBusiness',
+          component: () => import('@/views/WhatsAppAutomationView.vue'),
+          meta: { title: 'WhatsApp Business Policy | withjp.ai' },
+        },
       ],
     },
     {

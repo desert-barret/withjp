@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Prevent the HTML shell from being served stale from CDN/browser cache.
-         Hashed JS/CSS assets use long-term caching; only the entry HTML must revalidate. -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -24,9 +22,9 @@
     <meta name="msapplication-TileColor" content="#6366f1" />
 
     <!-- ── Primary SEO ─────────────────────────────────────────── -->
-    <title>Juan Pablo Guamán | Software Architect & Full Stack Developer</title>
-    <meta name="description" content="Juan Pablo Guamán Rodríguez — Software Architect y Full Stack Developer con 10+ años de experiencia. Más de 25 000 estudiantes en Udemy. Especialista en Vue 3, NestJS, TypeScript, Python, Flutter e IA." />
-    <meta name="keywords" content="Juan Pablo Guaman, Full Stack Developer, Software Architect, Vue.js, NestJS, TypeScript, Python, Flutter, Docker, GCP, automatización, Ecuador, withjp.ai, cursos programación, Udemy, desarrollo web, academia" />
+    <title>Juan Pablo Guamán | Bots con IA y Automatización WhatsApp | withjp.ai</title>
+    <meta name="description" content="Desarrollo bots con inteligencia artificial y automatizo procesos para empresas. Especialista en WhatsApp Business API, integraciones backend y software a medida. Ecuador · 10+ años de experiencia · 25 000+ estudiantes." />
+    <meta name="keywords" content="bots inteligencia artificial, automatización WhatsApp Business, WhatsApp API, desarrollo backend, integraciones API, software a medida, NestJS, FastAPI, Python, Vue.js, Juan Pablo Guaman, withjp.ai, Ecuador, automatización procesos, bot WhatsApp, chatbot IA" />
     <meta name="author" content="Juan Pablo Guamán Rodríguez" />
     <link rel="canonical" href="https://withjp.ai/" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -41,47 +39,37 @@
     <link rel="alternate" hreflang="x-default" href="https://withjp.ai/" />
 
     <!-- ── Open Graph ──────────────────────────────────────────── -->
-    <meta property="og:type" content="profile" />
-    <meta property="og:title" content="Juan Pablo Guamán | Software Architect & Full Stack Developer" />
-    <meta property="og:description" content="Software Architect & Full Stack Developer — 10+ años de experiencia, 25 000+ estudiantes en Udemy. Vue, NestJS, Flutter, Python, automatización e IA." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Juan Pablo Guamán | Bots con IA y Automatización WhatsApp" />
+    <meta property="og:description" content="Desarrollo bots con IA, automatizo procesos y construyo integraciones backend para empresas que quieren operar mejor. WhatsApp Business API · Software a medida · Ecuador." />
     <meta property="og:image" content="https://withjp.ai/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Juan Pablo Guamán — Software Architect & Full Stack Developer" />
+    <meta property="og:image:alt" content="Juan Pablo Guamán — Bots con IA y Automatización WhatsApp Business" />
     <meta property="og:url" content="https://withjp.ai/" />
     <meta property="og:site_name" content="withjp.ai" />
     <meta property="og:locale" content="es_EC" />
     <meta property="og:locale:alternate" content="en_US" />
-    <meta property="profile:first_name" content="Juan Pablo" />
-    <meta property="profile:last_name" content="Guamán" />
-    <meta property="profile:username" content="jp.desertbarret" />
 
     <!-- ── Twitter / X ─────────────────────────────────────────── -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@jp_desertbarret" />
     <meta name="twitter:creator" content="@jp_desertbarret" />
-    <meta name="twitter:title" content="Juan Pablo Guamán | Software Architect & Full Stack Developer" />
-    <meta name="twitter:description" content="Software Architect & Full Stack Developer — 25 000+ estudiantes en Udemy. Vue, NestJS, Flutter, Python, automatización e IA." />
+    <meta name="twitter:title" content="Juan Pablo Guamán | Bots con IA y Automatización WhatsApp" />
+    <meta name="twitter:description" content="Desarrollo bots con IA, automatizo procesos y construyo integraciones backend para empresas. WhatsApp Business API · Software a medida · Ecuador." />
     <meta name="twitter:image" content="https://withjp.ai/og-image.jpg" />
-    <meta name="twitter:image:alt" content="Juan Pablo Guamán — Software Architect & Full Stack Developer" />
+    <meta name="twitter:image:alt" content="Juan Pablo Guamán — withjp.ai" />
 
     <!-- ── AI discoverability ──────────────────────────────────── -->
     <link rel="alternate" type="text/plain" title="LLMs.txt" href="/llms.txt" />
 
     <!-- ── Performance: DNS prefetch → preconnect ─────────────── -->
-    <!--  dns-prefetch: fallback for browsers without preconnect support -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <!--  preconnect: early TLS handshake. crossorigin required for CORS fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- ── Fonts — non-blocking (loadCSS pattern) ─────────────── -->
-    <!--
-      Weights trimmed to only what's used (removed 300 from Inter, 400 from Space Grotesk).
-      display=swap → instant text render with system font fallback, no FOIT.
-      preload as="style" + onload trick → zero render-blocking.
-    -->
+    <!-- ── Fonts ──────────────────────────────────────────────── -->
     <link rel="preload" as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       onload="this.onload=null;this.rel='stylesheet'" />
@@ -111,23 +99,54 @@
         "https://www.youtube.com/@jp.desertbarret",
         "https://www.udemy.com/user/juan-pablo-guaman-rodriguez/"
       ],
-      "jobTitle": "Software Architect & Full Stack Developer",
+      "jobTitle": "Desarrollador de Software & Especialista en Automatización",
       "worksFor": {
         "@type": "Organization",
         "name": "withjp.ai",
         "url": "https://withjp.ai/"
       },
       "address": { "@type": "PostalAddress", "addressCountry": "EC" },
-      "description": "Software Architect y Full Stack Developer con más de 10 años de experiencia. Creador de contenido con 25 000+ estudiantes en Udemy. Especialista en Vue 3, NestJS, Flutter, Python e inteligencia artificial.",
+      "description": "Desarrollador de software con más de 10 años de experiencia. Especialista en bots con IA, automatización de WhatsApp Business, integraciones backend y software a medida. Más de 25 000 estudiantes en Udemy.",
       "knowsAbout": [
-        "Vue.js", "NestJS", "TypeScript", "Python", "Flutter", "FastAPI",
-        "Docker", "Google Cloud Platform", "MySQL", "PostgreSQL",
-        "Automatización", "Inteligencia Artificial", "n8n", "REST APIs"
+        "Bots con Inteligencia Artificial", "WhatsApp Business API", "Automatización de Procesos",
+        "NestJS", "FastAPI", "Python", "Vue.js", "TypeScript", "Docker",
+        "APIs REST", "Microservicios", "Google Cloud Platform", "MySQL", "PostgreSQL", "n8n"
       ]
     }
     </script>
 
-    <!-- ── JSON-LD: WebSite ────────────────────────────────────── -->
+    <!-- ── JSON-LD: ProfessionalService ──────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://withjp.ai/#service",
+      "name": "withjp.ai — Bots con IA y Automatización",
+      "url": "https://withjp.ai/",
+      "description": "Desarrollo de bots con inteligencia artificial, automatización de WhatsApp Business, integraciones backend y software a medida para empresas.",
+      "provider": { "@id": "https://withjp.ai/#person" },
+      "areaServed": "Worldwide",
+      "serviceType": [
+        "Desarrollo de Bots con IA",
+        "Automatización de WhatsApp Business",
+        "Integraciones y APIs",
+        "Software a Medida",
+        "Desarrollo Backend"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Desarrollo",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bots con IA", "description": "Desarrollo de bots conversacionales con inteligencia artificial para automatizar la atención al cliente." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatización de WhatsApp Business", "description": "Integración de la API oficial de WhatsApp Business para notificaciones y atención automática." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Integraciones y APIs", "description": "Desarrollo de APIs REST y microservicios para conectar sistemas internos con plataformas externas." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software a Medida", "description": "Diseño y desarrollo de soluciones completas adaptadas a las necesidades específicas del negocio." } }
+        ]
+      }
+    }
+    </script>
+
+    <!-- ── JSON-LD: WebSite + Sitelinks SearchBox ─────────────── -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -135,32 +154,56 @@
       "@id": "https://withjp.ai/#website",
       "url": "https://withjp.ai/",
       "name": "withjp.ai",
-      "description": "Portfolio y plataforma de Juan Pablo Guamán — Software Architect & Full Stack Developer con Academia de cursos online.",
+      "description": "Juan Pablo Guamán — Desarrollador de Software especializado en bots con IA, automatización de WhatsApp Business e integraciones backend.",
       "inLanguage": ["es", "en"],
       "author": { "@id": "https://withjp.ai/#person" }
     }
     </script>
 
-    <!-- ── JSON-LD: Cursos (ItemList) ──────────────────────────── -->
+    <!-- ── JSON-LD: FAQPage ───────────────────────────────────── -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Cursos de Juan Pablo Guamán en Udemy",
-      "description": "Cursos de desarrollo Full Stack, Flutter, NestJS y automatización por JP Guamán — 25 000+ estudiantes.",
-      "url": "https://withjp.ai/#courses",
-      "itemListElement": [
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "Course",
-            "name": "TU propia APP de DELIVERY Internacional | Flutter 3 y NestJS",
-            "description": "Arquitectura de producción real. Más de 700 000 compras procesadas. Flutter 3, NestJS, PostgreSQL, Docker, Firebase, Google Maps.",
-            "provider": { "@type": "Organization", "name": "Udemy" },
-            "url": "https://www.udemy.com/course/app-delivery-flutter-nestjs/",
-            "inLanguage": "es",
-            "teaches": ["Flutter 3", "NestJS", "PostgreSQL", "Docker", "Firebase", "Google Maps"]
+          "@type": "Question",
+          "name": "¿Cómo funciona un bot con IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un bot con IA entiende los mensajes de tus clientes en lenguaje natural y responde de forma automática. Se entrena con la información de tu negocio: preguntas frecuentes, catálogo, procesos. Funciona 24/7 sin intervención manual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito conocimientos técnicos para usar el bot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Yo me encargo de todo el desarrollo e implementación. Tú solo necesitas explicarme cómo funciona tu negocio y qué quieres automatizar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta desarrollar un bot o automatización?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende del alcance del proyecto. Cada solución es diferente, por eso hago una evaluación sin costo antes de dar un precio. Contáctame y lo analizamos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo tarda el desarrollo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un bot básico puede estar listo en 1-2 semanas. Proyectos más complejos con integraciones toman entre 3 y 6 semanas. Te doy un estimado claro antes de comenzar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El bot de WhatsApp cumple con las políticas de Meta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Trabajo únicamente con la API oficial de WhatsApp Business de Meta. Solo se envían mensajes a usuarios que han dado su consentimiento (opt-in) y se usan plantillas aprobadas por Meta."
           }
         }
       ]
@@ -173,11 +216,12 @@
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Inicio",   "item": "https://withjp.ai/" },
-        { "@type": "ListItem", "position": 2, "name": "Sobre JP", "item": "https://withjp.ai/#about" },
-        { "@type": "ListItem", "position": 3, "name": "Cursos",   "item": "https://withjp.ai/#courses" },
-        { "@type": "ListItem", "position": 4, "name": "Academia", "item": "https://withjp.ai/#academia" },
-        { "@type": "ListItem", "position": 5, "name": "Contacto", "item": "https://withjp.ai/#contact" }
+        { "@type": "ListItem", "position": 1, "name": "Inicio",      "item": "https://withjp.ai/" },
+        { "@type": "ListItem", "position": 2, "name": "Servicios",   "item": "https://withjp.ai/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Cómo trabajo","item": "https://withjp.ai/#how-i-work" },
+        { "@type": "ListItem", "position": 4, "name": "Sobre JP",    "item": "https://withjp.ai/#about" },
+        { "@type": "ListItem", "position": 5, "name": "Cursos",      "item": "https://withjp.ai/#courses" },
+        { "@type": "ListItem", "position": 6, "name": "Contacto",    "item": "https://withjp.ai/#contact" }
       ]
     }
     </script>

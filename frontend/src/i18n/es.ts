@@ -70,6 +70,64 @@ export default {
       },
     },
   },
+  trust: {
+    tag: 'Por qué trabajar conmigo',
+    title: '¿En qué te puedo ayudar?',
+    subtitle: 'Trabajo con clientes reales y construyo soluciones que funcionan en producción.',
+    pillars: {
+      clients: {
+        title: 'Clientes reales',
+        description: 'No soy una agencia. Trabajo directamente contigo. Cada proyecto recibe mi atención completa.',
+      },
+      custom: {
+        title: 'Soluciones personalizadas',
+        description: 'No vendo plantillas ni soluciones genéricas. Analizo tu negocio y construyo lo que realmente necesitas.',
+      },
+      direct: {
+        title: 'Comunicación directa',
+        description: 'Hablas conmigo, no con un intermediario. Siempre sabrás en qué estado está tu proyecto.',
+      },
+    },
+    stats: {
+      experience: 'Años de experiencia',
+      students: 'Estudiantes formados',
+      courses: 'Cursos publicados',
+      custom: 'Proyectos a medida',
+    },
+  },
+  faq: {
+    tag: 'Preguntas frecuentes',
+    title: 'Resuelve tus dudas',
+    subtitle: 'Las preguntas que me hacen antes de empezar un proyecto.',
+    cta_label: '¿Tienes otra pregunta?',
+    cta_button: 'Contáctame',
+    items: {
+      q1: {
+        question: '¿Cómo funciona un bot con IA?',
+        answer: 'El bot entiende los mensajes de tus clientes en lenguaje natural y responde de forma automática. Se entrena con la información de tu negocio: preguntas frecuentes, catálogo, procesos. Funciona 24/7 sin intervención manual y puede escalar al equipo humano cuando sea necesario.',
+      },
+      q2: {
+        question: '¿Necesito conocimientos técnicos para usar el bot?',
+        answer: 'No. Yo me encargo de todo el desarrollo, configuración e implementación. Tú solo necesitas explicarme cómo funciona tu negocio y qué quieres automatizar. El sistema queda listo para que lo uses sin conocimientos técnicos.',
+      },
+      q3: {
+        question: '¿Cuánto cuesta desarrollar un bot o automatización?',
+        answer: 'Depende del alcance y la complejidad del proyecto. Cada solución es diferente, por eso hago una evaluación sin costo antes de darte un precio. Contáctame, cuéntame tu caso y te propongo algo concreto.',
+      },
+      q4: {
+        question: '¿Cuánto tiempo tarda el desarrollo?',
+        answer: 'Un bot básico puede estar listo en 1 a 2 semanas. Proyectos más complejos con múltiples integraciones toman entre 3 y 6 semanas. Antes de empezar te doy un estimado claro y realista.',
+      },
+      q5: {
+        question: '¿El bot de WhatsApp cumple con las políticas de Meta?',
+        answer: 'Sí. Trabajo únicamente con la API oficial de WhatsApp Business de Meta. Solo se envían mensajes a usuarios que han dado su consentimiento (opt-in), se utilizan plantillas aprobadas por Meta y se respeta el derecho de cancelar suscripción en cualquier momento.',
+      },
+      q6: {
+        question: '¿Puedo ver cómo funciona antes de contratar?',
+        answer: 'Sí. Si el proyecto lo permite, puedo hacer una demo o un prototipo básico para que veas el funcionamiento antes de comprometerte. Cuéntame tu caso y lo evaluamos.',
+      },
+    },
+  },
   how_i_work: {
     tag: 'Proceso',
     title: 'Cómo trabajo',
