@@ -11,7 +11,7 @@
             <span class="font-display font-bold text-slate-900 dark:text-white">withjp<span class="text-primary-500">.ai</span></span>
           </div>
           <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            Software Architect &amp; Full Stack Developer · Ecuador 🇪🇨
+            Automatización de atención al cliente por WhatsApp Business · Ecuador 🇪🇨
           </p>
         </div>
 
@@ -19,10 +19,11 @@
         <div>
           <h4 class="font-semibold text-slate-900 dark:text-white mb-4">Links</h4>
           <div class="space-y-2">
-            <a href="#services"   class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.services') }}</a>
-            <a href="#about"      class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.about') }}</a>
-            <a href="#courses"    class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.courses') }}</a>
-            <a href="#contact"    class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.contact') }}</a>
+            <a href="#how-it-works" class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.how_it_works') }}</a>
+            <a href="#use-cases"    class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.use_cases') }}</a>
+            <a href="#services"     class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.services') }}</a>
+            <a href="#faq"          class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.faq') }}</a>
+            <a href="#contact"      class="block text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ t('nav.contact') }}</a>
           </div>
         </div>
 

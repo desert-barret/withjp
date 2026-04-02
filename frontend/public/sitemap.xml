@@ -15,9 +15,33 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://withjp.ai/"/>
     <image:image>
       <image:loc>https://withjp.ai/og-image.jpg</image:loc>
-      <image:title>Juan Pablo Guamán — Bots con IA y Automatización WhatsApp</image:title>
-      <image:caption>Desarrollo bots con IA y automatizo procesos para empresas. WhatsApp Business · Integraciones · Software a medida.</image:caption>
+      <image:title>withjp.ai — Automatización de Atención al Cliente por WhatsApp Business</image:title>
+      <image:caption>Automatiza la atención de tus clientes en WhatsApp con flujos estructurados. API oficial de Meta · Ecuador.</image:caption>
     </image:image>
+  </url>
+
+  <!-- ── Cómo funciona ─────────────────────────────────────── -->
+  <url>
+    <loc>https://withjp.ai/#how-it-works</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── Demo ──────────────────────────────────────────────── -->
+  <url>
+    <loc>https://withjp.ai/#demo</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ── Casos de uso ──────────────────────────────────────── -->
+  <url>
+    <loc>https://withjp.ai/#use-cases</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- ── Servicios ─────────────────────────────────────────── -->
@@ -28,12 +52,20 @@
     <priority>0.95</priority>
   </url>
 
+  <!-- ── FAQ ───────────────────────────────────────────────── -->
+  <url>
+    <loc>https://withjp.ai/#faq</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- ── Cómo trabajo ──────────────────────────────────────── -->
   <url>
     <loc>https://withjp.ai/#how-i-work</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
 
   <!-- ── About ─────────────────────────────────────────────── -->
@@ -44,20 +76,12 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- ── FAQ ───────────────────────────────────────────────── -->
-  <url>
-    <loc>https://withjp.ai/#faq</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
   <!-- ── Cursos Udemy ───────────────────────────────────────── -->
   <url>
     <loc>https://withjp.ai/#courses</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
 
   <!-- ── Academia JP ───────────────────────────────────────── -->
@@ -65,7 +89,7 @@
     <loc>https://withjp.ai/#academia</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
 
   <!-- ── Contacto ──────────────────────────────────────────── -->

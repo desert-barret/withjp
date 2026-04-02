@@ -1,11 +1,13 @@
 <template>
   <div>
     <HeroSection />
-    <TrustSection />
-    <ServicesSection />
+    <HowItWorksSection />
+    <WhatsAppDemoSection />
     <UseCasesSection />
-    <HowIWorkSection />
+    <ServicesSection />
+    <TrustSection />
     <FaqSection />
+    <HowIWorkSection />
     <AboutSection />
     <CoursesSection />
 
@@ -36,11 +38,13 @@
 
 <script setup lang="ts">
 import HeroSection from '@/components/sections/HeroSection.vue';
-import TrustSection from '@/components/sections/TrustSection.vue';
-import ServicesSection from '@/components/sections/ServicesSection.vue';
+import HowItWorksSection from '@/components/sections/HowItWorksSection.vue';
+import WhatsAppDemoSection from '@/components/sections/WhatsAppDemoSection.vue';
 import UseCasesSection from '@/components/sections/UseCasesSection.vue';
-import HowIWorkSection from '@/components/sections/HowIWorkSection.vue';
+import ServicesSection from '@/components/sections/ServicesSection.vue';
+import TrustSection from '@/components/sections/TrustSection.vue';
 import FaqSection from '@/components/sections/FaqSection.vue';
+import HowIWorkSection from '@/components/sections/HowIWorkSection.vue';
 import AboutSection from '@/components/sections/AboutSection.vue';
 import CoursesSection from '@/components/sections/CoursesSection.vue';
 import AcademiaSection from '@/components/sections/AcademiaSection.vue';

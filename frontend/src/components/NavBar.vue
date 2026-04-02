@@ -125,11 +125,11 @@ const scrolled    = ref(false);
 const mobileOpen  = ref(false);
 
 const navItems = [
-  { href: '#services',   key: 'nav.services'  },
-  { href: '#how-i-work', key: 'nav.how_i_work' },
-  { href: '#about',      key: 'nav.about'     },
-  { href: '#courses',    key: 'nav.courses'   },
-  { href: '#contact',    key: 'nav.contact'   },
+  { href: '#how-it-works', key: 'nav.how_it_works' },
+  { href: '#use-cases',    key: 'nav.use_cases'    },
+  { href: '#services',     key: 'nav.services'     },
+  { href: '#faq',          key: 'nav.faq' },
+  { href: '#contact',      key: 'nav.contact'      },
 ];
 
 function toggleLang() {
