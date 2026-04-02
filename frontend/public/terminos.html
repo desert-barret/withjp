@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,53 +8,61 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --bg: #f8f9ff;
       --surface: #ffffff;
-      --border: rgba(99,102,241,0.12);
+      --border: rgba(99, 102, 241, 0.12);
       --text-primary: #0f172a;
       --text-secondary: #475569;
       --text-muted: #94a3b8;
       --indigo: #6366f1;
       --indigo-dark: #4f46e5;
       --cyan: #22d3ee;
-      --shadow: 0 2px 8px rgba(0,0,0,0.04), 0 8px 32px rgba(99,102,241,0.07);
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(99, 102, 241, 0.07);
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #080b14;
-        --surface: rgba(255,255,255,0.03);
-        --border: rgba(99,102,241,0.15);
+        --surface: rgba(255, 255, 255, 0.03);
+        --border: rgba(99, 102, 241, 0.15);
         --text-primary: #f1f5f9;
         --text-secondary: #94a3b8;
         --text-muted: #64748b;
-        --shadow: 0 2px 8px rgba(0,0,0,0.3), 0 8px 32px rgba(99,102,241,0.1);
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 8px 32px rgba(99, 102, 241, 0.1);
       }
     }
 
     html[data-theme="dark"] {
       --bg: #080b14;
-      --surface: rgba(255,255,255,0.03);
-      --border: rgba(99,102,241,0.15);
+      --surface: rgba(255, 255, 255, 0.03);
+      --border: rgba(99, 102, 241, 0.15);
       --text-primary: #f1f5f9;
       --text-secondary: #94a3b8;
       --text-muted: #64748b;
-      --shadow: 0 2px 8px rgba(0,0,0,0.3), 0 8px 32px rgba(99,102,241,0.1);
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 8px 32px rgba(99, 102, 241, 0.1);
     }
 
     html[data-theme="light"] {
       --bg: #f8f9ff;
       --surface: #ffffff;
-      --border: rgba(99,102,241,0.12);
+      --border: rgba(99, 102, 241, 0.12);
       --text-primary: #0f172a;
       --text-secondary: #475569;
       --text-muted: #94a3b8;
-      --shadow: 0 2px 8px rgba(0,0,0,0.04), 0 8px 32px rgba(99,102,241,0.07);
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(99, 102, 241, 0.07);
     }
 
     body {
@@ -71,8 +80,8 @@
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(99,102,241,0.07) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(34,211,238,0.05) 0%, transparent 60%);
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(99, 102, 241, 0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(34, 211, 238, 0.05) 0%, transparent 60%);
       pointer-events: none;
       z-index: 0;
     }
@@ -122,7 +131,9 @@
       flex-shrink: 0;
     }
 
-    .logo-accent { color: var(--indigo); }
+    .logo-accent {
+      color: var(--indigo);
+    }
 
     .header-controls {
       display: flex;
@@ -146,9 +157,9 @@
     }
 
     .btn-icon:hover {
-      background: rgba(99,102,241,0.08);
+      background: rgba(99, 102, 241, 0.08);
       color: var(--indigo);
-      border-color: rgba(99,102,241,0.3);
+      border-color: rgba(99, 102, 241, 0.3);
     }
 
     .lang-btn {
@@ -181,8 +192,8 @@
       gap: 0.375rem;
       padding: 0.25rem 0.75rem;
       border-radius: 999px;
-      background: rgba(99,102,241,0.1);
-      border: 1px solid rgba(99,102,241,0.2);
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.2);
       color: var(--indigo);
       font-size: 0.7rem;
       font-weight: 600;
@@ -249,7 +260,9 @@
       margin-bottom: 0.75rem;
     }
 
-    p:last-child { margin-bottom: 0; }
+    p:last-child {
+      margin-bottom: 0;
+    }
 
     ul {
       list-style: none;
@@ -282,7 +295,9 @@
       font-weight: 500;
     }
 
-    .contact-link:hover { text-decoration: underline; }
+    .contact-link:hover {
+      text-decoration: underline;
+    }
 
     /* Footer */
     footer {
@@ -316,7 +331,9 @@
       transition: color 0.2s;
     }
 
-    .footer-links a:hover { color: var(--indigo); }
+    .footer-links a:hover {
+      color: var(--indigo);
+    }
 
     .footer-copy {
       font-size: 0.8125rem;
@@ -324,19 +341,39 @@
     }
 
     /* Language sections */
-    [data-lang] { display: none; }
-    body[data-active-lang="es"] [data-lang="es"] { display: block; }
-    body[data-active-lang="en"] [data-lang="en"] { display: block; }
-    body[data-active-lang="es"] h1[data-lang="es"] { display: block; }
-    body[data-active-lang="en"] h1[data-lang="en"] { display: block; }
+    [data-lang] {
+      display: none;
+    }
+
+    body[data-active-lang="es"] [data-lang="es"] {
+      display: block;
+    }
+
+    body[data-active-lang="en"] [data-lang="en"] {
+      display: block;
+    }
+
+    body[data-active-lang="es"] h1[data-lang="es"] {
+      display: block;
+    }
+
+    body[data-active-lang="en"] h1[data-lang="en"] {
+      display: block;
+    }
 
     /* Responsive */
     @media (max-width: 640px) {
-      .section { padding: 1.25rem 1.25rem; }
-      main { padding: 2rem 1rem 4rem; }
+      .section {
+        padding: 1.25rem 1.25rem;
+      }
+
+      main {
+        padding: 2rem 1rem 4rem;
+      }
     }
   </style>
 </head>
+
 <body data-active-lang="es">
 
   <header>
@@ -346,10 +383,25 @@
         <span>withjp<span class="logo-accent">.ai</span></span>
       </a>
       <div class="header-controls">
-        <button class="btn-icon lang-btn" onclick="toggleLang()" id="lang-toggle" aria-label="Switch language">EN</button>
+        <button class="btn-icon lang-btn" onclick="toggleLang()" id="lang-toggle"
+          aria-label="Switch language">EN</button>
         <button class="btn-icon" onclick="toggleTheme()" id="theme-toggle" aria-label="Toggle theme">
-          <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
         </button>
       </div>
     </div>
@@ -375,8 +427,11 @@
 
       <div class="section">
         <h2><span class="num">1</span> Descripción del Servicio</h2>
-        <p>withjp.ai es el sitio web personal de Juan Pablo Guamán Rodríguez, arquitecto de software y desarrollador full stack. A través de este sitio y sus canales asociados —incluyendo un bot de WhatsApp— ofrezco información, asesoría y servicios relacionados con el desarrollo de software e inteligencia artificial.</p>
-        <p>El bot de WhatsApp está diseñado para facilitar el primer contacto, resolver preguntas frecuentes y agendar sesiones de consultoría. No sustituye una relación contractual formal.</p>
+        <p>withjp.ai es el sitio web personal de Juan Pablo Guamán Rodríguez, arquitecto de software y desarrollador
+          full stack. A través de este sitio y sus canales asociados —incluyendo un bot de WhatsApp— ofrezco
+          información, asesoría y servicios relacionados con el desarrollo de software e inteligencia artificial.</p>
+        <p>El bot de WhatsApp está diseñado para facilitar el primer contacto, resolver preguntas frecuentes y agendar
+          sesiones de consultoría. No sustituye una relación contractual formal.</p>
       </div>
 
       <div class="section">
@@ -399,30 +454,39 @@
           <li>Acceder a cursos y contenido educativo de withjp.ai.</li>
           <li>Establecer contacto para colaboraciones o proyectos freelance.</li>
         </ul>
-        <p>Queda prohibido el uso automatizado masivo (scraping), la suplantación de identidad o cualquier acción que afecte la disponibilidad del servicio.</p>
+        <p>Queda prohibido el uso automatizado masivo (scraping), la suplantación de identidad o cualquier acción que
+          afecte la disponibilidad del servicio.</p>
       </div>
 
       <div class="section">
         <h2><span class="num">4</span> Limitación de Responsabilidad</h2>
-        <p>withjp.ai ofrece el servicio "tal como está". No garantizamos disponibilidad continua ni la exactitud absoluta de toda la información. En ningún caso seremos responsables por daños directos, indirectos o consecuentes derivados del uso o imposibilidad de uso del servicio.</p>
-        <p>La asesoría brindada es de carácter orientativo y no reemplaza la consulta de un profesional especializado para decisiones críticas de negocio o producción.</p>
+        <p>withjp.ai ofrece el servicio "tal como está". No garantizamos disponibilidad continua ni la exactitud
+          absoluta de toda la información. En ningún caso seremos responsables por daños directos, indirectos o
+          consecuentes derivados del uso o imposibilidad de uso del servicio.</p>
+        <p>La asesoría brindada es de carácter orientativo y no reemplaza la consulta de un profesional especializado
+          para decisiones críticas de negocio o producción.</p>
       </div>
 
       <div class="section">
         <h2><span class="num">5</span> Propiedad Intelectual</h2>
-        <p>Todo el contenido publicado en withjp.ai —textos, código de ejemplo, imágenes, videos y diseños— es propiedad de Juan Pablo Guamán Rodríguez, salvo indicación contraria. Queda prohibida su reproducción total o parcial sin autorización expresa y por escrito.</p>
+        <p>Todo el contenido publicado en withjp.ai —textos, código de ejemplo, imágenes, videos y diseños— es propiedad
+          de Juan Pablo Guamán Rodríguez, salvo indicación contraria. Queda prohibida su reproducción total o parcial
+          sin autorización expresa y por escrito.</p>
       </div>
 
       <div class="section">
         <h2><span class="num">6</span> Modificaciones del Servicio</h2>
-        <p>Nos reservamos el derecho de modificar, suspender o discontinuar cualquier parte del servicio en cualquier momento, incluyendo estos Términos y Condiciones. Los cambios entrarán en vigor desde el momento de su publicación en esta página. El uso continuado del servicio constituye la aceptación de los nuevos términos.</p>
+        <p>Nos reservamos el derecho de modificar, suspender o discontinuar cualquier parte del servicio en cualquier
+          momento, incluyendo estos Términos y Condiciones. Los cambios entrarán en vigor desde el momento de su
+          publicación en esta página. El uso continuado del servicio constituye la aceptación de los nuevos términos.
+        </p>
       </div>
 
       <div class="section">
         <h2><span class="num">7</span> Contacto</h2>
         <p>Para cualquier consulta relacionada con estos Términos, puedes comunicarte a:</p>
         <p>
-          Correo electrónico: <a href="mailto:hola@withjp.ai" class="contact-link">hola@withjp.ai</a><br />
+          Correo electrónico: <a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a><br />
           WhatsApp / Web: <a href="/" class="contact-link">withjp.ai</a>
         </p>
       </div>
@@ -434,8 +498,11 @@
 
       <div class="section">
         <h2><span class="num">1</span> Service Description</h2>
-        <p>withjp.ai is the personal website of Juan Pablo Guamán Rodríguez, software architect and full stack developer. Through this site and its associated channels —including a WhatsApp bot— I offer information, advisory, and services related to software development and artificial intelligence.</p>
-        <p>The WhatsApp bot is designed to facilitate first contact, answer frequently asked questions, and schedule consulting sessions. It does not replace a formal contractual relationship.</p>
+        <p>withjp.ai is the personal website of Juan Pablo Guamán Rodríguez, software architect and full stack
+          developer. Through this site and its associated channels —including a WhatsApp bot— I offer information,
+          advisory, and services related to software development and artificial intelligence.</p>
+        <p>The WhatsApp bot is designed to facilitate first contact, answer frequently asked questions, and schedule
+          consulting sessions. It does not replace a formal contractual relationship.</p>
       </div>
 
       <div class="section">
@@ -458,30 +525,38 @@
           <li>Accessing courses and educational content from withjp.ai.</li>
           <li>Making contact for collaborations or freelance projects.</li>
         </ul>
-        <p>Automated mass usage (scraping), identity impersonation, or any action that affects service availability is strictly prohibited.</p>
+        <p>Automated mass usage (scraping), identity impersonation, or any action that affects service availability is
+          strictly prohibited.</p>
       </div>
 
       <div class="section">
         <h2><span class="num">4</span> Limitation of Liability</h2>
-        <p>withjp.ai provides the service "as is." We do not guarantee continuous availability or absolute accuracy of all information. In no event shall we be liable for direct, indirect, or consequential damages arising from the use or inability to use the service.</p>
-        <p>Advisory provided is informational in nature and does not replace consultation with a specialized professional for critical business or production decisions.</p>
+        <p>withjp.ai provides the service "as is." We do not guarantee continuous availability or absolute accuracy of
+          all information. In no event shall we be liable for direct, indirect, or consequential damages arising from
+          the use or inability to use the service.</p>
+        <p>Advisory provided is informational in nature and does not replace consultation with a specialized
+          professional for critical business or production decisions.</p>
       </div>
 
       <div class="section">
         <h2><span class="num">5</span> Intellectual Property</h2>
-        <p>All content published on withjp.ai —texts, sample code, images, videos, and designs— is the property of Juan Pablo Guamán Rodríguez, unless otherwise indicated. Reproduction in whole or in part without express written authorization is prohibited.</p>
+        <p>All content published on withjp.ai —texts, sample code, images, videos, and designs— is the property of Juan
+          Pablo Guamán Rodríguez, unless otherwise indicated. Reproduction in whole or in part without express written
+          authorization is prohibited.</p>
       </div>
 
       <div class="section">
         <h2><span class="num">6</span> Service Modifications</h2>
-        <p>We reserve the right to modify, suspend, or discontinue any part of the service at any time, including these Terms &amp; Conditions. Changes take effect from the moment they are published on this page. Continued use of the service constitutes acceptance of the new terms.</p>
+        <p>We reserve the right to modify, suspend, or discontinue any part of the service at any time, including these
+          Terms &amp; Conditions. Changes take effect from the moment they are published on this page. Continued use of
+          the service constitutes acceptance of the new terms.</p>
       </div>
 
       <div class="section">
         <h2><span class="num">7</span> Contact</h2>
         <p>For any inquiries related to these Terms, you may reach us at:</p>
         <p>
-          Email: <a href="mailto:hola@withjp.ai" class="contact-link">hola@withjp.ai</a><br />
+          Email: <a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a><br />
           WhatsApp / Web: <a href="/" class="contact-link">withjp.ai</a>
         </p>
       </div>
@@ -505,7 +580,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Theme
-    (function() {
+    (function () {
       const stored = localStorage.getItem('withjp_theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const isDark = stored === 'dark' || (!stored && prefersDark);
@@ -528,7 +603,7 @@
     }
 
     // Language
-    (function() {
+    (function () {
       const stored = localStorage.getItem('withjp_locale');
       const lang = stored === 'en' ? 'en' : 'es';
       document.body.setAttribute('data-active-lang', lang);
@@ -546,4 +621,5 @@
     }
   </script>
 </body>
+
 </html>
