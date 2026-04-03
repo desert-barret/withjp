@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Términos y Condiciones / Terms & Conditions — withjp.ai</title>
+  <meta name="description" content="Términos y Condiciones de uso de withjp.ai — Juan Pablo Guamán Rodríguez, Loja, Ecuador. Servicios de consultoría de software, cursos Udemy y automatización WhatsApp Business API." />
+  <link rel="canonical" href="https://withjp.ai/terminos.html" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,7 +76,6 @@
       transition: background-color 0.3s, color 0.3s;
     }
 
-    /* Mesh gradient background */
     body::before {
       content: '';
       position: fixed;
@@ -86,7 +87,6 @@
       z-index: 0;
     }
 
-    /* Header */
     header {
       position: sticky;
       top: 0;
@@ -131,9 +131,7 @@
       flex-shrink: 0;
     }
 
-    .logo-accent {
-      color: var(--indigo);
-    }
+    .logo-accent { color: var(--indigo); }
 
     .header-controls {
       display: flex;
@@ -171,7 +169,6 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* Main */
     main {
       position: relative;
       z-index: 1;
@@ -219,7 +216,6 @@
       color: var(--text-muted);
     }
 
-    /* Sections */
     .section {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -260,9 +256,7 @@
       margin-bottom: 0.75rem;
     }
 
-    p:last-child {
-      margin-bottom: 0;
-    }
+    p:last-child { margin-bottom: 0; }
 
     ul {
       list-style: none;
@@ -289,17 +283,49 @@
       background: linear-gradient(135deg, #6366f1, #22d3ee);
     }
 
+    .identity-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.75rem;
+    }
+
+    .identity-table td {
+      padding: 0.4rem 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .identity-table td:first-child {
+      font-weight: 600;
+      color: var(--text-primary);
+      white-space: nowrap;
+      width: 40%;
+    }
+
+    .identity-table tr:last-child td { border-bottom: none; }
+
+    .highlight-box {
+      background: rgba(99, 102, 241, 0.05);
+      border: 1px solid rgba(99, 102, 241, 0.18);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-top: 0.75rem;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 0.875rem;
+    }
+
     .contact-link {
       color: var(--indigo);
       text-decoration: none;
       font-weight: 500;
     }
 
-    .contact-link:hover {
-      text-decoration: underline;
-    }
+    .contact-link:hover { text-decoration: underline; }
 
-    /* Footer */
     footer {
       position: relative;
       z-index: 1;
@@ -331,45 +357,23 @@
       transition: color 0.2s;
     }
 
-    .footer-links a:hover {
-      color: var(--indigo);
-    }
+    .footer-links a:hover { color: var(--indigo); }
 
     .footer-copy {
       font-size: 0.8125rem;
       color: var(--text-muted);
     }
 
-    /* Language sections */
-    [data-lang] {
-      display: none;
-    }
+    [data-lang] { display: none; }
 
-    body[data-active-lang="es"] [data-lang="es"] {
-      display: block;
-    }
+    body[data-active-lang="es"] [data-lang="es"] { display: block; }
+    body[data-active-lang="en"] [data-lang="en"] { display: block; }
 
-    body[data-active-lang="en"] [data-lang="en"] {
-      display: block;
-    }
-
-    body[data-active-lang="es"] h1[data-lang="es"] {
-      display: block;
-    }
-
-    body[data-active-lang="en"] h1[data-lang="en"] {
-      display: block;
-    }
-
-    /* Responsive */
     @media (max-width: 640px) {
-      .section {
-        padding: 1.25rem 1.25rem;
-      }
-
-      main {
-        padding: 2rem 1rem 4rem;
-      }
+      .section { padding: 1.25rem 1.25rem; }
+      main { padding: 2rem 1rem 4rem; }
+      .identity-table td { display: block; width: 100%; }
+      .identity-table td:first-child { padding-bottom: 0.1rem; }
     }
   </style>
 </head>
@@ -389,14 +393,10 @@
           <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
             <circle cx="12" cy="12" r="5" />
-            <line x1="12" y1="1" x2="12" y2="3" />
-            <line x1="12" y1="21" x2="12" y2="23" />
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-            <line x1="1" y1="12" x2="3" y2="12" />
-            <line x1="21" y1="12" x2="23" y2="12" />
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            <line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
           </svg>
           <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -412,81 +412,128 @@
     <div class="page-header" data-lang="es">
       <div class="page-badge">Legal</div>
       <h1>Términos y Condiciones</h1>
-      <p class="page-meta">Última actualización: 2 de abril de 2025 &nbsp;·&nbsp; withjp.ai</p>
+      <p class="page-meta">Última actualización: 2 de abril de 2026 &nbsp;·&nbsp; withjp.ai</p>
     </div>
 
     <!-- Page header EN -->
     <div class="page-header" data-lang="en">
       <div class="page-badge">Legal</div>
       <h1>Terms &amp; Conditions</h1>
-      <p class="page-meta">Last updated: April 2, 2025 &nbsp;·&nbsp; withjp.ai</p>
+      <p class="page-meta">Last updated: April 2, 2026 &nbsp;·&nbsp; withjp.ai</p>
     </div>
 
     <!-- ── ESPAÑOL ─────────────────────────────────────────── -->
     <div data-lang="es">
 
       <div class="section">
-        <h2><span class="num">1</span> Descripción del Servicio</h2>
-        <p>withjp.ai es el sitio web de Juan Pablo Guamán Rodríguez, desarrollador de software especializado en bots con inteligencia artificial, automatización de procesos, integración de sistemas y desarrollo de software a medida.</p>
-        <p>A través de este sitio y sus canales asociados —incluyendo comunicación vía WhatsApp Business— ofrezco información sobre mis servicios, atiendo consultas de potenciales clientes y gestiono proyectos de desarrollo. Los mensajes enviados por WhatsApp se realizan únicamente a usuarios que han dado su consentimiento previo (opt-in), conforme a las políticas de WhatsApp Business de Meta.</p>
+        <h2><span class="num">1</span> Identidad del Responsable</h2>
+        <p>El presente sitio web y todos sus servicios son operados bajo la responsabilidad de:</p>
+        <table class="identity-table">
+          <tr><td>Responsable</td><td>Juan Pablo Guamán Rodríguez</td></tr>
+          <tr><td>Domicilio</td><td>Loja, Ecuador</td></tr>
+          <tr><td>Correo electrónico</td><td><a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a></td></tr>
+          <tr><td>Sitio web</td><td><a href="https://withjp.ai" class="contact-link">https://withjp.ai</a></td></tr>
+          <tr><td>Actividad principal</td><td>Consultoría de software, automatización WhatsApp Business API (Meta) y cursos en línea (Udemy / Academia JP)</td></tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">2</span> Descripción del Servicio</h2>
+        <p>withjp.ai es el sitio web de Juan Pablo Guamán Rodríguez, desarrollador de software especializado en automatización de atención al cliente vía WhatsApp Business API, integración de sistemas y desarrollo de software a medida.</p>
+        <p>A través de este sitio y sus canales asociados ofrezco los siguientes servicios:</p>
+        <ul>
+          <li><strong>Consultoría y desarrollo de software:</strong> implementación de bots, flujos automatizados e integraciones empresariales.</li>
+          <li><strong>Cursos en línea en Udemy y Academia JP:</strong> formación en programación, inteligencia artificial, automatización y desarrollo web.</li>
+          <li><strong>Automatización vía WhatsApp Business:</strong> flujos de atención al cliente, seguimiento de pedidos, agendamiento de citas y notificaciones transaccionales a través de la API oficial de Meta.</li>
+        </ul>
+        <p>Los mensajes enviados por WhatsApp se realizan únicamente a usuarios que han dado su consentimiento previo (<em>opt-in</em>), en cumplimiento con las Políticas de WhatsApp Business de Meta.</p>
         <p>La información y el contacto inicial no sustituyen una relación contractual formal. Cada proyecto se formaliza mediante un acuerdo por escrito entre las partes.</p>
       </div>
 
       <div class="section">
-        <h2><span class="num">2</span> Responsabilidad del Usuario</h2>
+        <h2><span class="num">3</span> Responsabilidad del Usuario</h2>
         <p>Al utilizar este sitio web o interactuar a través del bot de WhatsApp, el usuario se compromete a:</p>
         <ul>
           <li>Proporcionar información veraz y actualizada.</li>
           <li>No utilizar el servicio para fines ilícitos, engañosos o que violen derechos de terceros.</li>
           <li>No enviar mensajes de spam, contenido ofensivo o malicioso a través del bot.</li>
           <li>Respetar los derechos de propiedad intelectual del contenido publicado.</li>
+          <li>Respetar las Políticas de Uso Aceptable de WhatsApp Business de Meta.</li>
         </ul>
       </div>
 
       <div class="section">
-        <h2><span class="num">3</span> Uso Permitido del Servicio</h2>
+        <h2><span class="num">4</span> Uso Permitido del Servicio</h2>
         <p>El servicio está pensado exclusivamente para:</p>
         <ul>
-          <li>Consultar información sobre proyectos y servicios de desarrollo.</li>
-          <li>Solicitar asesoría en programación e inteligencia artificial.</li>
-          <li>Acceder a cursos y contenido educativo de withjp.ai.</li>
-          <li>Establecer contacto para colaboraciones o proyectos freelance.</li>
+          <li>Consultar información sobre proyectos y servicios de desarrollo de software.</li>
+          <li>Solicitar asesoría en programación, automatización e inteligencia artificial.</li>
+          <li>Acceder a cursos y contenido educativo de withjp.ai, Udemy y Academia JP.</li>
+          <li>Establecer contacto para colaboraciones, consultoría o proyectos freelance.</li>
+          <li>Recibir notificaciones y comunicaciones de soporte previamente acordadas.</li>
         </ul>
-        <p>Queda prohibido el uso automatizado masivo (scraping), la suplantación de identidad o cualquier acción que
-          afecte la disponibilidad del servicio.</p>
+        <p>Queda prohibido el uso automatizado masivo (<em>scraping</em>), la suplantación de identidad o cualquier acción que afecte la disponibilidad o integridad del servicio.</p>
       </div>
 
       <div class="section">
-        <h2><span class="num">4</span> Limitación de Responsabilidad</h2>
-        <p>withjp.ai ofrece el servicio "tal como está". No garantizamos disponibilidad continua ni la exactitud
-          absoluta de toda la información. En ningún caso seremos responsables por daños directos, indirectos o
-          consecuentes derivados del uso o imposibilidad de uso del servicio.</p>
-        <p>La asesoría brindada es de carácter orientativo y no reemplaza la consulta de un profesional especializado
-          para decisiones críticas de negocio o producción.</p>
+        <h2><span class="num">5</span> Meta Platforms, Inc. como Procesador de Datos</h2>
+        <p>El canal de WhatsApp utilizado en este sitio opera a través de la <strong>API oficial de WhatsApp Business</strong>. En este contexto, <strong>Meta Platforms, Inc.</strong> (1601 Willow Road, Menlo Park, CA 94025, EE.UU.) actúa como procesador de los datos de comunicación intercambiados a través de WhatsApp.</p>
+        <p>El uso de WhatsApp está sujeto a:</p>
+        <ul>
+          <li><a href="https://www.whatsapp.com/legal/business-policy/" class="contact-link" target="_blank" rel="noopener noreferrer">Condiciones del Servicio de WhatsApp Business de Meta</a></li>
+          <li><a href="https://www.facebook.com/privacy/policy/" class="contact-link" target="_blank" rel="noopener noreferrer">Política de Privacidad de Meta Platforms, Inc.</a></li>
+        </ul>
+        <p>withjp.ai opera exclusivamente bajo la API oficial de Meta, cumpliendo todas sus políticas:</p>
+        <ul>
+          <li>Solo se envían mensajes a usuarios con consentimiento previo (<em>opt-in</em>).</li>
+          <li>Se utilizan plantillas de mensajes aprobadas por Meta.</li>
+          <li>El usuario puede darse de baja respondiendo <strong>STOP</strong> o <strong>ALTO</strong> en cualquier momento.</li>
+          <li>No se utiliza la API para spam ni comunicaciones masivas no solicitadas.</li>
+        </ul>
       </div>
 
       <div class="section">
-        <h2><span class="num">5</span> Propiedad Intelectual</h2>
-        <p>Todo el contenido publicado en withjp.ai —textos, código de ejemplo, imágenes, videos y diseños— es propiedad
-          de Juan Pablo Guamán Rodríguez, salvo indicación contraria. Queda prohibida su reproducción total o parcial
-          sin autorización expresa y por escrito.</p>
+        <h2><span class="num">6</span> Derechos ARCO del Usuario</h2>
+        <p>De conformidad con la normativa ecuatoriana de protección de datos (<strong>Ley Orgánica de Protección de Datos Personales</strong>) y regulaciones internacionales aplicables, el usuario tiene los siguientes derechos sobre sus datos personales:</p>
+        <ul>
+          <li><strong>Acceso (A):</strong> Solicitar información completa sobre qué datos personales tenemos sobre usted, con qué finalidad y durante cuánto tiempo.</li>
+          <li><strong>Rectificación (R):</strong> Corregir datos inexactos, incompletos o desactualizados que tengamos en nuestros registros.</li>
+          <li><strong>Cancelación / Supresión (C):</strong> Solicitar la eliminación de sus datos cuando ya no sean necesarios para los fines para los que fueron recopilados.</li>
+          <li><strong>Oposición (O):</strong> Oponerse al tratamiento de sus datos para fines de marketing, prospección comercial o cualquier otra finalidad que no sea estrictamente necesaria.</li>
+        </ul>
+        <p>Para ejercer cualquiera de estos derechos, envíe su solicitud por escrito indicando su nombre completo y el derecho que desea ejercer a: <a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a>. Responderemos en un plazo máximo de 15 días hábiles.</p>
+        <div class="highlight-box">
+          <p>También puede cancelar la suscripción a las comunicaciones de WhatsApp respondiendo <strong>STOP</strong> o <strong>ALTO</strong> en cualquier momento, sin necesidad de justificación.</p>
+        </div>
       </div>
 
       <div class="section">
-        <h2><span class="num">6</span> Modificaciones del Servicio</h2>
-        <p>Nos reservamos el derecho de modificar, suspender o discontinuar cualquier parte del servicio en cualquier
-          momento, incluyendo estos Términos y Condiciones. Los cambios entrarán en vigor desde el momento de su
-          publicación en esta página. El uso continuado del servicio constituye la aceptación de los nuevos términos.
-        </p>
+        <h2><span class="num">7</span> Limitación de Responsabilidad</h2>
+        <p>withjp.ai ofrece el servicio "tal como está". No garantizamos disponibilidad continua ni la exactitud absoluta de toda la información. En ningún caso seremos responsables por daños directos, indirectos o consecuentes derivados del uso o imposibilidad de uso del servicio.</p>
+        <p>La asesoría brindada es de carácter orientativo y no reemplaza la consulta de un profesional especializado para decisiones críticas de negocio o producción.</p>
       </div>
 
       <div class="section">
-        <h2><span class="num">7</span> Contacto</h2>
+        <h2><span class="num">8</span> Propiedad Intelectual</h2>
+        <p>Todo el contenido publicado en withjp.ai —textos, código de ejemplo, imágenes, videos, diseños y material de cursos— es propiedad de Juan Pablo Guamán Rodríguez, salvo indicación contraria. Queda prohibida su reproducción total o parcial sin autorización expresa y por escrito.</p>
+        <p>El contenido de los cursos alojados en Udemy está además sujeto a los términos de uso de dicha plataforma.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">9</span> Modificaciones del Servicio</h2>
+        <p>Nos reservamos el derecho de modificar, suspender o discontinuar cualquier parte del servicio en cualquier momento, incluyendo estos Términos y Condiciones. Los cambios entrarán en vigor desde el momento de su publicación en esta página. El uso continuado del servicio constituye la aceptación de los nuevos términos.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">10</span> Contacto y Jurisdicción</h2>
         <p>Para cualquier consulta relacionada con estos Términos, puedes comunicarte a:</p>
-        <p>
-          Correo electrónico: <a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a><br />
-          WhatsApp / Web: <a href="/" class="contact-link">withjp.ai</a>
-        </p>
+        <table class="identity-table">
+          <tr><td>Responsable</td><td>Juan Pablo Guamán Rodríguez</td></tr>
+          <tr><td>Domicilio</td><td>Loja, Ecuador</td></tr>
+          <tr><td>Correo electrónico</td><td><a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a></td></tr>
+          <tr><td>Sitio web</td><td><a href="/" class="contact-link">withjp.ai</a></td></tr>
+        </table>
+        <p style="margin-top:0.75rem">Estos Términos se rigen por las leyes de la República del Ecuador. Para cualquier controversia, las partes se someten a la jurisdicción de los tribunales competentes de Loja, Ecuador.</p>
       </div>
 
     </div><!-- /es -->
@@ -495,66 +542,114 @@
     <div data-lang="en">
 
       <div class="section">
-        <h2><span class="num">1</span> Service Description</h2>
-        <p>withjp.ai is the website of Juan Pablo Guamán Rodríguez, a software developer specializing in AI-powered bots, process automation, system integrations, and custom software development.</p>
-        <p>Through this site and its associated channels — including WhatsApp Business communication — I provide information about my services, handle inquiries from potential clients, and manage development projects. WhatsApp messages are sent only to users who have given prior consent (opt-in), in accordance with Meta's WhatsApp Business policies.</p>
+        <h2><span class="num">1</span> Responsible Party Identity</h2>
+        <p>This website and all its services are operated under the responsibility of:</p>
+        <table class="identity-table">
+          <tr><td>Responsible</td><td>Juan Pablo Guamán Rodríguez</td></tr>
+          <tr><td>Address</td><td>Loja, Ecuador</td></tr>
+          <tr><td>Email</td><td><a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a></td></tr>
+          <tr><td>Website</td><td><a href="https://withjp.ai" class="contact-link">https://withjp.ai</a></td></tr>
+          <tr><td>Main activity</td><td>Software consulting, WhatsApp Business API automation (Meta) and online courses (Udemy / Academia JP)</td></tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">2</span> Service Description</h2>
+        <p>withjp.ai is the website of Juan Pablo Guamán Rodríguez, a software developer specializing in WhatsApp Business API customer service automation, system integrations, and custom software development.</p>
+        <p>Through this site and its associated channels, the following services are offered:</p>
+        <ul>
+          <li><strong>Software consulting and development:</strong> bots, automated workflows, and enterprise integrations.</li>
+          <li><strong>Online courses on Udemy and Academia JP:</strong> training in programming, AI, automation, and web development.</li>
+          <li><strong>WhatsApp Business automation:</strong> customer service flows, order tracking, appointment scheduling, and transactional notifications via Meta's official API.</li>
+        </ul>
+        <p>WhatsApp messages are sent only to users who have given prior consent (opt-in), in compliance with Meta's WhatsApp Business policies.</p>
         <p>Initial contact and information do not replace a formal contractual relationship. Each project is formalized through a written agreement between the parties.</p>
       </div>
 
       <div class="section">
-        <h2><span class="num">2</span> User Responsibilities</h2>
+        <h2><span class="num">3</span> User Responsibilities</h2>
         <p>By using this website or interacting through the WhatsApp bot, the user agrees to:</p>
         <ul>
           <li>Provide truthful and up-to-date information.</li>
           <li>Not use the service for unlawful, deceptive, or third-party rights-violating purposes.</li>
           <li>Not send spam, offensive, or malicious content through the bot.</li>
           <li>Respect the intellectual property rights of published content.</li>
+          <li>Comply with Meta's WhatsApp Business Acceptable Use Policy.</li>
         </ul>
       </div>
 
       <div class="section">
-        <h2><span class="num">3</span> Permitted Use</h2>
+        <h2><span class="num">4</span> Permitted Use</h2>
         <p>The service is intended exclusively for:</p>
         <ul>
-          <li>Consulting information about development projects and services.</li>
-          <li>Requesting advisory on programming and artificial intelligence.</li>
-          <li>Accessing courses and educational content from withjp.ai.</li>
-          <li>Making contact for collaborations or freelance projects.</li>
+          <li>Consulting information about software development projects and services.</li>
+          <li>Requesting advisory on programming, automation, and artificial intelligence.</li>
+          <li>Accessing courses and educational content from withjp.ai, Udemy, and Academia JP.</li>
+          <li>Making contact for collaborations, consulting, or freelance projects.</li>
+          <li>Receiving previously agreed support notifications and communications.</li>
         </ul>
-        <p>Automated mass usage (scraping), identity impersonation, or any action that affects service availability is
-          strictly prohibited.</p>
+        <p>Automated mass usage (scraping), identity impersonation, or any action affecting service availability or integrity is strictly prohibited.</p>
       </div>
 
       <div class="section">
-        <h2><span class="num">4</span> Limitation of Liability</h2>
-        <p>withjp.ai provides the service "as is." We do not guarantee continuous availability or absolute accuracy of
-          all information. In no event shall we be liable for direct, indirect, or consequential damages arising from
-          the use or inability to use the service.</p>
-        <p>Advisory provided is informational in nature and does not replace consultation with a specialized
-          professional for critical business or production decisions.</p>
+        <h2><span class="num">5</span> Meta Platforms, Inc. as Data Processor</h2>
+        <p>The WhatsApp channel used on this site operates through the <strong>official WhatsApp Business API</strong>. In this context, <strong>Meta Platforms, Inc.</strong> (1601 Willow Road, Menlo Park, CA 94025, USA) acts as a processor of communication data exchanged through WhatsApp.</p>
+        <p>Use of WhatsApp is subject to:</p>
+        <ul>
+          <li><a href="https://www.whatsapp.com/legal/business-policy/" class="contact-link" target="_blank" rel="noopener noreferrer">Meta's WhatsApp Business Terms of Service</a></li>
+          <li><a href="https://www.facebook.com/privacy/policy/" class="contact-link" target="_blank" rel="noopener noreferrer">Meta Platforms, Inc. Privacy Policy</a></li>
+        </ul>
+        <p>withjp.ai operates exclusively under Meta's official API, complying with all its policies:</p>
+        <ul>
+          <li>Messages are only sent to users who have given prior consent (opt-in).</li>
+          <li>Only Meta-approved message templates are used.</li>
+          <li>Users can unsubscribe by replying <strong>STOP</strong> at any time.</li>
+          <li>The API is not used for spam or unsolicited mass communications.</li>
+        </ul>
       </div>
 
       <div class="section">
-        <h2><span class="num">5</span> Intellectual Property</h2>
-        <p>All content published on withjp.ai —texts, sample code, images, videos, and designs— is the property of Juan
-          Pablo Guamán Rodríguez, unless otherwise indicated. Reproduction in whole or in part without express written
-          authorization is prohibited.</p>
+        <h2><span class="num">6</span> User ARCO Rights (Data Subject Rights)</h2>
+        <p>In accordance with Ecuador's data protection law (<strong>Ley Orgánica de Protección de Datos Personales</strong>) and applicable international regulations, users have the following rights regarding their personal data:</p>
+        <ul>
+          <li><strong>Access (A):</strong> Request complete information about what personal data we hold about you, for what purpose, and for how long.</li>
+          <li><strong>Rectification (R):</strong> Correct inaccurate, incomplete, or outdated data in our records.</li>
+          <li><strong>Cancellation / Erasure (C):</strong> Request deletion of your data when it is no longer necessary for the purposes for which it was collected.</li>
+          <li><strong>Objection (O):</strong> Object to the processing of your data for marketing, commercial prospecting, or any purpose that is not strictly necessary.</li>
+        </ul>
+        <p>To exercise any of these rights, send a written request including your full name and the right you wish to exercise to: <a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a>. We will respond within a maximum of 15 business days.</p>
+        <div class="highlight-box">
+          <p>You may also unsubscribe from WhatsApp communications by replying <strong>STOP</strong> at any time, without providing any justification.</p>
+        </div>
       </div>
 
       <div class="section">
-        <h2><span class="num">6</span> Service Modifications</h2>
-        <p>We reserve the right to modify, suspend, or discontinue any part of the service at any time, including these
-          Terms &amp; Conditions. Changes take effect from the moment they are published on this page. Continued use of
-          the service constitutes acceptance of the new terms.</p>
+        <h2><span class="num">7</span> Limitation of Liability</h2>
+        <p>withjp.ai provides the service "as is." We do not guarantee continuous availability or absolute accuracy of all information. In no event shall we be liable for direct, indirect, or consequential damages arising from the use or inability to use the service.</p>
+        <p>Advisory provided is informational in nature and does not replace consultation with a specialized professional for critical business or production decisions.</p>
       </div>
 
       <div class="section">
-        <h2><span class="num">7</span> Contact</h2>
+        <h2><span class="num">8</span> Intellectual Property</h2>
+        <p>All content published on withjp.ai — texts, sample code, images, videos, designs, and course materials — is the property of Juan Pablo Guamán Rodríguez, unless otherwise indicated. Reproduction in whole or in part without express written authorization is prohibited.</p>
+        <p>Course content hosted on Udemy is also subject to that platform's terms of use.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">9</span> Service Modifications</h2>
+        <p>We reserve the right to modify, suspend, or discontinue any part of the service at any time, including these Terms &amp; Conditions. Changes take effect from the moment they are published on this page. Continued use of the service constitutes acceptance of the new terms.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">10</span> Contact and Jurisdiction</h2>
         <p>For any inquiries related to these Terms, you may reach us at:</p>
-        <p>
-          Email: <a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a><br />
-          WhatsApp / Web: <a href="/" class="contact-link">withjp.ai</a>
-        </p>
+        <table class="identity-table">
+          <tr><td>Responsible</td><td>Juan Pablo Guamán Rodríguez</td></tr>
+          <tr><td>Address</td><td>Loja, Ecuador</td></tr>
+          <tr><td>Email</td><td><a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a></td></tr>
+          <tr><td>Website</td><td><a href="/" class="contact-link">withjp.ai</a></td></tr>
+        </table>
+        <p style="margin-top:0.75rem">These Terms are governed by the laws of the Republic of Ecuador. Any dispute shall be subject to the jurisdiction of the competent courts of Loja, Ecuador.</p>
       </div>
 
     </div><!-- /en -->
@@ -566,18 +661,16 @@
         <a href="/">← withjp.ai</a>
         <a href="/privacidad.html" data-lang="es">Política de Privacidad</a>
         <a href="/privacidad.html" data-lang="en">Privacy Policy</a>
+        <a href="/cookies.html" data-lang="es">Cookies</a>
+        <a href="/cookies.html" data-lang="en">Cookies</a>
         <a href="/whatsapp-business" data-lang="es">Política de WhatsApp</a>
         <a href="/whatsapp-business" data-lang="en">WhatsApp Policy</a>
       </div>
-      <span class="footer-copy">© <span id="year"></span> Juan Pablo Guamán</span>
+      <span class="footer-copy">© 2026 Juan Pablo Guamán Rodríguez | Loja, Ecuador | info@withjp.ai</span>
     </div>
   </footer>
 
   <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Theme
     (function () {
       const stored = localStorage.getItem('withjp_theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -600,7 +693,6 @@
       document.getElementById('icon-moon').style.display = next === 'dark' ? '' : 'none';
     }
 
-    // Language
     (function () {
       const stored = localStorage.getItem('withjp_locale');
       const lang = stored === 'en' ? 'en' : 'es';

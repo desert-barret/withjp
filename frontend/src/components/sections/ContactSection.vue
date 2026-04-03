@@ -12,7 +12,7 @@
       </div>
 
       <!-- WhatsApp CTA — primary action -->
-      <div class="flex flex-col sm:flex-row gap-3 justify-center mb-10 reveal" :class="{ visible: visible }">
+      <div class="flex flex-col sm:flex-row gap-3 justify-center reveal" :class="{ visible: visible }">
         <a
           :href="whatsappUrl"
           target="_blank"
@@ -44,6 +44,16 @@
           {{ locale === 'es' ? 'Enviar un email' : 'Send an email' }}
         </a>
       </div>
+
+      <!-- Opt-in consent micro-copy -->
+      <p class="text-center text-xs text-slate-400 dark:text-slate-500 mt-3 mb-10 max-w-lg mx-auto reveal" :class="{ visible: visible }">
+        {{ locale === 'es'
+          ? 'Al comunicarte con nosotros, aceptas que procesemos tus datos según nuestra'
+          : 'By contacting us, you agree that we process your data as described in our' }}
+        <a href="/privacidad.html" class="text-primary-500 hover:text-primary-600 underline underline-offset-2 transition-colors">
+          {{ locale === 'es' ? 'Política de Privacidad' : 'Privacy Policy' }}
+        </a>.
+      </p>
 
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-12">
         <a v-for="(link, i) in contactLinks" :key="link.label"

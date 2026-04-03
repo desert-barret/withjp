@@ -115,7 +115,7 @@
     <loc>https://withjp.ai/terminos.html</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
   </url>
 
   <!-- ── Privacidad ────────────────────────────────────────── -->
@@ -123,7 +123,15 @@
     <loc>https://withjp.ai/privacidad.html</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ── Cookies ───────────────────────────────────────────── -->
+  <url>
+    <loc>https://withjp.ai/cookies.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
 </urlset>

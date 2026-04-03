@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Cookies / Cookie Policy — withjp.ai</title>
+  <meta name="description" content="Política de Cookies de withjp.ai — Juan Pablo Guamán Rodríguez, Loja, Ecuador. Información sobre el uso de cookies técnicas en el sitio." />
+  <link rel="canonical" href="https://withjp.ai/cookies.html" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f9ff; --surface: #ffffff;
+      --border: rgba(99,102,241,0.12); --text-primary: #0f172a;
+      --text-secondary: #475569; --text-muted: #94a3b8;
+      --indigo: #6366f1; --cyan: #22d3ee;
+      --shadow: 0 2px 8px rgba(0,0,0,0.04), 0 8px 32px rgba(99,102,241,0.07);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #080b14; --surface: rgba(255,255,255,0.03);
+        --border: rgba(99,102,241,0.15); --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8; --text-muted: #64748b;
+        --shadow: 0 2px 8px rgba(0,0,0,0.3), 0 8px 32px rgba(99,102,241,0.1);
+      }
+    }
+    html[data-theme="dark"] {
+      --bg: #080b14; --surface: rgba(255,255,255,0.03);
+      --border: rgba(99,102,241,0.15); --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8; --text-muted: #64748b;
+      --shadow: 0 2px 8px rgba(0,0,0,0.3), 0 8px 32px rgba(99,102,241,0.1);
+    }
+    html[data-theme="light"] {
+      --bg: #f8f9ff; --surface: #ffffff;
+      --border: rgba(99,102,241,0.12); --text-primary: #0f172a;
+      --text-secondary: #475569; --text-muted: #94a3b8;
+      --shadow: 0 2px 8px rgba(0,0,0,0.04), 0 8px 32px rgba(99,102,241,0.07);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--bg); color: var(--text-primary);
+      line-height: 1.7; min-height: 100vh;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(99,102,241,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(34,211,238,0.05) 0%, transparent 60%);
+      pointer-events: none; z-index: 0;
+    }
+
+    header { position: sticky; top: 0; z-index: 100; background: var(--surface); border-bottom: 1px solid var(--border); backdrop-filter: blur(12px); }
+    .header-inner { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 700; color: var(--text-primary); font-size: 1rem; }
+    .logo-icon { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, #6366f1, #22d3ee); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; }
+    .logo-accent { color: var(--indigo); }
+    .header-controls { display: flex; align-items: center; gap: 0.5rem; }
+    .btn-icon { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; font-size: 0.85rem; }
+    .btn-icon:hover { background: rgba(99,102,241,0.08); color: var(--indigo); border-color: rgba(99,102,241,0.3); }
+    .lang-btn { padding: 0 0.75rem; width: auto; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; font-family: 'Inter', sans-serif; }
+
+    main { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+    .page-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    .page-badge {
+      display: inline-flex; align-items: center; gap: 0.375rem;
+      padding: 0.25rem 0.75rem; border-radius: 999px;
+      background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.25);
+      color: #0891b2; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem;
+    }
+    html[data-theme="dark"] .page-badge { color: var(--cyan); }
+    h1 {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; line-height: 1.2;
+      background: linear-gradient(135deg, #22d3ee 0%, #818cf8 50%, #6366f1 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 0.75rem;
+    }
+    .page-meta { font-size: 0.875rem; color: var(--text-muted); }
+
+    .section { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem 2rem; margin-bottom: 1.25rem; box-shadow: var(--shadow); }
+    h2 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1.125rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.875rem; display: flex; align-items: center; gap: 0.5rem; }
+    h2 .num { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 6px; background: linear-gradient(135deg, #22d3ee, #6366f1); color: #fff; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; }
+    p { color: var(--text-secondary); font-size: 0.9375rem; margin-bottom: 0.75rem; }
+    p:last-child { margin-bottom: 0; }
+    ul { list-style: none; padding: 0; margin: 0.5rem 0 0.75rem; }
+    ul li { color: var(--text-secondary); font-size: 0.9375rem; padding: 0.3rem 0 0.3rem 1.5rem; position: relative; }
+    ul li::before { content: ''; position: absolute; left: 0.25rem; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background: linear-gradient(135deg, #22d3ee, #6366f1); }
+
+    .cookie-table { width: 100%; border-collapse: collapse; margin-top: 0.75rem; font-size: 0.875rem; }
+    .cookie-table th { text-align: left; padding: 0.6rem 0.75rem; font-weight: 600; color: var(--text-primary); background: rgba(99,102,241,0.06); border-bottom: 2px solid var(--border); }
+    .cookie-table td { padding: 0.6rem 0.75rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); vertical-align: top; }
+    .cookie-table tr:last-child td { border-bottom: none; }
+    .badge-tech { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; background: rgba(34,211,238,0.12); color: #0891b2; }
+    html[data-theme="dark"] .badge-tech { color: var(--cyan); }
+
+    .contact-link { color: var(--indigo); text-decoration: none; font-weight: 500; }
+    .contact-link:hover { text-decoration: underline; }
+
+    footer { position: relative; z-index: 1; border-top: 1px solid var(--border); background: var(--surface); }
+    .footer-inner { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .footer-links a { font-size: 0.875rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--indigo); }
+    .footer-copy { font-size: 0.8125rem; color: var(--text-muted); }
+
+    [data-lang] { display: none; }
+    body[data-active-lang="es"] [data-lang="es"] { display: block; }
+    body[data-active-lang="en"] [data-lang="en"] { display: block; }
+
+    @media (max-width: 640px) {
+      .section { padding: 1.25rem 1.25rem; }
+      main { padding: 2rem 1rem 4rem; }
+      .cookie-table th, .cookie-table td { padding: 0.5rem 0.5rem; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+
+<body data-active-lang="es">
+
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-icon">JP</div>
+        <span>withjp<span class="logo-accent">.ai</span></span>
+      </a>
+      <div class="header-controls">
+        <button class="btn-icon lang-btn" onclick="toggleLang()" id="lang-toggle" aria-label="Switch language">EN</button>
+        <button class="btn-icon" onclick="toggleTheme()" id="theme-toggle" aria-label="Toggle theme">
+          <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page header ES -->
+    <div class="page-header" data-lang="es">
+      <div class="page-badge">Legal</div>
+      <h1>Política de Cookies</h1>
+      <p class="page-meta">Última actualización: 2 de abril de 2026 &nbsp;·&nbsp; withjp.ai</p>
+    </div>
+
+    <!-- Page header EN -->
+    <div class="page-header" data-lang="en">
+      <div class="page-badge">Legal</div>
+      <h1>Cookie Policy</h1>
+      <p class="page-meta">Last updated: April 2, 2026 &nbsp;·&nbsp; withjp.ai</p>
+    </div>
+
+    <!-- ── ESPAÑOL ─────────────────────────────────────────── -->
+    <div data-lang="es">
+
+      <div class="section">
+        <h2><span class="num">1</span> ¿Qué son las Cookies?</h2>
+        <p>Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo (ordenador, tablet o teléfono) cuando los visitas. Permiten que el sitio recuerde tus preferencias y mejore tu experiencia de navegación.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">2</span> Cookies que Utilizamos</h2>
+        <p>withjp.ai únicamente utiliza <strong>cookies técnicas estrictamente necesarias</strong> para el funcionamiento del sitio. No utilizamos cookies de seguimiento publicitario, cookies de terceros para análisis de comportamiento ni cookies de redes sociales.</p>
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th>Cookie</th>
+              <th>Finalidad</th>
+              <th>Duración</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>withjp_theme</code></td>
+              <td>Guarda tu preferencia de tema visual (claro / oscuro)</td>
+              <td>Persistente (localStorage)</td>
+              <td><span class="badge-tech">Técnica</span></td>
+            </tr>
+            <tr>
+              <td><code>withjp_locale</code></td>
+              <td>Guarda tu preferencia de idioma (ES / EN)</td>
+              <td>Persistente (localStorage)</td>
+              <td><span class="badge-tech">Técnica</span></td>
+            </tr>
+            <tr>
+              <td><code>withjp_token</code></td>
+              <td>Token de autenticación para el panel de administración (solo para el administrador del sitio)</td>
+              <td>7 días (localStorage)</td>
+              <td><span class="badge-tech">Técnica</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 0.75rem; font-size: 0.875rem;">Nota: las preferencias de tema e idioma se almacenan en <strong>localStorage</strong> del navegador, no en cookies HTTP tradicionales, pero siguen siendo datos de preferencia del usuario.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">3</span> Cookies de Terceros</h2>
+        <p>Este sitio <strong>no instala cookies de terceros</strong>. Sin embargo, al interactuar con el botón de WhatsApp, serás redirigido a la plataforma de Meta (WhatsApp), que tiene su propia política de cookies y privacidad:</p>
+        <ul>
+          <li><a href="https://www.whatsapp.com/legal/privacy-policy" class="contact-link" target="_blank" rel="noopener noreferrer">Política de Privacidad de WhatsApp</a></li>
+          <li><a href="https://www.facebook.com/policies/cookies/" class="contact-link" target="_blank" rel="noopener noreferrer">Política de Cookies de Meta</a></li>
+        </ul>
+        <p>El uso de fuentes de Google Fonts implica una petición a los servidores de Google. Consulta la <a href="https://policies.google.com/privacy" class="contact-link" target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a> para más información.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">4</span> Gestión de Cookies</h2>
+        <p>Puedes gestionar o eliminar las preferencias almacenadas en tu navegador en cualquier momento:</p>
+        <ul>
+          <li><strong>Desde el navegador:</strong> Accede a la configuración de privacidad de tu navegador para borrar datos de sitios web (localStorage y cookies).</li>
+          <li><strong>Desde la herramienta de desarrollo:</strong> Abre las DevTools del navegador → Application → Local Storage → withjp.ai → elimina las entradas deseadas.</li>
+        </ul>
+        <p>Eliminar estas preferencias no afecta tu capacidad para usar el sitio, pero restablecerá el idioma y el tema a los valores predeterminados.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">5</span> Contacto</h2>
+        <p>Para cualquier consulta sobre el uso de cookies en withjp.ai:</p>
+        <p>
+          <strong>Responsable:</strong> Juan Pablo Guamán Rodríguez<br />
+          <strong>Domicilio:</strong> Loja, Ecuador<br />
+          <strong>Correo electrónico:</strong> <a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a>
+        </p>
+      </div>
+
+    </div><!-- /es -->
+
+    <!-- ── ENGLISH ─────────────────────────────────────────── -->
+    <div data-lang="en">
+
+      <div class="section">
+        <h2><span class="num">1</span> What are Cookies?</h2>
+        <p>Cookies are small text files that websites store on your device (computer, tablet, or phone) when you visit them. They allow the site to remember your preferences and improve your browsing experience.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">2</span> Cookies We Use</h2>
+        <p>withjp.ai only uses <strong>strictly necessary technical cookies</strong> for the site's operation. We do not use advertising tracking cookies, third-party behavioral analytics cookies, or social media cookies.</p>
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th>Cookie</th>
+              <th>Purpose</th>
+              <th>Duration</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>withjp_theme</code></td>
+              <td>Saves your visual theme preference (light / dark)</td>
+              <td>Persistent (localStorage)</td>
+              <td><span class="badge-tech">Technical</span></td>
+            </tr>
+            <tr>
+              <td><code>withjp_locale</code></td>
+              <td>Saves your language preference (ES / EN)</td>
+              <td>Persistent (localStorage)</td>
+              <td><span class="badge-tech">Technical</span></td>
+            </tr>
+            <tr>
+              <td><code>withjp_token</code></td>
+              <td>Authentication token for the admin panel (site administrator only)</td>
+              <td>7 days (localStorage)</td>
+              <td><span class="badge-tech">Technical</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 0.75rem; font-size: 0.875rem;">Note: theme and language preferences are stored in the browser's <strong>localStorage</strong>, not traditional HTTP cookies, but they are still user preference data.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">3</span> Third-Party Cookies</h2>
+        <p>This site <strong>does not install third-party cookies</strong>. However, when interacting with the WhatsApp button, you will be redirected to Meta's platform (WhatsApp), which has its own cookie and privacy policy:</p>
+        <ul>
+          <li><a href="https://www.whatsapp.com/legal/privacy-policy" class="contact-link" target="_blank" rel="noopener noreferrer">WhatsApp Privacy Policy</a></li>
+          <li><a href="https://www.facebook.com/policies/cookies/" class="contact-link" target="_blank" rel="noopener noreferrer">Meta Cookie Policy</a></li>
+        </ul>
+        <p>The use of Google Fonts involves a request to Google servers. See <a href="https://policies.google.com/privacy" class="contact-link" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a> for more information.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">4</span> Managing Cookies</h2>
+        <p>You can manage or delete stored preferences in your browser at any time:</p>
+        <ul>
+          <li><strong>From your browser:</strong> Access your browser's privacy settings to clear website data (localStorage and cookies).</li>
+          <li><strong>From developer tools:</strong> Open browser DevTools → Application → Local Storage → withjp.ai → delete desired entries.</li>
+        </ul>
+        <p>Deleting these preferences does not affect your ability to use the site, but will reset language and theme to their default values.</p>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">5</span> Contact</h2>
+        <p>For any questions about cookie use on withjp.ai:</p>
+        <p>
+          <strong>Controller:</strong> Juan Pablo Guamán Rodríguez<br />
+          <strong>Address:</strong> Loja, Ecuador<br />
+          <strong>Email:</strong> <a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a>
+        </p>
+      </div>
+
+    </div><!-- /en -->
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/">← withjp.ai</a>
+        <a href="/privacidad.html" data-lang="es">Política de Privacidad</a>
+        <a href="/privacidad.html" data-lang="en">Privacy Policy</a>
+        <a href="/terminos.html" data-lang="es">Términos y Condiciones</a>
+        <a href="/terminos.html" data-lang="en">Terms &amp; Conditions</a>
+        <a href="/whatsapp-business" data-lang="es">Política de WhatsApp</a>
+        <a href="/whatsapp-business" data-lang="en">WhatsApp Policy</a>
+      </div>
+      <span class="footer-copy">© 2026 Juan Pablo Guamán Rodríguez | Loja, Ecuador | info@withjp.ai</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const stored = localStorage.getItem('withjp_theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = stored === 'dark' || (!stored && prefersDark);
+      if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.getElementById('icon-sun').style.display = '';
+        document.getElementById('icon-moon').style.display = 'none';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+
+    function toggleTheme() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('withjp_theme', next);
+      document.getElementById('icon-sun').style.display = next === 'light' ? '' : 'none';
+      document.getElementById('icon-moon').style.display = next === 'dark' ? '' : 'none';
+    }
+
+    (function () {
+      const stored = localStorage.getItem('withjp_locale');
+      const lang = stored === 'en' ? 'en' : 'es';
+      document.body.setAttribute('data-active-lang', lang);
+      document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
+      document.documentElement.lang = lang;
+    })();
+
+    function toggleLang() {
+      const current = document.body.getAttribute('data-active-lang');
+      const next = current === 'es' ? 'en' : 'es';
+      document.body.setAttribute('data-active-lang', next);
+      document.getElementById('lang-toggle').textContent = next === 'es' ? 'EN' : 'ES';
+      document.documentElement.lang = next;
+      localStorage.setItem('withjp_locale', next);
+    }
+  </script>
+</body>
+
+</html>
