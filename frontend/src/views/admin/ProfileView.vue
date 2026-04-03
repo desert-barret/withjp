@@ -43,7 +43,7 @@
             <div class="space-y-4">
               <div>
                 <label class="label">Nombre completo</label>
-                <input v-model="form.name" type="text" class="input" placeholder="Juan Pablo Guamán" />
+                <input v-model="form.name" type="text" class="input" placeholder="Juan Pablo Guamán Rodríguez" />
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -247,9 +247,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineComponent, h, onMounted } from 'vue';
-import { useProfileStore } from '@/stores/profile';
 import { authApi } from '@/services/api';
+import { useProfileStore } from '@/stores/profile';
+import { defineComponent, h, onMounted, ref } from 'vue';
 
 // ── Save bar component (inline) ──────────────────────────────
 const SaveBar = defineComponent({

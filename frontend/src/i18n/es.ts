@@ -13,7 +13,7 @@ export default {
   },
   hero: {
     greeting: 'Hola, soy',
-    title: 'Juan Pablo Guaman',
+    title: 'Juan Pablo Guamán Rodríguez',
     badge: 'WhatsApp Business API · Oficial de Meta',
     headline: 'Automatiza la atención de tus clientes en WhatsApp',
     description: 'Responde preguntas frecuentes, gestiona pedidos y agenda citas automáticamente con flujos diseñados para tu negocio. Sin agentes disponibles 24/7, sin costos fijos de personal.',

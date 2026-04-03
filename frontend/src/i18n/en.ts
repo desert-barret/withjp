@@ -13,7 +13,7 @@ export default {
   },
   hero: {
     greeting: "Hi, I'm",
-    title: 'Juan Pablo Guaman',
+    title: 'Juan Pablo Guamán Rodríguez',
     badge: 'WhatsApp Business API · Official Meta',
     headline: 'Automate customer service on WhatsApp',
     description: 'Answer FAQs, manage orders, and schedule appointments automatically with flows designed for your business. No 24/7 agents, no fixed staffing costs.',

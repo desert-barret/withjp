@@ -45,7 +45,7 @@
             </div>
             <div class="min-w-0 flex-1">
               <p class="font-display font-bold text-slate-900 dark:text-white text-sm leading-tight truncate">
-                Juan Pablo Guamán
+                Juan Pablo Guamán Rodríguez
               </p>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 truncate">
                 WhatsApp Business Developer · Ecuador 🇪🇨
@@ -144,7 +144,7 @@
                   <div class="relative w-24 h-24 rounded-2xl overflow-hidden ring-2 ring-white/20 shadow-xl">
                     <div v-if="avatarLoading" class="absolute inset-0 bg-white/15 animate-pulse" />
                     <img v-if="profile?.avatar_url && !avatarError"
-                         :src="profile.avatar_url" alt="Juan Pablo Guamán"
+                         :src="profile.avatar_url" alt="Juan Pablo Guamán Rodríguez"
                          class="w-full h-full object-cover transition-opacity duration-500"
                          :class="avatarLoading ? 'opacity-0' : 'opacity-100'"
                          @load="avatarLoading = false"
@@ -161,7 +161,7 @@
                   </span>
                 </div>
 
-                <h3 class="font-display font-bold text-white text-lg leading-tight mb-1">Juan Pablo Guamán</h3>
+                <h3 class="font-display font-bold text-white text-lg leading-tight mb-1">Juan Pablo Guamán Rodríguez</h3>
                 <p class="text-emerald-200 text-sm mb-1">WhatsApp Business Developer</p>
                 <p class="text-emerald-300/70 text-xs mb-5">Ecuador 🇪🇨 · API oficial de Meta</p>
 
@@ -233,9 +233,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
-import { useI18n } from 'vue-i18n';
 import { useProfileStore } from '@/stores/profile';
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const { t, locale } = useI18n();
 const profileStore = useProfileStore();

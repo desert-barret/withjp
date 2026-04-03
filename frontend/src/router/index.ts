@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router';
 import { useAuthStore } from '@/stores/auth';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -17,7 +17,7 @@ const router = createRouter({
           path: '',
           name: 'Home',
           component: () => import('@/views/HomeView.vue'),
-          meta: { title: 'Juan Pablo Guaman | withjp.ai' },
+          meta: { title: 'Juan Pablo Guamán Rodríguez | withjp.ai' },
         },
         {
           path: 'whatsapp-automation',

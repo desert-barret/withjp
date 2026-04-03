@@ -1,14 +1,18 @@
 {
-  "name": "withjp.ai — Juan Pablo Guamán",
+  "name": "withjp.ai — Juan Pablo Guamán Rodríguez",
   "short_name": "withjp.ai",
-  "description": "Portfolio de Juan Pablo Guamán — Software Architect & Full Stack Developer. 25 000+ estudiantes en Udemy.",
+  "description": "Portfolio de Juan Pablo Guamán Rodríguez — Software Architect & Full Stack Developer. 25 000+ estudiantes en Udemy.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#080B14",
   "theme_color": "#6366f1",
   "lang": "es",
   "orientation": "portrait-primary",
-  "categories": ["education", "portfolio", "developer"],
+  "categories": [
+    "education",
+    "portfolio",
+    "developer"
+  ],
   "icons": [
     {
       "src": "/favicon.svg",

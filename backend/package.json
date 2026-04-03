@@ -2,7 +2,7 @@
   "name": "withjp-backend",
   "version": "1.0.0",
   "description": "withjp.ai backend API",
-  "author": "Juan Pablo Guaman",
+  "author": "Juan Pablo Guamán Rodríguez",
   "private": true,
   "license": "MIT",
   "scripts": {
