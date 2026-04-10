@@ -1,24 +1,23 @@
-import { ref, onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 
 export function useReveal(threshold = 0.15) {
-  const el = ref<HTMLElement | null>(null);
-  const visible = ref(false);
   let observer: IntersectionObserver;
 
   onMounted(() => {
     observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          visible.value = true;
-          observer.disconnect();
-        }
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
       },
       { threshold }
     );
-    if (el.value) observer.observe(el.value);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   });
 
   onUnmounted(() => observer?.disconnect());
-
-  return { el, visible };
 }
