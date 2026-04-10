@@ -50,6 +50,11 @@ const router = createRouter({
           component: () => import('@/views/public/BlogPage.vue'),
         },
         {
+          path: 'blog/por-que-usar-ia-es-una-ventaja',
+          name: 'BlogPostIA',
+          component: () => import('@/views/public/BlogPostIAPage.vue'),
+        },
+        {
           path: 'blog/:slug',
           name: 'BlogPost',
           component: () => import('@/views/public/BlogPostPage.vue'),

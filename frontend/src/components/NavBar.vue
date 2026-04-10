@@ -2,19 +2,19 @@
   <header
     class="fixed top-0 left-0 right-0 z-[70] transition-all duration-300"
     :class="scrolled
-      ? 'bg-white/90 dark:bg-[#080B14] backdrop-blur-xl border-b border-slate-200/60 dark:border-white/[0.08] shadow-sm dark:shadow-black/40'
-      : 'bg-white/75 dark:bg-[#080B14]/95 backdrop-blur-md border-b border-slate-100/60 dark:border-white/[0.06]'">
+      ? 'bg-white/95 dark:bg-[#080B14]/98 backdrop-blur-xl border-b border-slate-200/60 dark:border-white/[0.08] shadow-sm dark:shadow-black/40'
+      : 'bg-white/80 dark:bg-[#080B14]/95 backdrop-blur-md border-b border-slate-100/60 dark:border-white/[0.05]'">
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
 
       <!-- Logo -->
-      <router-link to="/" class="flex items-center gap-2.5 group">
+      <router-link to="/" class="flex items-center gap-2.5 group shrink-0">
         <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-primary-600 to-violet-600
                     flex items-center justify-center shadow-md shadow-primary-500/25
-                    group-hover:shadow-primary-500/40 group-hover:scale-105 transition-all">
+                    group-hover:shadow-primary-500/50 group-hover:scale-110 transition-all duration-300">
           <span class="text-white font-bold text-xs tracking-tight">JP</span>
         </div>
-        <span class="font-display font-bold text-[1.1rem] text-slate-900 dark:text-white">
+        <span class="font-display font-bold text-[1.05rem] text-slate-900 dark:text-white">
           withjp<span class="text-primary-500">.ai</span>
         </span>
       </router-link>
@@ -22,7 +22,7 @@
       <!-- Desktop nav -->
       <nav class="hidden md:flex items-center gap-0.5">
         <router-link v-for="item in navItems" :key="item.to" :to="item.to"
-          class="px-4 py-2 text-sm font-medium rounded-xl transition-all duration-200
+          class="px-3.5 py-2 text-sm font-medium rounded-xl transition-all duration-200
                  text-slate-600 dark:text-slate-400
                  hover:text-slate-900 dark:hover:text-white
                  hover:bg-slate-100/80 dark:hover:bg-white/[0.06]"
@@ -34,15 +34,26 @@
       <!-- Actions -->
       <div class="flex items-center gap-1.5">
 
+        <!-- Contact CTA (desktop only) -->
+        <a href="mailto:info@withjp.ai"
+          class="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold
+                 text-white bg-primary-600 hover:bg-primary-500
+                 shadow-sm shadow-primary-500/25 transition-all duration-200 mr-1">
+          {{ t('nav.contact') }}
+        </a>
+
         <!-- Lang toggle -->
         <button @click="toggleLang"
-          class="h-9 px-3 flex items-center gap-1.5 text-xs font-semibold rounded-xl
+          class="h-9 px-3 flex items-center gap-1.5 text-xs font-bold rounded-xl
                  border border-slate-200/80 dark:border-white/[0.08]
                  text-slate-600 dark:text-slate-400
                  hover:border-primary-400 dark:hover:border-primary-500/50
                  hover:text-primary-600 dark:hover:text-primary-400
                  bg-white/70 dark:bg-white/[0.04]
                  transition-all duration-200">
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
           {{ locale === 'es' ? 'EN' : 'ES' }}
         </button>
 
@@ -54,7 +65,8 @@
                  hover:border-primary-400 dark:hover:border-primary-500/50
                  hover:text-primary-600 dark:hover:text-primary-400
                  bg-white/70 dark:bg-white/[0.04]
-                 transition-all duration-200">
+                 transition-all duration-200"
+          :aria-label="theme.isDark ? 'Switch to light mode' : 'Switch to dark mode'">
           <svg v-if="theme.isDark" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"/>
@@ -92,12 +104,12 @@
       </div>
     </div>
 
-    <!-- Mobile menu dropdown -->
+    <!-- Mobile menu -->
     <Transition name="slide-down">
       <nav v-if="mobileOpen"
         class="md:hidden border-t border-slate-200/60 dark:border-white/[0.06]
-               bg-white/95 dark:bg-[#080B14]/95 backdrop-blur-xl
-               px-4 py-2 pb-3">
+               bg-white/98 dark:bg-[#080B14]/98 backdrop-blur-xl
+               px-4 py-3 pb-4">
         <router-link v-for="item in navItems" :key="item.to" :to="item.to"
           @click="mobileOpen = false"
           class="flex items-center px-4 py-3 text-sm font-medium rounded-xl
@@ -108,6 +120,12 @@
           active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-500/10">
           {{ t(item.key) }}
         </router-link>
+        <!-- Mobile contact -->
+        <a href="mailto:info@withjp.ai"
+          class="mt-2 flex items-center justify-center px-4 py-3 rounded-xl text-sm font-bold
+                 text-white bg-primary-600 hover:bg-primary-500 transition-colors">
+          {{ t('nav.contact') }}
+        </a>
       </nav>
     </Transition>
   </header>
@@ -127,7 +145,6 @@ const mobileOpen  = ref(false);
 const navItems = [
   { to: '/about',     key: 'nav.about' },
   { to: '/whatsapp',  key: 'nav.whatsapp' },
-  { to: '/cursos',    key: 'nav.courses' },
   { to: '/academia',  key: 'nav.academia' },
   { to: '/blog',      key: 'nav.blog' },
 ];
@@ -156,7 +173,7 @@ onUnmounted(() => {
 
 <style scoped>
 .slide-down-enter-active {
-  transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .slide-down-leave-active {
   transition: opacity 0.15s ease, transform 0.15s ease;
@@ -164,6 +181,6 @@ onUnmounted(() => {
 .slide-down-enter-from,
 .slide-down-leave-to {
   opacity: 0;
-  transform: translateY(-6px);
+  transform: translateY(-8px);
 }
 </style>
