@@ -91,7 +91,7 @@ export default {
     bio: {
       p1: "I've been building software for over 10 years. I started with simple web apps and scaled up to more complex systems: distributed backends, high-traffic mobile apps, third-party API integrations and, in recent years, products with integrated artificial intelligence.",
       p2: "My approach isn't to use the newest technology, but the one that solves the problem. I've worked with NestJS, Python, Flutter, Kotlin, Django, Spring Boot, and various databases on real production projects. What I care about is that the system works, is maintainable and supports growth.",
-      p3: "I also teach. I have 17 published courses on Udemy with over 25,000 students. All project-based, not demos. If you want to see how I think, check my courses. If you want to work with me, write to info@withjp.ai.",
+      p3: "I also teach. I have 17 published courses on Udemy with over 25,000 students. All project-based, not demos. If you want to see how I think, check my courses. If you want to work with me, get in touch.",
     },
     stats: {
       years: 'Years of experience',

@@ -91,7 +91,7 @@ export default {
     bio: {
       p1: 'Llevo mas de 10 anos construyendo software. Empece con aplicaciones web simples y fui escalando hacia sistemas mas complejos: backends distribuidos, apps moviles de alto trafico, integraciones con APIs de terceros y, en los ultimos anos, productos con inteligencia artificial integrada.',
       p2: 'Mi enfoque no es usar la tecnologia mas nueva, sino la que resuelve el problema. He trabajado con NestJS, Python, Flutter, Kotlin, Django, Spring Boot, y varias bases de datos en proyectos reales de produccion. Lo que me interesa es que el sistema funcione, sea mantenible y soporte crecimiento.',
-      p3: 'Tambien enseno. Tengo 17 cursos publicados en Udemy con mas de 25,000 estudiantes. Todos basados en proyectos reales, no demos. Si quieres ver como pienso, mira mis cursos. Si quieres trabajar conmigo, escribe a info@withjp.ai.',
+      p3: 'Tambien enseno. Tengo 17 cursos publicados en Udemy con mas de 25,000 estudiantes. Todos basados en proyectos reales, no demos. Si quieres ver como pienso, mira mis cursos. Si quieres trabajar conmigo, escribeme.',
     },
     stats: {
       years: 'Anos de experiencia',
