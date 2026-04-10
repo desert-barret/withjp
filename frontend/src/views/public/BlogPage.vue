@@ -68,6 +68,9 @@ useHead({
   title: () => t('blog_page.meta.title'),
   meta: [
     { name: 'description', content: () => t('blog_page.meta.description') },
+    { property: 'og:title', content: () => t('blog_page.meta.title') },
+    { property: 'og:description', content: () => t('blog_page.meta.description') },
+    { property: 'og:type', content: 'website' },
   ],
 });
 

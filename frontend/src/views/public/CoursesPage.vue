@@ -88,6 +88,9 @@ useHead({
   title: () => t('courses_page.meta.title'),
   meta: [
     { name: 'description', content: () => t('courses_page.meta.description') },
+    { property: 'og:title', content: () => t('courses_page.meta.title') },
+    { property: 'og:description', content: () => t('courses_page.meta.description') },
+    { property: 'og:type', content: 'website' },
   ],
 });
 
