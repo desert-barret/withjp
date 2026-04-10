@@ -1,23 +1,43 @@
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted, nextTick } from 'vue';
 
 export function useReveal(threshold = 0.15) {
-  let observer: IntersectionObserver;
+  let intersectionObserver: IntersectionObserver;
+  let mutationObserver: MutationObserver;
+  const observed = new WeakSet<Element>();
 
-  onMounted(() => {
-    observer = new IntersectionObserver(
+  function observe(el: Element) {
+    if (!observed.has(el)) {
+      observed.add(el);
+      intersectionObserver.observe(el);
+    }
+  }
+
+  function scanAll() {
+    document.querySelectorAll<Element>('.reveal').forEach(observe);
+  }
+
+  onMounted(async () => {
+    intersectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+            intersectionObserver.unobserve(entry.target);
           }
         });
       },
       { threshold }
     );
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    await nextTick();
+    scanAll();
+
+    mutationObserver = new MutationObserver(scanAll);
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
   });
 
-  onUnmounted(() => observer?.disconnect());
+  onUnmounted(() => {
+    intersectionObserver?.disconnect();
+    mutationObserver?.disconnect();
+  });
 }
