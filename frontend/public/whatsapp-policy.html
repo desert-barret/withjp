@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politica de WhatsApp Business / WhatsApp Business Policy — withjp.ai</title>
+  <meta name="description" content="Politica de uso de WhatsApp Business de withjp.ai. API oficial de Meta, consentimiento obligatorio, flujos estructurados y cumplimiento total de politicas." />
+  <link rel="canonical" href="https://withjp.ai/whatsapp-policy.html" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#f8f9ff;--surface:#ffffff;--border:rgba(99,102,241,0.12);--text-primary:#0f172a;--text-secondary:#475569;--text-muted:#94a3b8;--indigo:#6366f1;--cyan:#22d3ee;--emerald:#059669;--shadow:0 2px 8px rgba(0,0,0,0.04),0 8px 32px rgba(99,102,241,0.07)}
+    @media(prefers-color-scheme:dark){:root{--bg:#080b14;--surface:rgba(255,255,255,0.03);--border:rgba(99,102,241,0.15);--text-primary:#f1f5f9;--text-secondary:#94a3b8;--text-muted:#64748b;--shadow:0 2px 8px rgba(0,0,0,0.3),0 8px 32px rgba(99,102,241,0.1)}}
+    html[data-theme="dark"]{--bg:#080b14;--surface:rgba(255,255,255,0.03);--border:rgba(99,102,241,0.15);--text-primary:#f1f5f9;--text-secondary:#94a3b8;--text-muted:#64748b;--shadow:0 2px 8px rgba(0,0,0,0.3),0 8px 32px rgba(99,102,241,0.1)}
+    html[data-theme="light"]{--bg:#f8f9ff;--surface:#ffffff;--border:rgba(99,102,241,0.12);--text-primary:#0f172a;--text-secondary:#475569;--text-muted:#94a3b8;--shadow:0 2px 8px rgba(0,0,0,0.04),0 8px 32px rgba(99,102,241,0.07)}
+
+    body{font-family:'Inter',system-ui,sans-serif;background-color:var(--bg);color:var(--text-primary);line-height:1.7;min-height:100vh;transition:background-color .3s,color .3s}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 20% 10%,rgba(99,102,241,0.07) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(34,211,238,0.05) 0%,transparent 60%);pointer-events:none;z-index:0}
+
+    header{position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
+    .header-inner{max-width:800px;margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;color:var(--text-primary);font-size:1rem}
+    .logo-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#22d3ee);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.75rem;font-weight:700;flex-shrink:0}
+    .logo-accent{color:var(--indigo)}
+    .header-controls{display:flex;align-items:center;gap:.5rem}
+    .btn-icon{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text-secondary);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:.85rem}
+    .btn-icon:hover{background:rgba(99,102,241,0.08);color:var(--indigo);border-color:rgba(99,102,241,0.3)}
+    .lang-btn{padding:0 .75rem;width:auto;font-size:.75rem;font-weight:600;letter-spacing:.05em;font-family:'Inter',sans-serif}
+
+    main{position:relative;z-index:1;max-width:800px;margin:0 auto;padding:3rem 1.5rem 5rem}
+    .page-header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .page-badge{display:inline-flex;align-items:center;gap:.375rem;padding:.25rem .75rem;border-radius:999px;background:rgba(5,150,105,0.1);border:1px solid rgba(5,150,105,0.25);color:#059669;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
+    html[data-theme="dark"] .page-badge{color:#34d399}
+    h1{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;line-height:1.2;background:linear-gradient(135deg,#34d399 0%,#22d3ee 50%,#6366f1 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.75rem}
+    .page-meta{font-size:.875rem;color:var(--text-muted)}
+
+    .section{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.75rem 2rem;margin-bottom:1.25rem;box-shadow:var(--shadow)}
+    h2{font-family:'Space Grotesk',system-ui,sans-serif;font-size:1.125rem;font-weight:600;color:var(--text-primary);margin-bottom:.875rem;display:flex;align-items:center;gap:.5rem}
+    h2 .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;background:linear-gradient(135deg,#34d399,#059669);color:#fff;font-size:.7rem;font-weight:700;flex-shrink:0}
+    p{color:var(--text-secondary);font-size:.9375rem;margin-bottom:.75rem}
+    p:last-child{margin-bottom:0}
+    ul{list-style:none;padding:0;margin:.5rem 0 .75rem}
+    ul li{color:var(--text-secondary);font-size:.9375rem;padding:.3rem 0 .3rem 1.5rem;position:relative}
+    ul li::before{content:'';position:absolute;left:.25rem;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#34d399,#059669)}
+
+    .highlight-box{background:rgba(5,150,105,0.06);border:1px solid rgba(5,150,105,0.2);border-radius:10px;padding:1rem 1.25rem;margin-top:.75rem}
+    .highlight-box p{margin-bottom:0;font-size:.875rem}
+    .warning-box{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:1rem 1.25rem;margin-top:.75rem}
+    .warning-box p{margin-bottom:0;font-size:.875rem;color:#dc2626}
+    html[data-theme="dark"] .warning-box p{color:#f87171}
+    .warning-box ul li{color:#dc2626;font-size:.875rem}
+    html[data-theme="dark"] .warning-box ul li{color:#f87171}
+    .warning-box ul li::before{background:linear-gradient(135deg,#ef4444,#dc2626)}
+
+    .contact-link{color:var(--indigo);text-decoration:none;font-weight:500}
+    .contact-link:hover{text-decoration:underline}
+
+    .badge-compliance{display:inline-flex;align-items:center;gap:.25rem;padding:.15rem .5rem;border-radius:4px;font-size:.7rem;font-weight:600;background:rgba(5,150,105,0.12);color:#059669}
+    html[data-theme="dark"] .badge-compliance{color:#34d399}
+
+    footer{position:relative;z-index:1;border-top:1px solid var(--border);background:var(--surface)}
+    .footer-inner{max-width:800px;margin:0 auto;padding:2rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+    .footer-links{display:flex;flex-wrap:wrap;gap:1rem}
+    .footer-links a{font-size:.875rem;color:var(--text-muted);text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:var(--indigo)}
+    .footer-copy{font-size:.8125rem;color:var(--text-muted)}
+
+    [data-lang]{display:none}
+    body[data-active-lang="es"] [data-lang="es"]{display:block}
+    body[data-active-lang="en"] [data-lang="en"]{display:block}
+
+    @media(max-width:640px){.section{padding:1.25rem}.main{padding:2rem 1rem 4rem}}
+  </style>
+</head>
+
+<body data-active-lang="es">
+
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-icon">JP</div>
+        <span>withjp<span class="logo-accent">.ai</span></span>
+      </a>
+      <div class="header-controls">
+        <button class="btn-icon lang-btn" onclick="toggleLang()" id="lang-toggle" aria-label="Switch language">EN</button>
+        <button class="btn-icon" onclick="toggleTheme()" id="theme-toggle" aria-label="Toggle theme">
+          <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── HEADER ES ──────────────────────────────────────── -->
+    <div class="page-header" data-lang="es">
+      <div class="page-badge">WhatsApp Business</div>
+      <h1>Politica de uso de WhatsApp Business</h1>
+      <p class="page-meta">Ultima actualizacion: 2 de abril de 2026 &nbsp;&middot;&nbsp; withjp.ai</p>
+    </div>
+
+    <!-- ── HEADER EN ──────────────────────────────────────── -->
+    <div class="page-header" data-lang="en">
+      <div class="page-badge">WhatsApp Business</div>
+      <h1>WhatsApp Business Usage Policy</h1>
+      <p class="page-meta">Last updated: April 2, 2026 &nbsp;&middot;&nbsp; withjp.ai</p>
+    </div>
+
+    <!-- ══════════════════ ESPAÑOL ══════════════════════════ -->
+    <div data-lang="es">
+
+      <div class="section">
+        <h2><span class="num">1</span> Que es este servicio</h2>
+        <p>withjp.ai ofrece servicios de automatizacion de atencion al cliente para empresas a traves de la <strong>API oficial de WhatsApp Business de Meta</strong>. No es un chatbot de proposito general ni una plataforma de conversacion abierta.</p>
+        <p>Los flujos que se desarrollan son especificos para cada negocio: atencion de preguntas frecuentes, seguimiento de pedidos, agendamiento de citas, soporte post-venta y notificaciones transaccionales. Cada flujo tiene un objetivo definido y respuestas estructuradas.</p>
+        <div class="warning-box">
+          <p style="font-weight:600;margin-bottom:.5rem">Lo que este servicio NO hace:</p>
+          <ul>
+            <li>Chatbots de proposito general tipo "pregunta lo que quieras"</li>
+            <li>Conversaciones abiertas sin flujo definido</li>
+            <li>Envio de mensajes sin consentimiento previo (spam)</li>
+            <li>Uso de aplicaciones o APIs no autorizadas por Meta</li>
+            <li>Mensajes de marketing masivo sin opt-in explicito</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">2</span> Consentimiento del usuario (opt-in)</h2>
+        <p><strong>Solo se envian mensajes a personas que han dado su consentimiento explicito.</strong> No se envian mensajes no solicitados.</p>
+        <p>El consentimiento (opt-in) se obtiene mediante uno de los siguientes metodos antes de enviar cualquier mensaje:</p>
+        <ul>
+          <li><strong>Formulario web:</strong> El usuario marca una casilla aceptando recibir mensajes de WhatsApp del negocio.</li>
+          <li><strong>Inicio de conversacion:</strong> El usuario escribe primero al numero de WhatsApp Business del negocio.</li>
+          <li><strong>Proceso de compra o registro:</strong> El cliente acepta notificaciones al completar una compra o crear una cuenta.</li>
+          <li><strong>Flujo guiado de suscripcion:</strong> El usuario responde afirmativamente a una solicitud de suscripcion dentro del chat.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">3</span> Tipos de flujos permitidos</h2>
+        <p>Todos los flujos desarrollados se encuadran en las categorias de uso empresarial aprobadas por WhatsApp Business:</p>
+        <ul>
+          <li><strong>Atencion al cliente y soporte</strong> <span class="badge-compliance">Permitido por Meta</span><br>Respuesta a preguntas frecuentes, resolucion de problemas, escalado a agente humano.<br><em>Ejemplo: "Cual es el horario de atencion?" &rarr; respuesta automatica inmediata.</em></li>
+          <li><strong>Notificaciones transaccionales</strong> <span class="badge-compliance">Permitido por Meta</span><br>Confirmaciones de compra, alertas de pago, actualizaciones de estado de pedido.<br><em>Ejemplo: "Tu pedido #4521 ha sido despachado."</em></li>
+          <li><strong>Automatizacion de procesos especificos</strong> <span class="badge-compliance">Permitido por Meta</span><br>Agendamiento de citas, seguimiento de pedidos, calificacion de leads con flujos definidos.<br><em>Ejemplo: "Para agendar una cita, elige una fecha disponible:"</em></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">4</span> Cancelacion de suscripcion (opt-out)</h2>
+        <p>Cualquier usuario puede cancelar la recepcion de mensajes en cualquier momento enviando palabras como <strong>"STOP"</strong>, <strong>"CANCELAR"</strong> o <strong>"NO QUIERO MENSAJES"</strong>. El sistema procesa esta solicitud de forma inmediata y no vuelve a enviar mensajes a ese numero.</p>
+        <p>Cada proyecto incluye un flujo de opt-out configurado antes del lanzamiento. El cumplimiento de esta politica es obligatorio y no negociable.</p>
+        <div class="highlight-box">
+          <p>Para cancelar comunicaciones de WhatsApp, responde <strong>STOP</strong> o <strong>ALTO</strong> en cualquier momento desde tu conversacion activa.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">5</span> Cumplimiento de politicas de Meta</h2>
+        <p>Todas las implementaciones cumplen con las Politicas de WhatsApp Business, los Terminos de Servicio de Meta y las normativas de proteccion de datos aplicables.</p>
+        <ul>
+          <li>API oficial de WhatsApp Business (Meta)</li>
+          <li>Mensajes solo con consentimiento previo (opt-in)</li>
+          <li>Sin mensajes masivos no solicitados (anti-spam)</li>
+          <li>Opt-out inmediato disponible en todo momento</li>
+          <li>Solo plantillas de mensajes aprobadas por Meta</li>
+          <li>Flujos estructurados con objetivos definidos</li>
+          <li>Sin conversaciones abiertas sin proposito</li>
+          <li>Proteccion y privacidad de datos del usuario</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">6</span> Contacto</h2>
+        <p>Para consultas sobre esta politica o sobre el uso de WhatsApp Business:</p>
+        <p>
+          <strong>Responsable:</strong> Juan Pablo Guaman Rodriguez<br>
+          <strong>Domicilio:</strong> Loja, Ecuador<br>
+          <strong>Correo electronico:</strong> <a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a><br>
+          <strong>Sitio web:</strong> <a href="/" class="contact-link">withjp.ai</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ══════════════════ ENGLISH ══════════════════════════ -->
+    <div data-lang="en">
+
+      <div class="section">
+        <h2><span class="num">1</span> What this service is</h2>
+        <p>withjp.ai provides customer service automation services for businesses through <strong>Meta's official WhatsApp Business API</strong>. It is not a general-purpose chatbot or open-ended conversation platform.</p>
+        <p>The flows developed are specific to each business: FAQ handling, order tracking, appointment scheduling, after-sales support, and transactional notifications. Each flow has a defined objective and structured responses.</p>
+        <div class="warning-box">
+          <p style="font-weight:600;margin-bottom:.5rem">What this service does NOT do:</p>
+          <ul>
+            <li>General-purpose chatbots like "ask me anything"</li>
+            <li>Open-ended conversations without a defined flow</li>
+            <li>Sending messages without prior consent (spam)</li>
+            <li>Use of unauthorized apps or APIs not approved by Meta</li>
+            <li>Mass marketing messages without explicit opt-in</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">2</span> User consent (opt-in)</h2>
+        <p><strong>Messages are only sent to people who have given explicit consent.</strong> No unsolicited messages are sent.</p>
+        <p>Consent (opt-in) is obtained through one of the following methods before sending any message:</p>
+        <ul>
+          <li><strong>Web form:</strong> The user checks a box agreeing to receive WhatsApp messages from the business.</li>
+          <li><strong>Conversation initiation:</strong> The user writes first to the business's WhatsApp Business number.</li>
+          <li><strong>Purchase or registration process:</strong> The customer agrees to notifications when completing a purchase or creating an account.</li>
+          <li><strong>Guided subscription flow:</strong> The user responds affirmatively to a subscription request inside the chat.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">3</span> Permitted flow types</h2>
+        <p>All developed flows fall within the business use categories approved by WhatsApp Business:</p>
+        <ul>
+          <li><strong>Customer service and support</strong> <span class="badge-compliance">Allowed by Meta</span><br>Answering FAQs, resolving issues, escalating to human agent.<br><em>Example: "What are your business hours?" &rarr; immediate automated response.</em></li>
+          <li><strong>Transactional notifications</strong> <span class="badge-compliance">Allowed by Meta</span><br>Purchase confirmations, payment alerts, order status updates.<br><em>Example: "Your order #4521 has been dispatched."</em></li>
+          <li><strong>Specific process automation</strong> <span class="badge-compliance">Allowed by Meta</span><br>Appointment scheduling, order tracking, lead qualification with defined flows.<br><em>Example: "To schedule an appointment, choose an available date:"</em></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">4</span> Subscription cancellation (opt-out)</h2>
+        <p>Any user can cancel message reception at any time by sending words like <strong>"STOP"</strong>, <strong>"CANCEL"</strong>, or <strong>"UNSUBSCRIBE"</strong>. The system processes this request immediately and no further messages are sent to that number.</p>
+        <p>Each project includes an opt-out flow configured before launch. Compliance with this policy is mandatory and non-negotiable.</p>
+        <div class="highlight-box">
+          <p>To cancel WhatsApp communications, reply <strong>STOP</strong> at any time from your active conversation.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">5</span> Meta policy compliance</h2>
+        <p>All implementations comply with WhatsApp Business Policies, Meta's Terms of Service, and applicable data protection regulations.</p>
+        <ul>
+          <li>Official WhatsApp Business API (Meta)</li>
+          <li>Messages only with prior consent (opt-in)</li>
+          <li>No unsolicited bulk messages (anti-spam)</li>
+          <li>Immediate opt-out available at all times</li>
+          <li>Only Meta-approved message templates</li>
+          <li>Structured flows with defined objectives</li>
+          <li>No open-ended purposeless conversations</li>
+          <li>User data protection and privacy</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><span class="num">6</span> Contact</h2>
+        <p>For questions about this policy or WhatsApp Business usage:</p>
+        <p>
+          <strong>Controller:</strong> Juan Pablo Guaman Rodriguez<br>
+          <strong>Address:</strong> Loja, Ecuador<br>
+          <strong>Email:</strong> <a href="mailto:info@withjp.ai" class="contact-link">info@withjp.ai</a><br>
+          <strong>Website:</strong> <a href="/" class="contact-link">withjp.ai</a>
+        </p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/">&larr; withjp.ai</a>
+        <a href="/privacidad.html" data-lang="es">Politica de Privacidad</a>
+        <a href="/privacidad.html" data-lang="en">Privacy Policy</a>
+        <a href="/terminos.html" data-lang="es">Terminos y Condiciones</a>
+        <a href="/terminos.html" data-lang="en">Terms &amp; Conditions</a>
+        <a href="/cookies.html" data-lang="es">Cookies</a>
+        <a href="/cookies.html" data-lang="en">Cookies</a>
+      </div>
+      <span class="footer-copy">&copy; 2026 Juan Pablo Guaman Rodriguez | Loja, Ecuador | info@withjp.ai</span>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var s=localStorage.getItem('withjp_theme');
+      var d=window.matchMedia('(prefers-color-scheme:dark)').matches;
+      var k=s==='dark'||(!s&&d);
+      if(k){document.documentElement.setAttribute('data-theme','dark');document.getElementById('icon-sun').style.display='';document.getElementById('icon-moon').style.display='none'}
+      else{document.documentElement.setAttribute('data-theme','light')}
+    })();
+    function toggleTheme(){
+      var k=document.documentElement.getAttribute('data-theme')==='dark';
+      var n=k?'light':'dark';
+      document.documentElement.setAttribute('data-theme',n);
+      localStorage.setItem('withjp_theme',n);
+      document.getElementById('icon-sun').style.display=n==='light'?'':'none';
+      document.getElementById('icon-moon').style.display=n==='dark'?'':'none';
+    }
+    (function(){
+      var s=localStorage.getItem('withjp_locale');
+      var l=s==='en'?'en':'es';
+      document.body.setAttribute('data-active-lang',l);
+      document.getElementById('lang-toggle').textContent=l==='es'?'EN':'ES';
+      document.documentElement.lang=l;
+    })();
+    function toggleLang(){
+      var c=document.body.getAttribute('data-active-lang');
+      var n=c==='es'?'en':'es';
+      document.body.setAttribute('data-active-lang',n);
+      document.getElementById('lang-toggle').textContent=n==='es'?'EN':'ES';
+      document.documentElement.lang=n;
+      localStorage.setItem('withjp_locale',n);
+    }
+  </script>
+</body>
+</html>

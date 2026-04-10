@@ -54,16 +54,16 @@ const router = createRouter({
           name: 'BlogPost',
           component: () => import('@/views/public/BlogPostPage.vue'),
         },
-        // WhatsApp Business Policy (Vue page — kept from original)
+        // Legacy redirects — WhatsApp policy is now a static HTML
         {
           path: 'whatsapp-automation',
-          name: 'WhatsAppAutomation',
-          component: () => import('@/views/WhatsAppAutomationView.vue'),
+          beforeEnter() { window.location.href = '/whatsapp-policy.html'; },
+          component: { render: () => null },
         },
         {
           path: 'whatsapp-business',
-          name: 'WhatsAppBusiness',
-          component: () => import('@/views/WhatsAppAutomationView.vue'),
+          beforeEnter() { window.location.href = '/whatsapp-policy.html'; },
+          component: { render: () => null },
         },
       ],
     },

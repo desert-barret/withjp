@@ -73,9 +73,9 @@
             Cookies
           </a>
           <span class="text-slate-300 dark:text-slate-700">&middot;</span>
-          <router-link to="/whatsapp-business" class="text-sm text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors underline underline-offset-2">
+          <a href="/whatsapp-policy.html" class="text-sm text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors underline underline-offset-2">
             {{ t('footer.whatsapp_policy') }}
-          </router-link>
+          </a>
         </div>
       </div>
     </div>

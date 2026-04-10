@@ -37,7 +37,7 @@ export class SitemapService {
       { loc: '/privacidad.html', priority: '0.3', changefreq: 'yearly' },
       { loc: '/terminos.html', priority: '0.3', changefreq: 'yearly' },
       { loc: '/cookies.html', priority: '0.3', changefreq: 'yearly' },
-      { loc: '/whatsapp-business', priority: '0.3', changefreq: 'yearly' },
+      { loc: '/whatsapp-policy.html', priority: '0.3', changefreq: 'yearly' },
     ];
 
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
