@@ -2,92 +2,101 @@
   <div>
     <!-- Hero -->
     <section class="pt-32 pb-20 bg-gradient-to-b from-slate-50 to-white dark:from-dark-950 dark:to-dark-900">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <div class="w-24 h-24 rounded-3xl bg-gradient-to-br from-primary-600 to-violet-600
-                    flex items-center justify-center mx-auto mb-8 shadow-xl shadow-primary-500/20">
-          <span class="text-white font-bold text-3xl">JP</span>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-center gap-8 mb-12">
+          <div class="w-20 h-20 rounded-2xl bg-slate-900 dark:bg-white
+                      flex items-center justify-center shrink-0">
+            <span class="text-white dark:text-slate-900 font-bold text-2xl">JP</span>
+          </div>
+          <div>
+            <h1 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 dark:text-white mb-2">
+              Juan Pablo Guaman
+            </h1>
+            <p class="text-xl text-primary-600 dark:text-primary-400 font-medium">
+              {{ t('about.role') }}
+            </p>
+          </div>
         </div>
-        <h1 class="text-4xl sm:text-5xl font-display font-bold text-slate-900 dark:text-white mb-4">
-          Juan Pablo Guaman Rodriguez
-        </h1>
-        <p class="text-xl text-primary-600 dark:text-primary-400 font-medium mb-6">
-          {{ profileTitle }}
-        </p>
-        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          {{ profileBio }}
-        </p>
+
+        <div class="prose prose-lg prose-slate dark:prose-invert max-w-none
+                    prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed">
+          <p>{{ t('about.bio.p1') }}</p>
+          <p>{{ t('about.bio.p2') }}</p>
+          <p>{{ t('about.bio.p3') }}</p>
+        </div>
       </div>
     </section>
 
-    <!-- Stats -->
+    <!-- Numbers -->
     <section class="py-16 bg-white dark:bg-dark-900 border-y border-slate-200 dark:border-slate-800">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div v-for="stat in stats" :key="stat.label">
-            <div class="text-3xl sm:text-4xl font-display font-bold text-slate-900 dark:text-white">
-              {{ stat.value }}
-            </div>
+            <div class="text-3xl font-display font-bold text-slate-900 dark:text-white">{{ stat.value }}</div>
             <div class="text-sm text-slate-500 dark:text-slate-400 mt-1">{{ stat.label }}</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Story / Timeline -->
+    <!-- What I bring -->
     <section class="py-20 bg-white dark:bg-dark-900">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <h2 class="text-3xl font-display font-bold text-slate-900 dark:text-white mb-12 text-center">
-          {{ t('about.journey.title') }}
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-10">
+          {{ t('about.strengths.title') }}
+        </h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div v-for="(item, idx) in strengths" :key="idx"
+            class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+            <h3 class="font-display font-bold text-slate-900 dark:text-white mb-2">{{ item.title }}</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="py-20 bg-slate-50 dark:bg-dark-950">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-10">
+          {{ t('about.stack.title') }}
         </h2>
         <div class="space-y-8">
-          <div v-for="(milestone, idx) in milestones" :key="idx"
-            class="flex gap-6">
-            <div class="flex flex-col items-center">
-              <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-500/10
-                          flex items-center justify-center text-primary-600 dark:text-primary-400 font-bold text-sm shrink-0">
-                {{ milestone.year }}
-              </div>
-              <div v-if="idx < milestones.length - 1" class="w-px flex-1 bg-slate-200 dark:bg-slate-700 mt-2"></div>
-            </div>
-            <div class="pb-8">
-              <h3 class="font-display font-bold text-slate-900 dark:text-white mb-1">{{ milestone.title }}</h3>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">{{ milestone.description }}</p>
+          <div v-for="(group, idx) in stackGroups" :key="idx">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
+              {{ group.label }}
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span v-for="tech in group.items" :key="tech"
+                class="px-3 py-1.5 rounded-lg text-sm font-medium
+                       bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800
+                       text-slate-700 dark:text-slate-300">
+                {{ tech }}
+              </span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Tech Stack -->
-    <section class="py-20 bg-slate-50 dark:bg-dark-950">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        <h2 class="text-3xl font-display font-bold text-slate-900 dark:text-white mb-12 text-center">
-          {{ t('about.tech.title') }}
-        </h2>
-        <div class="flex flex-wrap justify-center gap-3">
-          <span v-for="tech in technologies" :key="tech"
-            class="px-4 py-2 rounded-xl text-sm font-medium
-                   bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800
-                   text-slate-700 dark:text-slate-300">
-            {{ tech }}
-          </span>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA -->
-    <section class="py-20 bg-white dark:bg-dark-900">
+    <section class="py-20 bg-slate-900 dark:bg-dark-950">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <h2 class="text-3xl font-display font-bold text-slate-900 dark:text-white mb-6">
+        <h2 class="text-3xl font-display font-bold text-white mb-4">
           {{ t('about.cta.title') }}
         </h2>
+        <p class="text-slate-400 mb-8">{{ t('about.cta.subtitle') }}</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <router-link to="/whatsapp"
+          <a href="mailto:info@withjp.ai"
+            class="px-8 py-4 rounded-2xl font-semibold bg-white text-slate-900
+                   hover:bg-slate-100 shadow-lg transition-all duration-300">
+            {{ t('about.cta.email') }}
+          </a>
+          <a href="https://www.linkedin.com/in/desertbarret/" target="_blank" rel="noopener"
             class="px-8 py-4 rounded-2xl font-semibold text-white
-                   bg-gradient-to-r from-emerald-600 to-emerald-500
-                   shadow-lg shadow-emerald-500/25 transition-all duration-300">
-            {{ t('about.cta.button') }}
-          </router-link>
+                   border-2 border-white/20 hover:bg-white/10 transition-all duration-300">
+            LinkedIn
+          </a>
         </div>
       </div>
     </section>
@@ -95,55 +104,37 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useHead } from '@unhead/vue';
-import { useProfileStore } from '@/stores/profile';
 
-const { t, locale } = useI18n();
-const profileStore = useProfileStore();
+const { t } = useI18n();
 
 useHead({
   title: () => t('about.meta.title'),
-  meta: [
-    { name: 'description', content: () => t('about.meta.description') },
-  ],
+  meta: [{ name: 'description', content: () => t('about.meta.description') }],
 });
-
-onMounted(() => {
-  if (!profileStore.profile) profileStore.fetch();
-});
-
-const profileTitle = computed(() => {
-  const p = profileStore.profile;
-  return locale.value === 'en' ? (p?.title_en || p?.title_es || '') : (p?.title_es || '');
-});
-
-const profileBio = computed(() => {
-  const p = profileStore.profile;
-  return locale.value === 'en' ? (p?.bio_en || p?.bio_es || '') : (p?.bio_es || '');
-});
-
-const technologies = computed(() =>
-  profileStore.profile?.technologies || [
-    'Flutter', 'NestJS', 'React', 'Vue.js', 'TypeScript', 'Node.js',
-    'Kotlin', 'Python', 'Django', 'MySQL', 'PostgreSQL', 'Docker',
-    'Firebase', 'GCP', 'WhatsApp API',
-  ]
-);
 
 const stats = computed(() => [
-  { value: '10+', label: t('about.stats.experience') },
-  { value: '25,000+', label: t('about.stats.students') },
+  { value: '10+', label: t('about.stats.years') },
+  { value: '25K+', label: t('about.stats.students') },
   { value: '17', label: t('about.stats.courses') },
-  { value: '4.3 ★', label: t('about.stats.rating') },
+  { value: '4.3', label: t('about.stats.rating') },
 ]);
 
-const milestones = computed(() => [
-  { year: '\'16', title: t('about.journey.m1.title'), description: t('about.journey.m1.description') },
-  { year: '\'20', title: t('about.journey.m2.title'), description: t('about.journey.m2.description') },
-  { year: '\'23', title: t('about.journey.m3.title'), description: t('about.journey.m3.description') },
-  { year: '\'25', title: t('about.journey.m4.title'), description: t('about.journey.m4.description') },
-  { year: '\'26', title: t('about.journey.m5.title'), description: t('about.journey.m5.description') },
+const strengths = computed(() => [
+  { title: t('about.strengths.s1.title'), description: t('about.strengths.s1.desc') },
+  { title: t('about.strengths.s2.title'), description: t('about.strengths.s2.desc') },
+  { title: t('about.strengths.s3.title'), description: t('about.strengths.s3.desc') },
+  { title: t('about.strengths.s4.title'), description: t('about.strengths.s4.desc') },
+]);
+
+const stackGroups = computed(() => [
+  { label: 'Backend', items: ['NestJS', 'Node.js', 'Python', 'FastAPI', 'Django', 'Spring Boot', 'TypeORM', 'REST APIs', 'WebSockets'] },
+  { label: 'Mobile', items: ['Flutter', 'Kotlin', 'React Native', 'Dart', 'Jetpack Compose'] },
+  { label: 'Frontend', items: ['Vue 3', 'React', 'TypeScript', 'Next.js', 'Tailwind CSS'] },
+  { label: 'Data', items: ['PostgreSQL', 'MySQL', 'Redis', 'MongoDB', 'Firebase'] },
+  { label: 'Infra & DevOps', items: ['Docker', 'GCP', 'Cloud Run', 'Cloud SQL', 'Nginx', 'CI/CD'] },
+  { label: 'AI & Automation', items: ['Claude API', 'OpenAI', 'WhatsApp Business API', 'n8n', 'LLM Integration'] },
 ]);
 </script>

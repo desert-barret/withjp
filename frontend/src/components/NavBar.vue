@@ -125,12 +125,11 @@ const scrolled    = ref(false);
 const mobileOpen  = ref(false);
 
 const navItems = [
-  { to: '/',          key: 'nav.home' },
-  { to: '/whatsapp',  key: 'nav.whatsapp' },
-  { to: '/academia',  key: 'nav.academia' },
-  { to: '/cursos',    key: 'nav.courses' },
-  { to: '/blog',      key: 'nav.blog' },
   { to: '/about',     key: 'nav.about' },
+  { to: '/whatsapp',  key: 'nav.whatsapp' },
+  { to: '/cursos',    key: 'nav.courses' },
+  { to: '/academia',  key: 'nav.academia' },
+  { to: '/blog',      key: 'nav.blog' },
 ];
 
 function toggleLang() {
