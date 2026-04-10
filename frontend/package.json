@@ -9,12 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@unhead/vue": "^3.0.0",
+    "@unhead/vue": "^1.11.20",
     "@vueuse/core": "^10.5.0",
     "axios": "^1.5.0",
     "markdown-it": "^14.1.1",
     "pinia": "^2.1.6",
-    "unhead": "^3.0.0",
     "vue": "^3.3.4",
     "vue-i18n": "^9.4.0",
     "vue-router": "^4.2.4"
