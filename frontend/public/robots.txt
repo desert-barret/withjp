@@ -6,13 +6,17 @@
 # ── General crawlers ──────────────────────────────────
 User-agent: *
 Allow: /
+Allow: /about
+Allow: /whatsapp
+Allow: /academia
+Allow: /cursos
+Allow: /blog
+Allow: /legal/
 Allow: /llms.txt
 Allow: /sitemap.xml
-Allow: /manifest.webmanifest
 Disallow: /admin
 Disallow: /admin/
 Disallow: /api/
-Disallow: /*.json$
 
 # ── Google ────────────────────────────────────────────
 User-agent: Googlebot
@@ -24,9 +28,6 @@ User-agent: Googlebot-Image
 Allow: /
 Disallow: /admin/
 
-User-agent: Googlebot-Video
-Allow: /
-
 # ── Bing ──────────────────────────────────────────────
 User-agent: bingbot
 Allow: /
@@ -34,68 +35,55 @@ Disallow: /admin/
 Disallow: /api/
 Crawl-delay: 1
 
-# ── AI & LLM Bots — explicitly welcomed ───────────────
-
-# OpenAI GPT
+# ── AI & LLM Bots ────────────────────────────────────
 User-agent: GPTBot
 Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-# OpenAI ChatGPT browsing
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /admin/
 
-# Google Gemini / AI Overviews
 User-agent: Google-Extended
 Allow: /
 Disallow: /admin/
 
-# Anthropic Claude
 User-agent: ClaudeBot
 Allow: /
 Disallow: /admin/
 
-# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 Disallow: /admin/
 
-# Meta AI / LLaMA
 User-agent: FacebookBot
 Allow: /
 Disallow: /admin/
 
-# Common Crawl (LLM training datasets)
 User-agent: CCBot
 Allow: /
 Disallow: /admin/
 
-# Cohere AI
 User-agent: cohere-ai
 Allow: /
 Disallow: /admin/
 
-# Apple Intelligence
 User-agent: Applebot
 Allow: /
 Disallow: /admin/
 
-# Diffbot (AI content extraction)
 User-agent: Diffbot
 Allow: /
 Disallow: /admin/
 
-# You.com AI
 User-agent: YouBot
 Allow: /
 Disallow: /admin/
 
-# Amazon Alexa
 User-agent: Amazonbot
 Allow: /
 Disallow: /admin/
 
 # ── Sitemaps ──────────────────────────────────────────
-Sitemap: https://withjp.ai/sitemap.xml
+Sitemap: https://withjp.ai/api/withjp/sitemap.xml

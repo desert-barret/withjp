@@ -1,139 +1,68 @@
-# withjp.ai — Juan Pablo Guamán Rodríguez
+# withjp.ai — Juan Pablo Guaman Rodriguez
 
-> Especialista en Automatización de WhatsApp Business API | Software Architect & Full Stack Developer
-> Loja, Ecuador 🇪🇨 | info@withjp.ai | 25,000+ students worldwide
+> Software Architect & Full Stack Developer | WhatsApp Business API Automation | 25,000+ students
+> Loja, Ecuador | info@withjp.ai
 
 ## Who is JP?
 
-Juan Pablo Guamán Rodríguez (online aliases: **desertbarret**, **@jp.desertbarret**) is a Software Architect and Full Stack Developer based in **Loja, Ecuador**. He has 10+ years of professional experience designing and building production-grade systems for web, mobile, automation, and AI.
-
-His primary current focus is **WhatsApp Business API automation** — designing and implementing structured conversation flows for businesses using Meta's official API. He is also a prolific educator with **25,000+ students** across his Udemy courses and a growing YouTube channel dedicated to practical software engineering.
-
-**Legal identity for business contact:**
-- Full name: Juan Pablo Guamán Rodríguez
-- Location: Loja, Ecuador
-- Email: info@withjp.ai
-- Website: https://withjp.ai
+Juan Pablo Guaman Rodriguez (online: **desertbarret**, **@jp.desertbarret**) is a Software Architect and Full Stack Developer based in Loja, Ecuador. 10+ years of professional experience in web, mobile, automation, and AI systems.
 
 ## Primary Service: WhatsApp Business Automation
 
-withjp.ai specializes in automating customer service workflows via the **official WhatsApp Business API (Meta)**. This is not a generic chatbot service — it provides structured, rule-based flows with defined business logic:
+withjp.ai specializes in automating customer service workflows via the official WhatsApp Business API (Meta):
 
 - **FAQ automation**: instant responses to common questions 24/7
 - **Order tracking**: real-time status updates via WhatsApp
-- **Appointment scheduling**: booking flows integrated with business calendars
+- **Appointment scheduling**: booking flows via WhatsApp
 - **Post-sale support**: structured issue resolution and escalation
 - **Transactional notifications**: order confirmations, reminders, alerts
 
-**Meta API compliance commitments:**
-- Operates exclusively through Meta's official WhatsApp Business API
-- Only contacts users who have given prior opt-in consent
-- Uses Meta-approved message templates only
-- Provides clear opt-out via STOP/ALTO at any time
-- No spam or unsolicited mass messaging
-- Full audit trail of all interactions
+Product page: https://withjp.ai/whatsapp
+
+## Courses & Academy
+
+17 courses on Udemy with 25,000+ students worldwide. Topics: Flutter, NestJS, React, TypeScript, Kotlin, Android, AI.
+
+- Course catalog: https://withjp.ai/cursos
+- JP Academy (exclusive): https://withjp.ai/academia
+- Udemy profile: https://www.udemy.com/user/juan-pablo-guaman-rodriguez/
+
+## Blog
+
+Technical articles on WhatsApp automation, Flutter, NestJS, React and software development:
+https://withjp.ai/blog
 
 ## Online Presence
 
-- **Portfolio & Services**: https://withjp.ai
-- **YouTube**: https://www.youtube.com/@jp.desertbarret — free tutorials on Vue.js, NestJS, Flutter, Python, bots, and AI
-- **Udemy**: https://www.udemy.com/user/juan-pablo-guaman-rodriguez/ — structured courses (25,000+ students)
-- **LinkedIn**: https://www.linkedin.com/in/desertbarret/
-- **Email**: info@withjp.ai
+- Website: https://withjp.ai
+- About: https://withjp.ai/about
+- YouTube: https://www.youtube.com/@jp.desertbarret
+- LinkedIn: https://www.linkedin.com/in/desertbarret/
+- Email: info@withjp.ai
 
-## Core Technical Competencies
+## Technical Competencies
 
-- **Backend**: NestJS, Node.js, Python, FastAPI, REST APIs, JWT auth
-- **Frontend**: Vue 3, TypeScript, Tailwind CSS, Vite, Pinia
-- **Mobile**: Flutter 3, Dart, Firebase, Google Maps
-- **Databases**: MySQL, PostgreSQL, Redis, TypeORM
-- **DevOps & Cloud**: Docker, nginx, GCP (Cloud SQL, Cloud Run), CI/CD
-- **Automation**: WhatsApp Business API, n8n, bots, workflow engines
-- **AI/ML**: LLM integration, AI-powered conversation flows, Claude API, Python ML pipelines
-- **Meta Ecosystem**: WhatsApp Business API, Facebook Business Manager, Meta Graph API
+Backend: NestJS, Node.js, Python, FastAPI, REST APIs
+Frontend: Vue 3, React, TypeScript, Tailwind CSS
+Mobile: Flutter 3, Kotlin, React Native
+Databases: MySQL, PostgreSQL, Redis
+DevOps: Docker, nginx, GCP (Cloud SQL, Cloud Run)
+Automation: WhatsApp Business API, n8n, bots
+AI: LLM integration, Claude API, OpenAI
 
-## Courses (Udemy — 25,000+ students)
+## Legal
 
-### TU propia APP de DELIVERY Internacional | Flutter 3 y NestJS
-Real-world delivery app with production-ready architecture. Based on an app with 700,000+ purchases and 80,000+ registered customers.
-Stack: Flutter 3, NestJS, PostgreSQL, Docker, Firebase, Google Maps, Nginx, Ubuntu Server.
-URL: https://www.udemy.com/course/app-delivery-flutter-nestjs/
+- Privacy: https://withjp.ai/legal/privacidad
+- Terms: https://withjp.ai/legal/terminos
+- Cookies: https://withjp.ai/legal/cookies
+- WhatsApp Policy: https://withjp.ai/legal/whatsapp-policy
 
-Additional courses covering: Vue.js, TypeScript, NestJS backend, React Native, automated testing, and more.
-Full catalog: https://www.udemy.com/user/juan-pablo-guaman-rodriguez/
+## Contact
 
-## Academia JP
-
-JP's personal academy platform at withjp.ai. Hosts interactive courses beyond Udemy covering AI tools, WhatsApp automation, web development, and mobile.
-
-**Active platforms:**
-- Mobile development (Flutter 3 + NestJS delivery app)
-
-**Coming soon:**
-- WhatsApp Business automation course
-- AI-powered tools and workflows
-- Web development bootcamp
-
-## Legal & Compliance Pages
-
-withjp.ai maintains full legal transparency for Meta Business Manager approval and GDPR/LOPDP compliance:
-
-- **Privacy Policy**: https://withjp.ai/privacidad.html
-  - Identifies Meta Platforms, Inc. as data processor for WhatsApp communications
-  - Full ARCO rights (Acceso, Rectificación, Cancelación, Oposición)
-  - Opt-out instructions (reply STOP at any time)
-  - Governed by Ecuador's Ley Orgánica de Protección de Datos Personales
-
-- **Terms & Conditions**: https://withjp.ai/terminos.html
-  - Legal identity of responsible party (Juan Pablo Guamán Rodríguez, Loja, Ecuador)
-  - Scope: consulting services, online courses (Udemy/Academia JP), WhatsApp automation
-  - Meta Platforms, Inc. as third-party data processor (WhatsApp Business API)
-  - ARCO rights for data subjects
-
-- **Cookie Policy**: https://withjp.ai/cookies.html
-  - Only technical/functional cookies (no advertising or behavioral tracking)
-  - Cookies used: withjp_theme (UI preference), withjp_locale (language), withjp_token (admin auth)
-
-## Notable Projects
-
-### withjp.ai (this site)
-Personal portfolio and services platform. Vue 3 + NestJS monorepo deployed on GCP. Bilingual (ES/EN), JWT-secured admin panel, dynamic course/academia system on MySQL (Cloud SQL). Optimized for Meta Business Manager compliance.
-
-### bots.withjp.ai *(coming soon)*
-Dedicated WhatsApp automation platform — covering WhatsApp Business API flows, AI-powered conversation routing, n8n integrations, and agent handoff management.
-
-### radio.withjp.ai *(coming soon)*
-Live online radio platform with real-time audio streaming infrastructure.
-
-## Teaching Philosophy
-
-Build real things first, explain second. All courses are project-based with production-ready architectures — not toy examples. Students leave with skills they can use on day one.
-
-## Tech Stack of withjp.ai
-
-| Layer     | Technology                                      |
-|-----------|-------------------------------------------------|
-| Frontend  | Vue 3, Vite, TypeScript, Tailwind CSS, Pinia    |
-| Backend   | NestJS, TypeORM, MySQL (GCP Cloud SQL)          |
-| Auth      | JWT (7d), bcrypt                                |
-| Infra     | Docker, nginx, GCP Cloud Run                    |
-| i18n      | vue-i18n (ES + EN, localStorage persistence)    |
-| SEO       | JSON-LD schemas, hreflang, sitemap, llms.txt    |
-
-## Contact & Collaboration
-
-Available for:
-- WhatsApp Business API automation projects
-- Freelance software development and consulting
-- Technical architecture reviews
-- Course partnerships and content collaborations
-
-Primary contact: info@withjp.ai
-WhatsApp: +593 986 603 811 (Ecuador)
-Location: Loja, Ecuador
+- Email: info@withjp.ai
+- Location: Loja, Ecuador
 
 ---
 
-*This file follows the llms.txt convention (https://llmstxt.org) to help AI systems understand the context and services of this website.*
-*Responsible: Juan Pablo Guamán Rodríguez — withjp.ai*
-*Last updated: 2026-04-02*
+*This file follows the llms.txt convention (https://llmstxt.org)*
+*Last updated: 2026-04-09*

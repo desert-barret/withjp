@@ -21,13 +21,14 @@
 
       <!-- Desktop nav -->
       <nav class="hidden md:flex items-center gap-0.5">
-        <a v-for="item in navItems" :key="item.href" :href="item.href"
+        <router-link v-for="item in navItems" :key="item.to" :to="item.to"
           class="px-4 py-2 text-sm font-medium rounded-xl transition-all duration-200
                  text-slate-600 dark:text-slate-400
                  hover:text-slate-900 dark:hover:text-white
-                 hover:bg-slate-100/80 dark:hover:bg-white/[0.06]">
+                 hover:bg-slate-100/80 dark:hover:bg-white/[0.06]"
+          active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-500/10">
           {{ t(item.key) }}
-        </a>
+        </router-link>
       </nav>
 
       <!-- Actions -->
@@ -42,7 +43,7 @@
                  hover:text-primary-600 dark:hover:text-primary-400
                  bg-white/70 dark:bg-white/[0.04]
                  transition-all duration-200">
-          {{ locale === 'es' ? '🇺🇸 EN' : '🇪🇸 ES' }}
+          {{ locale === 'es' ? 'EN' : 'ES' }}
         </button>
 
         <!-- Theme toggle -->
@@ -54,7 +55,6 @@
                  hover:text-primary-600 dark:hover:text-primary-400
                  bg-white/70 dark:bg-white/[0.04]
                  transition-all duration-200">
-          <!-- Moon icon (dark mode active) -->
           <svg v-if="theme.isDark" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"/>
@@ -63,7 +63,6 @@
             <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
           </svg>
-          <!-- Sun icon (light mode active) -->
           <svg v-else class="w-4 h-4" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -77,7 +76,7 @@
                  text-slate-500 dark:text-slate-400
                  bg-white/70 dark:bg-white/[0.04]
                  transition-all duration-200"
-          :aria-label="mobileOpen ? 'Cerrar menú' : 'Abrir menú'"
+          :aria-label="mobileOpen ? 'Close menu' : 'Open menu'"
           :aria-expanded="mobileOpen">
           <svg v-if="mobileOpen" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -99,15 +98,16 @@
         class="md:hidden border-t border-slate-200/60 dark:border-white/[0.06]
                bg-white/95 dark:bg-[#080B14]/95 backdrop-blur-xl
                px-4 py-2 pb-3">
-        <a v-for="item in navItems" :key="item.href" :href="item.href"
+        <router-link v-for="item in navItems" :key="item.to" :to="item.to"
           @click="mobileOpen = false"
           class="flex items-center px-4 py-3 text-sm font-medium rounded-xl
                  text-slate-600 dark:text-slate-300
                  hover:text-slate-900 dark:hover:text-white
                  hover:bg-slate-100/80 dark:hover:bg-white/[0.06]
-                 transition-colors duration-150">
+                 transition-colors duration-150"
+          active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-500/10">
           {{ t(item.key) }}
-        </a>
+        </router-link>
       </nav>
     </Transition>
   </header>
@@ -125,11 +125,12 @@ const scrolled    = ref(false);
 const mobileOpen  = ref(false);
 
 const navItems = [
-  { href: '#how-it-works', key: 'nav.how_it_works' },
-  { href: '#use-cases',    key: 'nav.use_cases'    },
-  { href: '#services',     key: 'nav.services'     },
-  { href: '#faq',          key: 'nav.faq' },
-  { href: '#contact',      key: 'nav.contact'      },
+  { to: '/',          key: 'nav.home' },
+  { to: '/whatsapp',  key: 'nav.whatsapp' },
+  { to: '/academia',  key: 'nav.academia' },
+  { to: '/cursos',    key: 'nav.courses' },
+  { to: '/blog',      key: 'nav.blog' },
+  { to: '/about',     key: 'nav.about' },
 ];
 
 function toggleLang() {
@@ -139,14 +140,13 @@ function toggleLang() {
 
 function onScroll() {
   scrolled.value = window.scrollY > 8;
-  // Close mobile menu when user starts scrolling
   if (window.scrollY > 60 && mobileOpen.value) {
     mobileOpen.value = false;
   }
 }
 
 onMounted(() => {
-  onScroll(); // Set initial state immediately
+  onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 });
 

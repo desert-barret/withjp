@@ -48,6 +48,7 @@ export const coursesApi = {
   getAll:      (showAll = false) => api.get(`/courses${showAll ? '?all=true' : ''}`),
   getFeatured: () => api.get('/courses/featured'),
   getOne:      (id: number) => api.get(`/courses/${id}`),
+  getBySlug:   (slug: string) => api.get(`/courses/slug/${slug}`),
   create:      (data: any) => api.post('/courses', data),
   update:      (id: number, data: any) => api.put(`/courses/${id}`, data),
   remove:      (id: number) => api.delete(`/courses/${id}`),
@@ -64,6 +65,22 @@ export const academiaApi = {
 export const profileApi = {
   get:    () => api.get('/profile'),
   update: (data: any) => api.put('/profile', data),
+};
+
+export const blogApi = {
+  getAll:      (showAll = false) => api.get(`/blog${showAll ? '?all=true' : ''}`),
+  getFeatured: () => api.get('/blog/featured'),
+  getBySlug:   (slug: string) => api.get(`/blog/slug/${slug}`),
+  getOne:      (id: number) => api.get(`/blog/${id}`),
+  create:      (data: any) => api.post('/blog', data),
+  update:      (id: number, data: any) => api.put(`/blog/${id}`, data),
+  remove:      (id: number) => api.delete(`/blog/${id}`),
+};
+
+export const contactApi = {
+  send:    (data: any) => api.post('/contact', data),
+  getAll:  () => api.get('/contact'),
+  markRead: (id: number) => api.patch(`/contact/${id}/read`),
 };
 
 export default api;

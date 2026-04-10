@@ -1,0 +1,5 @@
+# Security Policy for withjp.ai
+Contact: mailto:info@withjp.ai
+Preferred-Languages: es, en
+Canonical: https://withjp.ai/.well-known/security.txt
+Expires: 2027-04-09T00:00:00.000Z

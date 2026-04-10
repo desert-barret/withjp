@@ -4,47 +4,39 @@ import {
   IsBoolean,
   IsNumber,
   IsArray,
+  IsDateString,
   ValidateNested,
 } from 'class-validator';
 import { Type } from 'class-transformer';
-import { TranslationDto } from './translation.dto';
+import { PostTranslationDto } from './translation.dto';
 
-export class CreateCourseDto {
-  @IsOptional()
+export class CreatePostDto {
   @IsString()
-  slug?: string;
-
-  @IsOptional()
-  @IsString()
-  image_url?: string;
+  slug: string;
 
   @IsOptional()
   @IsString()
-  demo_url?: string;
-
-  @IsOptional()
-  @IsString()
-  github_url?: string;
-
-  @IsOptional()
-  @IsArray()
-  technologies?: string[];
+  featured_image?: string;
 
   @IsOptional()
   @IsString()
   category?: string;
 
   @IsOptional()
+  @IsArray()
+  tags?: string[];
+
+  @IsOptional()
   @IsBoolean()
   featured?: boolean;
 
   @IsOptional()
-  @IsNumber()
-  sort_order?: number;
+  @IsBoolean()
+  published?: boolean;
 
   @IsOptional()
-  @IsBoolean()
-  active?: boolean;
+  @IsDateString()
+  published_at?: string;
 
   @IsOptional()
   @IsString()
@@ -58,8 +50,12 @@ export class CreateCourseDto {
   @IsString()
   og_image?: string;
 
+  @IsOptional()
+  @IsNumber()
+  reading_time?: number;
+
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => TranslationDto)
-  translations: TranslationDto[];
+  @Type(() => PostTranslationDto)
+  translations: PostTranslationDto[];
 }

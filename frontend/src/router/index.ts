@@ -9,6 +9,7 @@ const router = createRouter({
     return { top: 0 };
   },
   routes: [
+    // ── Public pages ──────────────────────────────────────
     {
       path: '/',
       component: () => import('@/layouts/DefaultLayout.vue'),
@@ -16,23 +17,81 @@ const router = createRouter({
         {
           path: '',
           name: 'Home',
-          component: () => import('@/views/HomeView.vue'),
-          meta: { title: 'Juan Pablo Guamán Rodríguez | withjp.ai' },
+          component: () => import('@/views/public/HomePage.vue'),
         },
         {
+          path: 'about',
+          name: 'About',
+          component: () => import('@/views/public/AboutPage.vue'),
+        },
+        {
+          path: 'whatsapp',
+          name: 'WhatsApp',
+          component: () => import('@/views/public/WhatsAppPage.vue'),
+        },
+        {
+          path: 'academia',
+          name: 'Academia',
+          component: () => import('@/views/public/AcademiaPage.vue'),
+        },
+        {
+          path: 'cursos',
+          name: 'Courses',
+          component: () => import('@/views/public/CoursesPage.vue'),
+        },
+        {
+          path: 'cursos/:slug',
+          name: 'CourseDetail',
+          component: () => import('@/views/public/CourseDetailPage.vue'),
+        },
+        {
+          path: 'blog',
+          name: 'Blog',
+          component: () => import('@/views/public/BlogPage.vue'),
+        },
+        {
+          path: 'blog/:slug',
+          name: 'BlogPost',
+          component: () => import('@/views/public/BlogPostPage.vue'),
+        },
+        // Legal pages
+        {
+          path: 'legal/privacidad',
+          name: 'Privacy',
+          component: () => import('@/views/legal/LegalPage.vue'),
+          meta: { legalType: 'privacy' },
+        },
+        {
+          path: 'legal/terminos',
+          name: 'Terms',
+          component: () => import('@/views/legal/LegalPage.vue'),
+          meta: { legalType: 'terms' },
+        },
+        {
+          path: 'legal/cookies',
+          name: 'Cookies',
+          component: () => import('@/views/legal/LegalPage.vue'),
+          meta: { legalType: 'cookies' },
+        },
+        {
+          path: 'legal/whatsapp-policy',
+          name: 'WhatsAppPolicy',
+          component: () => import('@/views/legal/LegalPage.vue'),
+          meta: { legalType: 'whatsapp_policy' },
+        },
+        // Legacy redirects
+        {
           path: 'whatsapp-automation',
-          name: 'WhatsAppAutomation',
-          component: () => import('@/views/WhatsAppAutomationView.vue'),
-          meta: { title: 'WhatsApp Automation Policy | withjp.ai' },
+          redirect: '/legal/whatsapp-policy',
         },
         {
           path: 'whatsapp-business',
-          name: 'WhatsAppBusiness',
-          component: () => import('@/views/WhatsAppAutomationView.vue'),
-          meta: { title: 'WhatsApp Business Policy | withjp.ai' },
+          redirect: '/legal/whatsapp-policy',
         },
       ],
     },
+
+    // ── Admin ─────────────────────────────────────────────
     {
       path: '/admin',
       component: () => import('@/layouts/AdminLayout.vue'),
@@ -69,6 +128,8 @@ const router = createRouter({
         },
       ],
     },
+
+    // ── 404 ───────────────────────────────────────────────
     {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
@@ -80,13 +141,13 @@ const router = createRouter({
 router.beforeEach(async (to) => {
   const auth = useAuthStore();
 
+  // Set page title from meta (admin pages only — public pages use @unhead/vue)
   if (to.meta.title) {
     document.title = to.meta.title as string;
   }
 
   if (to.meta.requiresAuth) {
     if (!auth.isAuthenticated) return { name: 'AdminLogin' };
-    // On cold start, validate that the stored token is still accepted by the server
     if (!auth.user) {
       await auth.fetchMe();
       if (!auth.isAuthenticated) return { name: 'AdminLogin' };

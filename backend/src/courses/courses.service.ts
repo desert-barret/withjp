@@ -34,6 +34,12 @@ export class CoursesService {
     return course;
   }
 
+  async findBySlug(slug: string): Promise<Course> {
+    const course = await this.repo.findOne({ where: { slug } });
+    if (!course) throw new NotFoundException(`Course '${slug}' not found`);
+    return course;
+  }
+
   async create(dto: CreateCourseDto): Promise<Course> {
     const { translations, ...base } = dto;
     const course = this.repo.create({

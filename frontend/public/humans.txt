@@ -1,0 +1,16 @@
+/* TEAM */
+Developer: Juan Pablo Guaman Rodriguez
+Role: Software Architect & Full Stack Developer
+Location: Loja, Ecuador
+Contact: info@withjp.ai
+LinkedIn: https://www.linkedin.com/in/desertbarret/
+
+/* SITE */
+Built with: Vue 3, Vite, TypeScript, Tailwind CSS, Pinia
+Backend: NestJS, TypeORM, MySQL
+Infrastructure: Docker, GCP Cloud Run, Cloud SQL
+Languages: Spanish, English
+Last updated: 2026-04-09
+
+/* THANKS */
+Anthropic Claude — AI-assisted development

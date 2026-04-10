@@ -16,6 +16,7 @@ const AppDataSource = new DataSource({
 });
 
 interface CourseData {
+  slug: string;
   image_url?: string;
   demo_url: string;
   technologies: string[];
@@ -29,6 +30,7 @@ interface CourseData {
 const courses: CourseData[] = [
   // ─── MOBILE ───────────────────────────────────────────────────────────────
   {
+    slug: 'app-delivery-flutter-nestjs',
     demo_url: 'https://www.udemy.com/course/app-delivery-flutter-nestjs/',
     technologies: ['Flutter 3', 'NestJS', 'PostgreSQL', 'Docker', 'Firebase', 'Google Maps', 'Nginx'],
     category: 'mobile',
@@ -51,6 +53,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'app-delivery-flutter-nestjs-plus',
     demo_url: 'https://www.udemy.com/course/app-delivery-flutter-nestjs-plus/',
     technologies: ['Flutter', 'NestJS', 'PostgreSQL', 'Firebase'],
     category: 'mobile',
@@ -73,6 +76,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'flutter-nestjs-chatgpt-ia',
     demo_url: 'https://www.udemy.com/course/flutter-nestjs-chatgpt/',
     technologies: ['Flutter', 'NestJS', 'ChatGPT API', 'OpenAI', 'TypeScript'],
     category: 'ai',
@@ -95,6 +99,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'flutter-nestjs-ecommerce-pasarelas-pago',
     demo_url: 'https://www.udemy.com/course/flutter-nestjs-y-mysql-e-commerce-app-con-pasarelas-de-pago/',
     technologies: ['Flutter', 'NestJS', 'MySQL', 'Clean Architecture', 'BloC', 'MVVM', 'Mercado Pago', 'Stripe'],
     category: 'mobile',
@@ -117,6 +122,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'app-indriver-uber-flutter-nestjs',
     demo_url: 'https://www.udemy.com/course/crea-una-app-clone-de-indriver-uber-didi-con-flutter-nestjs-mysql/',
     technologies: ['Flutter', 'NestJS', 'MySQL', 'Socket IO', 'Clean Architecture'],
     category: 'mobile',
@@ -139,6 +145,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'app-indriver-uber-kotlin-nestjs',
     demo_url: 'https://www.udemy.com/course/crea-una-app-clone-de-indriver-uber-con-kotlin-nestjs-mysql/',
     technologies: ['Kotlin', 'NestJS', 'MySQL', 'Socket IO', 'Android nativo'],
     category: 'mobile',
@@ -161,6 +168,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'app-indriver-uber-kotlin-django',
     demo_url: 'https://www.udemy.com/course/crea-una-app-clone-de-indriver-uber-con-kotlin-django-mysql/',
     technologies: ['Kotlin', 'Django', 'MySQL', 'Socket IO', 'Python'],
     category: 'mobile',
@@ -183,6 +191,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'app-indriver-uber-flutter-django',
     demo_url: 'https://www.udemy.com/course/crea-una-app-clone-de-indriver-uber-con-flutter-django-mysql/',
     technologies: ['Flutter', 'Django', 'MySQL', 'Socket IO', 'Python'],
     category: 'mobile',
@@ -205,6 +214,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'app-indriver-uber-react-native-spring-boot',
     demo_url: 'https://www.udemy.com/course/crea-una-app-clone-indriver-uber-react-native-y-spring-boot/',
     technologies: ['React Native', 'Spring Boot', 'MySQL', 'Clean Architecture', 'MVVM', 'Java'],
     category: 'mobile',
@@ -227,6 +237,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'chatbot-whatsapp-flutter-nodejs',
     demo_url: 'https://www.udemy.com/course/whatsapp-flutter-nodejs-mysql/',
     technologies: ['Flutter', 'Node.js', 'MySQL', 'WhatsApp Web', 'Socket IO', 'EJS'],
     category: 'automation',
@@ -250,6 +261,7 @@ const courses: CourseData[] = [
   },
   // ─── WEB / FULL STACK ─────────────────────────────────────────────────────
   {
+    slug: 'fullstack-nodejs-react-nestjs-nextjs',
     demo_url: 'https://www.udemy.com/course/curso-full-stack-nodejs-react-typescript-nestjs-nextjs/',
     technologies: ['Node.js', 'TypeScript', 'React', 'Next.js', 'NestJS', 'TypeORM', 'Express', 'Vite'],
     category: 'web',
@@ -272,6 +284,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'react-typescript-guia-completa',
     demo_url: 'https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/',
     technologies: ['React', 'TypeScript', 'Hooks', 'State Management', 'REST APIs'],
     category: 'web',
@@ -294,6 +307,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'javascript-moderno-guia-definitiva',
     demo_url: 'https://www.udemy.com/course/javascript-moderno-guia-definitiva-construye-10-proyectos/',
     technologies: ['JavaScript', 'ES6+', 'Node.js', 'Vue.js', 'React', 'MongoDB', 'REST APIs'],
     category: 'web',
@@ -316,6 +330,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'nodejs-bootcamp-mvc-rest-apis',
     demo_url: 'https://www.udemy.com/course/nodejs-bootcamp-desarrollo-web-mvc-y-rest-apis/',
     technologies: ['Node.js', 'Express', 'MVC', 'REST APIs', 'MySQL', 'PostgreSQL', 'MongoDB', 'EJS', 'Pug'],
     category: 'web',
@@ -339,6 +354,7 @@ const courses: CourseData[] = [
   },
   // ─── ANDROID / KOTLIN ─────────────────────────────────────────────────────
   {
+    slug: 'android-14-kotlin-intensivo',
     demo_url: 'https://www.udemy.com/course/kotlin-intensivo/',
     technologies: ['Kotlin', 'Android 14', 'Firebase', 'MVVM', 'Jetpack Compose', 'Coroutines', 'Room'],
     category: 'mobile',
@@ -361,6 +377,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'android-kotlin-desde-cero',
     demo_url: 'https://www.udemy.com/course/curso-android-kotlin/',
     technologies: ['Kotlin', 'Android', 'Views', 'UI', 'Basics'],
     category: 'mobile',
@@ -383,6 +400,7 @@ const courses: CourseData[] = [
     ],
   },
   {
+    slug: 'android-kotlin-profesional-completo',
     demo_url: 'https://www.udemy.com/course/android_kotlin/',
     technologies: ['Kotlin', 'Android', 'Views', 'UI', 'Lists', 'Architecture'],
     category: 'mobile',
@@ -406,9 +424,202 @@ const courses: CourseData[] = [
   },
 ];
 
+const blogPosts = [
+  {
+    slug: 'como-automatizar-whatsapp-business-api',
+    category: 'whatsapp',
+    tags: ['WhatsApp', 'Automatización', 'API', 'Meta', 'Negocios'],
+    featured: true,
+    published: true,
+    published_at: '2026-04-01T10:00:00Z',
+    reading_time: 8,
+    meta_title: 'Cómo Automatizar WhatsApp Business API en 2026 | Guía Completa',
+    meta_description: 'Aprende paso a paso cómo automatizar tu atención al cliente con WhatsApp Business API. Flujos estructurados, API oficial de Meta, cumplimiento de políticas.',
+    translations: [
+      {
+        locale: 'es',
+        title: 'Cómo Automatizar WhatsApp Business API: Guía Completa 2026',
+        excerpt: 'Guía paso a paso para implementar automatización de atención al cliente con la API oficial de WhatsApp Business de Meta.',
+        content: `# Cómo Automatizar WhatsApp Business API: Guía Completa 2026
+
+La automatización de WhatsApp Business no es simplemente "poner un chatbot". Es diseñar flujos de conversación estructurados que resuelven problemas reales de tus clientes.
+
+## ¿Por qué automatizar WhatsApp?
+
+WhatsApp tiene más de 2 mil millones de usuarios activos. En Latinoamérica, es el canal principal de comunicación entre empresas y clientes. Si tu negocio no responde por WhatsApp, estás perdiendo ventas.
+
+### El problema real
+
+- Respondes manualmente 200+ mensajes al día
+- Tus clientes esperan minutos (o horas) por una respuesta simple
+- Tu equipo pierde tiempo en preguntas repetitivas
+- Fuera de horario, nadie responde
+
+### La solución: flujos automatizados
+
+No se trata de reemplazar al humano. Se trata de que el sistema resuelva el 80% de las consultas automáticamente y solo escale al equipo las que realmente necesitan atención humana.
+
+## Los 3 pasos para automatizar
+
+### 1. Conectar con la API oficial de Meta
+
+Lo primero es obtener acceso a la API oficial de WhatsApp Business. Esto requiere:
+- Una cuenta de Meta Business Manager verificada
+- Un número de teléfono dedicado
+- Aprobación de plantillas de mensaje
+
+### 2. Diseñar tus flujos de atención
+
+Cada negocio necesita flujos diferentes. Los más comunes son:
+- **FAQ automáticas**: respuestas a preguntas frecuentes
+- **Seguimiento de pedidos**: el cliente consulta el estado de su orden
+- **Agendamiento de citas**: reserva directa por WhatsApp
+- **Soporte post-venta**: reportes de problemas y seguimiento
+
+### 3. Implementar y probar
+
+El desarrollo incluye la conexión con tus sistemas internos (CRM, ERP, base de datos) para dar respuestas en tiempo real.
+
+## Cumplimiento de políticas
+
+Meta tiene reglas estrictas. Tu automatización debe cumplir:
+- Solo contactar usuarios con opt-in explícito
+- Usar plantillas aprobadas por Meta
+- Ofrecer opt-out siempre (STOP/ALTO)
+- No enviar spam ni mensajes masivos no solicitados
+
+## Conclusión
+
+Automatizar WhatsApp no es una moda. Es una necesidad operativa. Si quieres saber cómo aplicarlo a tu negocio, [contáctame](/whatsapp) para una consulta gratuita.`,
+      },
+      {
+        locale: 'en',
+        title: 'How to Automate WhatsApp Business API: Complete 2026 Guide',
+        excerpt: 'Step-by-step guide to implementing customer service automation with the official WhatsApp Business API from Meta.',
+        content: `# How to Automate WhatsApp Business API: Complete 2026 Guide
+
+WhatsApp Business automation isn't just "adding a chatbot." It's designing structured conversation flows that solve real customer problems.
+
+## Why automate WhatsApp?
+
+WhatsApp has over 2 billion active users. In Latin America, it's the primary communication channel between businesses and customers. If your business doesn't respond on WhatsApp, you're losing sales.
+
+### The real problem
+
+- You manually respond to 200+ messages daily
+- Your customers wait minutes (or hours) for simple answers
+- Your team wastes time on repetitive questions
+- After hours, nobody responds
+
+### The solution: automated flows
+
+It's not about replacing humans. It's about letting the system resolve 80% of queries automatically and only escalate to your team the ones that truly need human attention.
+
+## The 3 steps to automate
+
+### 1. Connect with Meta's official API
+
+First, get access to the official WhatsApp Business API. This requires:
+- A verified Meta Business Manager account
+- A dedicated phone number
+- Message template approvals
+
+### 2. Design your support flows
+
+Every business needs different flows. The most common are:
+- **Automated FAQs**: answers to frequently asked questions
+- **Order tracking**: customer checks their order status
+- **Appointment scheduling**: direct booking via WhatsApp
+- **After-sales support**: problem reports and follow-up
+
+### 3. Implement and test
+
+Development includes connecting to your internal systems (CRM, ERP, database) to provide real-time responses.
+
+## Policy compliance
+
+Meta has strict rules. Your automation must comply:
+- Only contact users with explicit opt-in
+- Use Meta-approved templates
+- Always offer opt-out (STOP)
+- No spam or unsolicited mass messages
+
+## Conclusion
+
+Automating WhatsApp isn't a trend. It's an operational necessity. If you want to know how to apply it to your business, [contact me](/whatsapp) for a free consultation.`,
+      },
+    ],
+  },
+  {
+    slug: 'flutter-vs-react-native-2026',
+    category: 'mobile',
+    tags: ['Flutter', 'React Native', 'Mobile', 'Comparativa'],
+    featured: true,
+    published: true,
+    published_at: '2026-03-20T10:00:00Z',
+    reading_time: 6,
+    meta_title: 'Flutter vs React Native 2026: Comparativa Definitiva',
+    meta_description: 'Comparativa actualizada Flutter vs React Native. Cuál elegir para tu próximo proyecto móvil, rendimiento, ecosistema y experiencia real.',
+    translations: [
+      {
+        locale: 'es',
+        title: 'Flutter vs React Native en 2026: Comparativa Definitiva',
+        excerpt: 'Después de 10 años desarrollando apps móviles, esta es mi comparativa honesta entre Flutter y React Native.',
+        content: `# Flutter vs React Native en 2026: Comparativa Definitiva
+
+Después de crear más de 15 cursos de desarrollo móvil y construir apps en producción con ambos frameworks, comparto mi experiencia real.
+
+## Rendimiento
+
+**Flutter** compila a código nativo (ARM) usando Dart. No hay puente (bridge) entre tu código y la plataforma. Esto da un rendimiento consistente.
+
+**React Native** usa un bridge para comunicarse con componentes nativos. La nueva arquitectura (Fabric + JSI) mejoró esto significativamente, pero Flutter sigue teniendo ventaja en animaciones complejas.
+
+## Ecosistema
+
+React Native tiene la ventaja de JavaScript — puedes reutilizar conocimiento y bibliotecas del ecosistema web. Flutter requiere aprender Dart, pero su ecosistema de paquetes ha crecido enormemente.
+
+## Mi recomendación
+
+- Si tu equipo ya conoce JavaScript/React: **React Native**
+- Si empiezas desde cero o priorizas rendimiento: **Flutter**
+- Si necesitas apps de alta complejidad visual: **Flutter**
+
+Ambos son opciones excelentes en 2026. La decisión depende de tu contexto, no de cuál es "mejor".`,
+      },
+      {
+        locale: 'en',
+        title: 'Flutter vs React Native in 2026: The Definitive Comparison',
+        excerpt: 'After 10 years building mobile apps, here is my honest comparison between Flutter and React Native.',
+        content: `# Flutter vs React Native in 2026: The Definitive Comparison
+
+After creating 15+ mobile development courses and building production apps with both frameworks, I share my real experience.
+
+## Performance
+
+**Flutter** compiles to native code (ARM) using Dart. There's no bridge between your code and the platform, giving consistent performance.
+
+**React Native** uses a bridge to communicate with native components. The new architecture (Fabric + JSI) improved this significantly, but Flutter still has the edge in complex animations.
+
+## Ecosystem
+
+React Native has the JavaScript advantage — you can reuse knowledge and libraries from the web ecosystem. Flutter requires learning Dart, but its package ecosystem has grown enormously.
+
+## My recommendation
+
+- If your team already knows JavaScript/React: **React Native**
+- If you're starting from scratch or prioritize performance: **Flutter**
+- If you need visually complex apps: **Flutter**
+
+Both are excellent choices in 2026. The decision depends on your context, not which one is "better."`,
+      },
+    ],
+  },
+];
+
 async function seed() {
   await AppDataSource.initialize();
-  console.log('📦 Connected to database');
+  console.log('Connected to database');
 
   // Admin user
   const userRepo = AppDataSource.getRepository('users');
@@ -416,17 +627,21 @@ async function seed() {
   if (!existing) {
     const hashed = await bcrypt.hash('withjp2024!', 10);
     await userRepo.save({ email: 'admin@withjp.ai', password: hashed, role: 'admin' });
-    console.log('✅ Admin created: admin@withjp.ai / withjp2024!');
+    console.log('Admin created: admin@withjp.ai');
   } else {
-    console.log('ℹ️  Admin already exists');
+    console.log('Admin already exists');
   }
 
-  // Courses — drop all translations first, then projects
-  await AppDataSource.query('DELETE FROM project_translations');
-  await AppDataSource.query('DELETE FROM projects');
+  // Courses
+  await AppDataSource.query('DELETE FROM course_translations').catch(() => {});
+  await AppDataSource.query('DELETE FROM courses').catch(() => {});
 
-  const courseRepo = AppDataSource.getRepository('projects');
-  const translationRepo = AppDataSource.getRepository('project_translations');
+  // Fallback for old table names
+  await AppDataSource.query('DELETE FROM project_translations').catch(() => {});
+  await AppDataSource.query('DELETE FROM projects').catch(() => {});
+
+  const courseRepo = AppDataSource.getRepository('courses');
+  const translationRepo = AppDataSource.getRepository('course_translations');
 
   for (const c of courses) {
     const { translations, ...base } = c;
@@ -436,9 +651,9 @@ async function seed() {
     }
   }
 
-  console.log(`✅ ${courses.length} cursos de Udemy sembrados`);
+  console.log(`${courses.length} cursos sembrados`);
 
-  // Academia — seed
+  // Academia
   await AppDataSource.query('DELETE FROM academia_translations').catch(() => {});
   await AppDataSource.query('DELETE FROM academia').catch(() => {});
 
@@ -525,7 +740,24 @@ async function seed() {
     }
   }
 
-  console.log(`✅ ${academiaItems.length} item(s) de Academia sembrados`);
+  console.log(`${academiaItems.length} item(s) de Academia sembrados`);
+
+  // Blog posts
+  await AppDataSource.query('DELETE FROM post_translations').catch(() => {});
+  await AppDataSource.query('DELETE FROM posts').catch(() => {});
+
+  const postRepo = AppDataSource.getRepository('posts');
+  const postTransRepo = AppDataSource.getRepository('post_translations');
+
+  for (const p of blogPosts) {
+    const { translations, ...base } = p;
+    const post = await postRepo.save(postRepo.create(base));
+    for (const t of translations) {
+      await postTransRepo.save(postTransRepo.create({ ...t, post }));
+    }
+  }
+
+  console.log(`${blogPosts.length} posts de blog sembrados`);
 
   // Update profile
   await AppDataSource.query('UPDATE profile SET title_es = ?, title_en = ?, bio_es = ?, bio_en = ? WHERE id = 1', [
@@ -533,10 +765,10 @@ async function seed() {
     'Software Architect & Full Stack Developer',
     'Arquitecto de Software e Ingeniero en Sistemas con más de 10 años de experiencia. Especialista en apps de movilidad y transporte. Instructor en Udemy con más de 25,000 estudiantes y calificación 4.3.',
     'Software Architect and Systems Engineer with 10+ years of experience. Specialist in mobility and transportation apps. Udemy instructor with 25,000+ students and 4.3 rating.',
-  ]).catch(() => console.log('ℹ️  Profile not yet created (will init on first request)'));
+  ]).catch(() => console.log('Profile not yet created (will init on first request)'));
 
   await AppDataSource.destroy();
-  console.log('🎉 Seed complete!');
+  console.log('Seed complete!');
 }
 
 seed().catch(console.error);

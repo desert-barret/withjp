@@ -1,14 +1,14 @@
 import {
-  Controller, Get, Post, Put, Delete,
+  Controller, Get, Post as HttpPost, Put, Delete,
   Body, Param, ParseIntPipe, UseGuards, Query,
 } from '@nestjs/common';
-import { CoursesService } from './courses.service';
-import { CreateCourseDto } from './dto/create-course.dto';
+import { BlogService } from './blog.service';
+import { CreatePostDto } from './dto/create-post.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
-@Controller('courses')
-export class CoursesController {
-  constructor(private service: CoursesService) {}
+@Controller('blog')
+export class BlogController {
+  constructor(private service: BlogService) {}
 
   @Get()
   findAll(@Query('all') all?: string) {
@@ -31,14 +31,14 @@ export class CoursesController {
   }
 
   @UseGuards(JwtAuthGuard)
-  @Post()
-  create(@Body() dto: CreateCourseDto) {
+  @HttpPost()
+  create(@Body() dto: CreatePostDto) {
     return this.service.create(dto);
   }
 
   @UseGuards(JwtAuthGuard)
   @Put(':id')
-  update(@Param('id', ParseIntPipe) id: number, @Body() dto: Partial<CreateCourseDto>) {
+  update(@Param('id', ParseIntPipe) id: number, @Body() dto: Partial<CreatePostDto>) {
     return this.service.update(id, dto);
   }
 

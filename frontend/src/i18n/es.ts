@@ -1,298 +1,301 @@
 export default {
   nav: {
     home: 'Inicio',
-    about: 'Sobre mí',
-    services: 'Servicios',
-    how_it_works: 'Cómo funciona',
-    use_cases: 'Casos de uso',
-    faq: 'FAQ',
-    courses: 'Cursos',
+    about: 'Sobre mi',
+    whatsapp: 'WhatsApp',
     academia: 'Academia',
+    courses: 'Cursos',
+    blog: 'Blog',
     contact: 'Contacto',
     admin: 'Admin',
   },
-  hero: {
-    greeting: 'Hola, soy',
-    title: 'Juan Pablo Guamán Rodríguez',
-    badge: 'WhatsApp Business API · Oficial de Meta',
-    headline: 'Automatiza la atención de tus clientes en WhatsApp',
-    description: 'Responde preguntas frecuentes, gestiona pedidos y agenda citas automáticamente con flujos diseñados para tu negocio. Sin agentes disponibles 24/7, sin costos fijos de personal.',
-    cta_primary: 'Solicitar demo',
-    cta_secondary: 'Ver cómo funciona',
-    available: 'Disponible para nuevos proyectos',
-    proof_1: 'API oficial de Meta',
-    proof_2: '100% cumplimiento de políticas',
-    proof_3: 'Flujos a medida',
-  },
-  how_it_works: {
-    tag: 'Cómo funciona',
-    title: 'En 3 pasos tienes tu atención automatizada',
-    subtitle: 'Sin código, sin tecnicismos. Yo me encargo de todo.',
-    step1: {
-      number: '01',
-      title: 'Conecta tu WhatsApp Business',
-      description: 'Vinculamos tu número oficial de WhatsApp Business con la API de Meta. Todo dentro del ecosistema oficial.',
+
+  // ── HOME PAGE ─────────────────────────────────────────────
+  home: {
+    meta: {
+      title: 'withjp.ai | Juan Pablo Guaman - Arquitecto de Software & Desarrollador',
+      description: 'Arquitecto de Software, automatizacion WhatsApp Business, 25,000+ estudiantes en Udemy. Cursos, academia y consultoria.',
     },
-    step2: {
-      number: '02',
-      title: 'Definimos tus flujos de atención',
-      description: 'Me cuentas cómo funciona tu negocio. Diseño los flujos: FAQs, pedidos, citas, soporte o lo que necesites.',
-    },
-    step3: {
-      number: '03',
-      title: 'Tu equipo atiende mejor con menos esfuerzo',
-      description: 'El sistema responde 24/7. Tú y tu equipo solo reciben las conversaciones que realmente necesitan intervención humana.',
-    },
-    cta: 'Quiero automatizar mi atención',
-  },
-  demo: {
-    tag: 'Demo real',
-    title: 'Así funciona en la práctica',
-    subtitle: 'Un flujo real de atención al cliente por WhatsApp.',
-    conversation: {
-      label_client: 'Cliente',
-      label_bot: 'Sistema automático',
-      msg1_client: '¿Dónde está mi pedido?',
-      msg2_bot: '¡Hola! Soy el asistente de atención de [Tu Empresa]. 👋\n\nPara consultar tu pedido necesito tu número de orden.',
-      msg3_client: 'Es el #4521',
-      msg4_bot: 'Tu pedido #4521 está en camino 🚚\n\nFecha estimada de entrega: mañana entre 09:00 y 13:00\n\n¿Qué deseas hacer?',
-      opt1: '📦 Ver detalle del pedido',
-      opt2: '🧑‍💼 Hablar con un agente',
-      opt3: '❌ Solicitar cancelación',
-      note: 'Flujo automatizado · Solo usuarios con opt-in reciben mensajes',
-    },
-    features: {
-      f1: 'Respuesta inmediata, 24 horas al día',
-      f2: 'Flujos estructurados, no conversación abierta',
-      f3: 'Escalado automático a agente humano',
-      f4: 'Registro completo de cada interacción',
-    },
-  },
-  services: {
-    tag: 'Qué construyo',
-    title: 'Servicios de automatización',
-    subtitle: 'Herramientas reales para negocios reales. Nada genérico, todo a medida.',
-    flows: {
-      title: 'Flujos de atención automáticos',
-      description: 'Diseño e implemento flujos de conversación estructurados para WhatsApp: respuestas a FAQs, seguimiento de pedidos, agendamiento de citas y soporte post-venta.',
-    },
-    whatsapp: {
-      title: 'Integración WhatsApp Business API',
-      description: 'Conecto tu negocio con la API oficial de WhatsApp Business de Meta. Solo mensajes con consentimiento, plantillas aprobadas y cumplimiento total de políticas.',
-    },
-    api: {
-      title: 'Integración con tus sistemas',
-      description: 'El bot consulta tu CRM, ERP o base de datos en tiempo real para dar respuestas concretas. Stock, estado de pedidos, citas disponibles.',
-    },
-    panel: {
-      title: 'Panel de gestión y reportes',
-      description: 'Dashboard para que tu equipo vea conversaciones, gestione escalados a agentes humanos y analice métricas de atención.',
-    },
-  },
-  use_cases: {
-    tag: 'Casos de uso',
-    title: 'Para qué lo usan las empresas',
-    subtitle: 'Flujos específicos, resultados medibles. No conversaciones abiertas.',
-    items: {
-      faq: {
-        title: 'Atención automática de FAQs',
-        description: 'El sistema responde al instante las preguntas más frecuentes: horarios, precios, políticas de devolución, formas de pago. Sin esperar a un agente.',
-      },
-      orders: {
-        title: 'Seguimiento de pedidos',
-        description: 'El cliente escribe su número de orden y recibe el estado en segundos: en preparación, despachado, en camino o entregado.',
-      },
-      appointments: {
-        title: 'Agendamiento de citas',
-        description: 'El cliente consulta disponibilidad, elige horario y confirma su cita directamente por WhatsApp. Sin llamadas, sin formularios.',
-      },
-      after_sales: {
-        title: 'Soporte post-venta',
-        description: 'Flujos estructurados para reportar problemas, solicitar garantías o cambios. El bot clasifica el caso y escala al área correcta.',
-      },
-      leads: {
-        title: 'Calificación de leads',
-        description: 'El sistema hace preguntas clave, filtra prospectos y solo pasa al equipo de ventas los contactos que cumplen el perfil de cliente ideal.',
-      },
-      notifications: {
-        title: 'Notificaciones transaccionales',
-        description: 'Envío automático de confirmaciones de compra, recordatorios de citas o alertas de pago. Solo a usuarios con consentimiento (opt-in).',
-      },
-    },
-  },
-  trust: {
-    tag: 'Por qué trabajar conmigo',
-    title: '¿Por qué elegir esta solución?',
-    subtitle: 'No vendo humo. Construyo herramientas que funcionan en producción.',
-    pillars: {
-      official: {
-        title: 'API oficial de Meta',
-        description: 'Trabajo exclusivamente con la API oficial de WhatsApp Business. Cero riesgo de bloqueo, cero usos de aplicaciones no autorizadas.',
-      },
-      compliant: {
-        title: 'Cumplimiento total de políticas',
-        description: 'Opt-in obligatorio, plantillas aprobadas por Meta, gestión de opt-out. Tu cuenta de WhatsApp Business protegida.',
-      },
-      custom: {
-        title: 'Solución a medida, no plantilla',
-        description: 'Cada flujo se diseña según tu negocio. No es un chatbot genérico. Es automatización específica para lo que tú necesitas.',
-      },
+    hero: {
+      available: 'Disponible para nuevos proyectos',
+      headline: 'Software, automatizacion y educacion que generan impacto real',
+      description: 'Arquitecto de Software con 10+ anos de experiencia. Automatizo atencion al cliente con WhatsApp Business API y formo desarrolladores con cursos practicos.',
+      cta_primary: 'Automatiza tu WhatsApp',
+      cta_secondary: 'Ver cursos',
     },
     stats: {
-      experience: 'Años de experiencia',
-      students: 'Estudiantes formados',
+      experience: 'Anos de experiencia',
+      students: 'Estudiantes',
       courses: 'Cursos publicados',
-      custom: 'Proyectos 100% a medida',
+      meta_api: 'API oficial Meta',
     },
-  },
-  faq: {
-    tag: 'Preguntas frecuentes',
-    title: 'Resuelve tus dudas',
-    subtitle: 'Las preguntas que me hacen antes de empezar un proyecto.',
-    cta_label: '¿Tienes otra pregunta?',
-    cta_button: 'Contáctame',
-    items: {
-      q1: {
-        question: '¿Es un chatbot de IA o un flujo automatizado?',
-        answer: 'Es automatización con flujos estructurados, no un chatbot de IA abierto. Eso significa que el sistema sigue rutas definidas por tu negocio: responde lo que tú configuras. La IA se usa internamente para entender el intento del usuario dentro de esos flujos, no para tener conversaciones libres.',
+    services: {
+      tag: 'Que ofrezco',
+      title: 'Tres pilares, un objetivo: resultados',
+      whatsapp: {
+        title: 'Automatizacion WhatsApp',
+        description: 'Flujos de atencion automatica con la API oficial de Meta. FAQs, pedidos, citas y soporte 24/7 sin agentes.',
       },
-      q2: {
-        question: '¿Cumple con las políticas de WhatsApp Business de Meta?',
-        answer: 'Sí. Trabajo exclusivamente con la API oficial de WhatsApp Business de Meta. Solo se envían mensajes a usuarios que han dado su consentimiento (opt-in), se usan plantillas aprobadas por Meta y siempre existe la opción de cancelar la suscripción (opt-out). No se usan aplicaciones no oficiales.',
+      courses: {
+        title: 'Cursos y formacion',
+        description: '17 cursos en Udemy + Academia JP. Flutter, NestJS, React, Kotlin, IA. 25,000+ estudiantes en 4 continentes.',
       },
-      q3: {
-        question: '¿Puedo ver una demo real antes de decidir?',
-        answer: 'Sí. Si tu caso lo permite, hago una demo funcional para que veas exactamente cómo quedarían tus flujos de atención antes de comprometerte. Contáctame y lo coordinamos.',
-      },
-      q4: {
-        question: '¿Cuánto cuesta?',
-        answer: 'Depende del número de flujos, integraciones y complejidad del proyecto. No hay precio fijo porque cada solución es diferente. Cuéntame tu caso y te doy un presupuesto concreto sin costo.',
-      },
-      q5: {
-        question: '¿Cuánto tarda en estar listo?',
-        answer: 'Un flujo básico (FAQs + seguimiento de pedidos) puede estar operativo en 1 a 2 semanas. Proyectos con integraciones a sistemas internos toman entre 3 y 6 semanas. Te doy un estimado preciso antes de empezar.',
-      },
-      q6: {
-        question: '¿Qué pasa cuando el cliente necesita un humano?',
-        answer: 'El sistema detecta cuando el flujo no puede resolver la consulta y escala automáticamente a un agente humano. Puedes recibir la conversación en tu teléfono o en una plataforma de gestión. El cliente nunca queda sin respuesta.',
+      dev: {
+        title: 'Desarrollo a medida',
+        description: 'Arquitectura de software, apps moviles, backends escalables. Proyectos reales con codigo limpio y produccion.',
       },
     },
-  },
-  how_i_work: {
-    tag: 'Mi proceso',
-    title: 'Cómo trabajo contigo',
-    subtitle: 'Sin burocracia. Directo al resultado.',
-    steps: {
-      discovery: {
-        title: 'Entiendo tu negocio',
-        description: 'Me cuentas cómo funciona tu atención al cliente hoy y qué quieres automatizar. Sin tecnicismos.',
-      },
-      proposal: {
-        title: 'Propongo los flujos',
-        description: 'Te presento un diseño claro de los flujos de atención, con ejemplos de conversación reales.',
-      },
-      development: {
-        title: 'Desarrollo e integro',
-        description: 'Construyo los flujos, conecto tus sistemas y configuro todo en la API oficial de WhatsApp Business.',
-      },
-      delivery: {
-        title: 'Pruebas y entrega',
-        description: 'Probamos juntos antes de salir en vivo. Te capacito y te acompaño en el lanzamiento.',
-      },
+    how: {
+      tag: 'Como funciona',
+      title: 'Automatiza tu atencion en 3 pasos',
+      step1: { title: 'Conecta tu WhatsApp Business', description: 'Vinculamos tu numero oficial con la API de Meta. Todo dentro del ecosistema oficial.' },
+      step2: { title: 'Definimos tus flujos', description: 'Diseno flujos personalizados: FAQs, pedidos, citas, soporte. Lo que tu negocio necesite.' },
+      step3: { title: 'Tu equipo atiende mejor', description: 'El sistema responde 24/7. Tu equipo solo recibe las conversaciones que necesitan intervencion humana.' },
+    },
+    courses: {
+      tag: 'Cursos destacados',
+      title: 'Aprende conmigo',
+      see_all: 'Ver todos los cursos',
+    },
+    faq: {
+      title: 'Preguntas frecuentes',
+      q1: { question: 'Es un chatbot de IA o un flujo automatizado?', answer: 'Es automatizacion con flujos estructurados, no un chatbot de IA abierto. El sistema sigue rutas definidas por tu negocio. La IA se usa internamente para entender la intencion del usuario.' },
+      q2: { question: 'Cumple con las politicas de WhatsApp Business de Meta?', answer: 'Si. Trabajo exclusivamente con la API oficial. Solo mensajes con consentimiento (opt-in), plantillas aprobadas por Meta y opt-out siempre disponible.' },
+      q3: { question: 'Cuanto tiempo tarda en estar listo?', answer: 'Un flujo basico puede estar operativo en 1 a 2 semanas. Proyectos con integraciones a sistemas internos toman entre 3 y 6 semanas.' },
+      q4: { question: 'Puedo ver una demo antes de decidir?', answer: 'Si. Si tu caso lo permite, hago una demo funcional para que veas como quedarian tus flujos antes de comprometerte.' },
+      q5: { question: 'Que pasa cuando el cliente necesita un humano?', answer: 'El sistema detecta cuando no puede resolver la consulta y escala automaticamente a un agente humano. El cliente nunca queda sin respuesta.' },
+    },
+    cta: {
+      title: 'Listo para empezar?',
+      subtitle: 'Automatiza tu atencion al cliente o aprende a construir software real.',
+      button_primary: 'Automatizar mi WhatsApp',
+      button_secondary: 'Explorar cursos',
     },
   },
+
+  // ── ABOUT PAGE ────────────────────────────────────────────
   about: {
-    title: 'Sobre Mí',
-    subtitle: 'Desarrollador de software especializado en automatización',
-    description: 'Soy desarrollador full stack con más de 10 años de experiencia. Me especializo en automatización de atención al cliente, flujos de WhatsApp Business e integración de sistemas. También creo cursos técnicos: más de 25.000 estudiantes han aprendido conmigo en Udemy y YouTube.',
-    skills_title: 'Habilidades',
-    tech_title: 'Tecnologías',
-    experience: 'Años de experiencia',
-    courses_count: 'Cursos publicados',
-    students: 'Estudiantes',
+    meta: {
+      title: 'Sobre Mi | Juan Pablo Guaman Rodriguez | withjp.ai',
+      description: 'Arquitecto de Software con 10+ anos de experiencia. Instructor Udemy con 25,000+ estudiantes. Especialista en Flutter, NestJS y WhatsApp Business API.',
+    },
+    stats: {
+      experience: 'Anos de experiencia',
+      students: 'Estudiantes',
+      courses: 'Cursos publicados',
+      rating: 'Rating Udemy',
+    },
+    journey: {
+      title: 'Mi trayectoria',
+      m1: { title: 'Inicio en desarrollo', description: 'Empece mi carrera como desarrollador de software, construyendo sistemas web y moviles para empresas locales.' },
+      m2: { title: 'Primer curso en Udemy', description: 'Publique mi primer curso de desarrollo movil. La respuesta fue increible y me motivo a seguir creando contenido educativo.' },
+      m3: { title: '25,000 estudiantes', description: 'Alcance mas de 25,000 estudiantes en Udemy con 17 cursos publicados. Comunidad activa en YouTube.' },
+      m4: { title: 'WhatsApp Business API', description: 'Me especialice en automatizacion de atencion al cliente con la API oficial de WhatsApp Business de Meta.' },
+      m5: { title: 'Academia JP', description: 'Lance mi propia plataforma educativa con cursos exclusivos de IA, Claude Code y desarrollo avanzado.' },
+    },
+    tech: { title: 'Stack tecnologico' },
+    cta: { title: 'Trabajemos juntos', button: 'Contactar por WhatsApp' },
   },
+
+  // ── WHATSAPP PAGE ─────────────────────────────────────────
+  whatsapp: {
+    meta: {
+      title: 'Automatizacion WhatsApp Business API | withjp.ai',
+      description: 'Automatiza tu atencion al cliente en WhatsApp con flujos estructurados. API oficial de Meta. FAQs, pedidos, citas y soporte 24/7.',
+    },
+    hero: {
+      headline: 'Tus clientes te escriben por WhatsApp. Cuantos se quedan sin respuesta?',
+      description: 'Automatiza el 80% de las consultas con flujos inteligentes. API oficial de Meta. Sin spam. Sin riesgos.',
+      cta: 'Agendar diagnostico gratuito',
+    },
+    problem: {
+      title: 'El problema',
+      p1: 'Respondes manualmente 200+ mensajes al dia',
+      p2: 'Tus clientes esperan horas por una respuesta simple',
+      p3: 'Tu equipo pierde tiempo en preguntas repetitivas',
+      p4: 'Fuera de horario nadie responde',
+    },
+    solution: {
+      title: 'La solucion',
+      s1: 'Respuestas automaticas en segundos, 24/7',
+      s2: 'Solo escala a tu equipo lo que realmente necesita atencion',
+      s3: 'Flujos personalizados para tu negocio',
+      s4: 'Cumplimiento total de politicas de Meta',
+    },
+    cases: {
+      title: 'Casos de uso reales',
+      faq: { title: 'FAQs automaticas', desc: 'Responde horarios, precios y politicas al instante.', result: '80% consultas resueltas sin agente' },
+      orders: { title: 'Seguimiento de pedidos', desc: 'El cliente consulta su estado en segundos.', result: '-60% consultas manuales de tracking' },
+      appointments: { title: 'Agendamiento de citas', desc: 'Reserva directa por WhatsApp sin formularios.', result: '+40% citas agendadas automaticamente' },
+      support: { title: 'Soporte post-venta', desc: 'Clasifica y escala problemas al area correcta.', result: '80% FAQs resueltas sin humano' },
+      leads: { title: 'Calificacion de leads', desc: 'Filtra prospectos y pasa solo los calificados.', result: '+35% leads calificados para ventas' },
+      notifications: { title: 'Notificaciones', desc: 'Confirmaciones, recordatorios y alertas.', result: '99.5% tasa de entrega de mensajes' },
+    },
+    process: {
+      title: 'Como funciona el proceso',
+      s1: { title: 'Discovery call', desc: '15 minutos para entender tu negocio y objetivos.' },
+      s2: { title: 'Diseno de flujos', desc: 'Te presento los flujos personalizados con ejemplos reales.' },
+      s3: { title: 'Implementacion', desc: 'Construyo, conecto tus sistemas y configuro la API.' },
+      s4: { title: 'Go live', desc: 'Probamos juntos y te acompano en el lanzamiento.' },
+    },
+    trust: {
+      title: 'Por que confiar',
+      t1: { title: 'API oficial de Meta', desc: 'Cero riesgo de bloqueo. Solo herramientas oficiales.' },
+      t2: { title: 'Cumplimiento total', desc: 'Opt-in obligatorio, plantillas aprobadas, opt-out siempre.' },
+      t3: { title: 'A medida, no plantilla', desc: 'Cada flujo se disena para tu negocio especifico.' },
+      t4: { title: 'Soporte post-lanzamiento', desc: 'Te acompano despues del go-live. No desaparezco.' },
+    },
+    faq: {
+      title: 'Preguntas sobre WhatsApp Automation',
+      q1: { q: 'Cuanto cuesta?', a: 'Depende del numero de flujos e integraciones. Cuentame tu caso y te doy un presupuesto sin costo.' },
+      q2: { q: 'Funciona con WhatsApp normal?', a: 'No. Se usa exclusivamente la API oficial de WhatsApp Business de Meta. Necesitas una cuenta Business verificada.' },
+      q3: { q: 'Y si necesito cambios despues?', a: 'Los flujos son 100% modificables. Puedo agregar nuevos flujos o ajustar los existentes en cualquier momento.' },
+      q4: { q: 'Cuanto tarda en estar listo?', a: 'Un flujo basico toma 1-2 semanas. Proyectos con integraciones complejas toman 3-6 semanas.' },
+    },
+    cta: {
+      title: 'Solo acepto 3 proyectos nuevos por mes',
+      subtitle: 'El tuyo sera uno de ellos?',
+      button: 'Reservar mi lugar',
+    },
+  },
+
+  // ── ACADEMIA PAGE ─────────────────────────────────────────
+  academia_page: {
+    meta: {
+      title: 'Academia | Cursos de Programacion | withjp.ai',
+      description: 'Aprende a construir software real. 25,000+ estudiantes, 17 cursos en Udemy. Flutter, NestJS, React, Kotlin, IA.',
+    },
+    badge: 'Plataforma de aprendizaje',
+    hero: {
+      title: 'Aprende a construir software real',
+      subtitle: 'Cursos practicos, proyectos reales, arquitectura de produccion. Mas de 25,000 estudiantes en 4 continentes.',
+    },
+    stats: {
+      students: 'Estudiantes',
+      courses: 'Cursos publicados',
+      rating: 'Rating promedio',
+    },
+    udemy: {
+      title: 'Cursos en Udemy',
+      subtitle: 'Cursos completos con proyectos reales de produccion.',
+      see_all: 'Ver todos',
+    },
+    private: {
+      title: 'Academia JP',
+      subtitle: 'Cursos exclusivos con acceso directo. Contenido que no encontraras en ninguna otra plataforma.',
+      access: 'Acceder al curso',
+      coming_soon: 'Proximamente',
+    },
+  },
+
+  // ── COURSES PAGE ──────────────────────────────────────────
+  courses_page: {
+    meta: {
+      title: 'Cursos de Programacion | Flutter, NestJS, React, Kotlin | withjp.ai',
+      description: 'Catalogo completo de cursos. Flutter, NestJS, React, TypeScript, Kotlin, Android. Proyectos reales de produccion.',
+    },
+    title: 'Todos los cursos',
+    subtitle: '17 cursos con proyectos reales. De principiante a profesional.',
+    featured: 'Destacado',
+    no_courses: 'No hay cursos disponibles en esta categoria.',
+    view_on_udemy: 'Ver en Udemy',
+    related: 'Cursos relacionados',
+    back_to_courses: 'Volver a cursos',
+  },
+
+  // ── BLOG PAGE ─────────────────────────────────────────────
+  blog_page: {
+    meta: {
+      title: 'Blog | Articulos sobre desarrollo y automatizacion | withjp.ai',
+      description: 'Articulos sobre WhatsApp Business, Flutter, NestJS, React y mas. Guias practicas y comparativas.',
+    },
+    title: 'Blog',
+    subtitle: 'Articulos sobre desarrollo de software, automatizacion e inteligencia artificial.',
+    no_posts: 'No hay articulos publicados aun.',
+    read: 'min de lectura',
+    back: 'Volver al blog',
+  },
+
+  // ── LEGAL PAGES ───────────────────────────────────────────
+  legal: {
+    privacy: {
+      title: 'Politica de Privacidad',
+      content: '<h2>1. Responsable del tratamiento</h2><p>Juan Pablo Guaman Rodriguez, Loja, Ecuador. Email: info@withjp.ai</p><h2>2. Datos que recopilamos</h2><p>Solo recopilamos datos que nos proporcionas voluntariamente a traves de formularios de contacto (nombre, email, mensaje) y datos tecnicos necesarios para el funcionamiento del sitio (cookies tecnicas).</p><h2>3. Finalidad</h2><p>Los datos se usan exclusivamente para responder a tu consulta y mejorar nuestros servicios. No vendemos ni compartimos datos con terceros.</p><h2>4. WhatsApp Business API</h2><p>Para el servicio de automatizacion, Meta Platforms, Inc. actua como procesador de datos. Solo contactamos usuarios con consentimiento explicito (opt-in). Puedes cancelar en cualquier momento respondiendo STOP.</p><h2>5. Derechos ARCO</h2><p>Tienes derecho de Acceso, Rectificacion, Cancelacion y Oposicion. Ejercelos escribiendo a info@withjp.ai</p><h2>6. Ley aplicable</h2><p>Ley Organica de Proteccion de Datos Personales del Ecuador.</p><p><em>Ultima actualizacion: Abril 2026</em></p>',
+    },
+    terms: {
+      title: 'Terminos y Condiciones',
+      content: '<h2>1. Identidad del responsable</h2><p>Juan Pablo Guaman Rodriguez, Loja, Ecuador. Email: info@withjp.ai</p><h2>2. Servicios ofrecidos</h2><p>withjp.ai ofrece: (a) servicios de consultoria y desarrollo de software, (b) cursos online a traves de Udemy y Academia JP, (c) automatizacion de atencion al cliente via WhatsApp Business API.</p><h2>3. Propiedad intelectual</h2><p>Todo el contenido del sitio (textos, imagenes, codigo, cursos) es propiedad de Juan Pablo Guaman Rodriguez salvo indicacion contraria.</p><h2>4. Limitacion de responsabilidad</h2><p>Los servicios se proporcionan "tal cual". No garantizamos resultados especificos de la automatizacion, ya que dependen de factores externos al servicio.</p><h2>5. Procesadores de datos terceros</h2><p>Meta Platforms, Inc. actua como procesador de datos para las comunicaciones via WhatsApp Business API.</p><h2>6. Jurisdiccion</h2><p>Estos terminos se rigen por las leyes de la Republica del Ecuador.</p><p><em>Ultima actualizacion: Abril 2026</em></p>',
+    },
+    cookies: {
+      title: 'Politica de Cookies',
+      content: '<h2>Que cookies usamos</h2><p>withjp.ai solo utiliza cookies tecnicas y funcionales necesarias para el correcto funcionamiento del sitio:</p><ul><li><strong>withjp_theme</strong> — Preferencia de tema (claro/oscuro)</li><li><strong>withjp_lang</strong> — Preferencia de idioma (es/en)</li><li><strong>withjp_token</strong> — Token de autenticacion del panel de administracion</li></ul><h2>No usamos cookies de rastreo</h2><p>No utilizamos cookies publicitarias, de rastreo conductual ni de terceros. No usamos Google Analytics ni herramientas similares de tracking.</p><h2>Control de cookies</h2><p>Puedes eliminar las cookies en cualquier momento desde la configuracion de tu navegador.</p><p><em>Ultima actualizacion: Abril 2026</em></p>',
+    },
+    whatsapp_policy: {
+      title: 'Politica de WhatsApp Business',
+      content: '<h2>Uso de WhatsApp Business API</h2><p>withjp.ai utiliza la API oficial de WhatsApp Business de Meta para automatizar la atencion al cliente de empresas.</p><h2>Politica de mensajes</h2><ul><li>Solo contactamos a usuarios que han dado su consentimiento explicito (opt-in)</li><li>Usamos exclusivamente plantillas de mensaje aprobadas por Meta</li><li>El opt-out esta siempre disponible: responde STOP o ALTO en cualquier momento</li><li>No enviamos spam ni mensajes masivos no solicitados</li></ul><h2>Datos y privacidad</h2><p>Meta Platforms, Inc. actua como procesador de datos para las comunicaciones via WhatsApp. Los datos de conversacion se almacenan de acuerdo con las politicas de Meta y la legislacion ecuatoriana de proteccion de datos.</p><h2>Cumplimiento</h2><p>Cumplimos con la WhatsApp Business Policy, la WhatsApp Commerce Policy y los terminos de servicio de Meta Business Platform.</p><h2>Contacto</h2><p>Para consultas sobre esta politica: info@withjp.ai</p><p><em>Ultima actualizacion: Abril 2026</em></p>',
+    },
+  },
+
+  // ── FOOTER ────────────────────────────────────────────────
+  footer: {
+    pages: 'Paginas',
+    resources: 'Recursos',
+    rights: 'Todos los derechos reservados',
+    privacy: 'Privacidad',
+    terms: 'Terminos',
+    whatsapp_policy: 'Politica WhatsApp',
+  },
+
+  // ── COURSES (shared) ──────────────────────────────────────
   courses: {
-    title: 'Cursos',
-    subtitle: 'Aprende conmigo',
-    featured: 'Destacados',
-    all: 'Ver todos',
-    no_courses: 'No hay cursos disponibles',
-    udemy: 'Ver en Udemy',
-    youtube: 'Ver en YouTube',
-    students: 'estudiantes',
     category: {
       all: 'Todos',
       web: 'Web',
       mobile: 'Mobile',
-      automation: 'Automatización',
+      automation: 'Automatizacion',
       ai: 'IA',
     },
   },
-  academia: {
-    badge: 'Plataforma de aprendizaje',
-    title: 'Academia',
-    subtitle: 'Cursos propios con acceso directo. Aprende a tu ritmo con contenido exclusivo de withjp.',
-    access: 'Acceder al curso',
-    coming_soon: 'Próximamente',
-    no_items: 'No hay cursos disponibles',
-  },
-  contact: {
-    title: 'Contacto',
-    subtitle: '¿Hablamos?',
-    description: 'Cuéntame qué quieres automatizar. Respondo en menos de 24 horas.',
-    cta_banner_title: '¿Listo para automatizar tu atención al cliente?',
-    cta_banner_subtitle: 'Cuéntame tu caso y te propongo una solución concreta.',
-    cta_button: 'Escríbeme',
-    email: 'Correo',
-    linkedin: 'LinkedIn',
-    github: 'GitHub',
-    youtube: 'YouTube',
-    whatsapp: 'WhatsApp',
-  },
-  footer: {
-    rights: 'Todos los derechos reservados',
-    made_with: 'Hecho con',
-    by: 'por',
-    terms: 'Términos y Condiciones',
-    privacy: 'Política de Privacidad',
-    whatsapp_policy: 'Política de WhatsApp Business',
-  },
+
+  // ── ADMIN ─────────────────────────────────────────────────
   admin: {
-    login: 'Iniciar Sesión',
-    logout: 'Cerrar Sesión',
+    login: 'Iniciar Sesion',
+    logout: 'Cerrar Sesion',
     dashboard: 'Panel',
     courses: 'Cursos',
     profile: 'Perfil',
     email: 'Correo',
-    password: 'Contraseña',
+    password: 'Contrasena',
     save: 'Guardar',
     cancel: 'Cancelar',
     delete: 'Eliminar',
     edit: 'Editar',
     create: 'Crear',
     new_course: 'Nuevo Curso',
-    confirm_delete: '¿Eliminar este curso?',
+    confirm_delete: 'Eliminar este curso?',
     saved: 'Guardado correctamente',
     error: 'Error al guardar',
     loading: 'Cargando...',
-    title_es: 'Título (ES)',
-    title_en: 'Título (EN)',
-    description_es: 'Descripción (ES)',
-    description_en: 'Descripción (EN)',
-    short_desc_es: 'Descripción corta (ES)',
-    short_desc_en: 'Descripción corta (EN)',
+    title_es: 'Titulo (ES)',
+    title_en: 'Titulo (EN)',
+    description_es: 'Descripcion (ES)',
+    description_en: 'Descripcion (EN)',
+    short_desc_es: 'Descripcion corta (ES)',
+    short_desc_en: 'Descripcion corta (EN)',
     image_url: 'URL de imagen',
     demo_url: 'URL del demo',
     github_url: 'URL de GitHub',
-    technologies: 'Tecnologías (separadas por coma)',
-    category: 'Categoría',
+    technologies: 'Tecnologias (separadas por coma)',
+    category: 'Categoria',
     featured: 'Destacado',
     active: 'Activo',
     sort_order: 'Orden',
   },
+
+  // ── COMMON ────────────────────────────────────────────────
   common: {
     loading: 'Cargando...',
-    error: 'Ocurrió un error',
+    error: 'Ocurrio un error',
     not_found: 'No encontrado',
     back: 'Volver',
     language: 'Idioma',

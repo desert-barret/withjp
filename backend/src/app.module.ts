@@ -6,6 +6,9 @@ import { UsersModule } from './users/users.module';
 import { CoursesModule } from './courses/courses.module';
 import { AcademiaModule } from './academia/academia.module';
 import { ProfileModule } from './profile/profile.module';
+import { BlogModule } from './blog/blog.module';
+import { ContactModule } from './contact/contact.module';
+import { SitemapModule } from './sitemap/sitemap.module';
 
 @Module({
   imports: [
@@ -30,6 +33,9 @@ import { ProfileModule } from './profile/profile.module';
     CoursesModule,
     AcademiaModule,
     ProfileModule,
+    BlogModule,
+    ContactModule,
+    SitemapModule,
   ],
 })
 export class AppModule {}

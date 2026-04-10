@@ -6,39 +6,33 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { CourseTranslation } from './course-translation.entity';
+import { PostTranslation } from './post-translation.entity';
 
-@Entity('courses')
-export class Course {
+@Entity('posts')
+export class Post {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ unique: true, nullable: true })
+  @Column({ unique: true })
   slug: string;
 
   @Column({ nullable: true })
-  image_url: string;
-
-  @Column({ nullable: true })
-  demo_url: string;
-
-  @Column({ nullable: true })
-  github_url: string;
-
-  @Column({ type: 'json', nullable: true })
-  technologies: string[];
+  featured_image: string;
 
   @Column({ nullable: true })
   category: string;
 
+  @Column({ type: 'json', nullable: true })
+  tags: string[];
+
   @Column({ default: false })
   featured: boolean;
 
-  @Column({ default: 0 })
-  sort_order: number;
+  @Column({ default: false })
+  published: boolean;
 
-  @Column({ default: true })
-  active: boolean;
+  @Column({ type: 'datetime', nullable: true })
+  published_at: Date;
 
   @Column({ nullable: true })
   meta_title: string;
@@ -49,11 +43,14 @@ export class Course {
   @Column({ nullable: true })
   og_image: string;
 
-  @OneToMany(() => CourseTranslation, (t) => t.course, {
+  @Column({ default: 0 })
+  reading_time: number;
+
+  @OneToMany(() => PostTranslation, (t) => t.post, {
     cascade: true,
     eager: true,
   })
-  translations: CourseTranslation[];
+  translations: PostTranslation[];
 
   @CreateDateColumn()
   createdAt: Date;
