@@ -54,39 +54,16 @@ const router = createRouter({
           name: 'BlogPost',
           component: () => import('@/views/public/BlogPostPage.vue'),
         },
-        // Legal pages
-        {
-          path: 'legal/privacidad',
-          name: 'Privacy',
-          component: () => import('@/views/legal/LegalPage.vue'),
-          meta: { legalType: 'privacy' },
-        },
-        {
-          path: 'legal/terminos',
-          name: 'Terms',
-          component: () => import('@/views/legal/LegalPage.vue'),
-          meta: { legalType: 'terms' },
-        },
-        {
-          path: 'legal/cookies',
-          name: 'Cookies',
-          component: () => import('@/views/legal/LegalPage.vue'),
-          meta: { legalType: 'cookies' },
-        },
-        {
-          path: 'legal/whatsapp-policy',
-          name: 'WhatsAppPolicy',
-          component: () => import('@/views/legal/LegalPage.vue'),
-          meta: { legalType: 'whatsapp_policy' },
-        },
-        // Legacy redirects
+        // WhatsApp Business Policy (Vue page — kept from original)
         {
           path: 'whatsapp-automation',
-          redirect: '/legal/whatsapp-policy',
+          name: 'WhatsAppAutomation',
+          component: () => import('@/views/WhatsAppAutomationView.vue'),
         },
         {
           path: 'whatsapp-business',
-          redirect: '/legal/whatsapp-policy',
+          name: 'WhatsAppBusiness',
+          component: () => import('@/views/WhatsAppAutomationView.vue'),
         },
       ],
     },

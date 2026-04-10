@@ -34,10 +34,10 @@ export class SitemapService {
       { loc: '/academia', priority: '0.8', changefreq: 'weekly' },
       { loc: '/cursos', priority: '0.8', changefreq: 'weekly' },
       { loc: '/blog', priority: '0.7', changefreq: 'weekly' },
-      { loc: '/legal/privacidad', priority: '0.3', changefreq: 'yearly' },
-      { loc: '/legal/terminos', priority: '0.3', changefreq: 'yearly' },
-      { loc: '/legal/cookies', priority: '0.3', changefreq: 'yearly' },
-      { loc: '/legal/whatsapp-policy', priority: '0.3', changefreq: 'yearly' },
+      { loc: '/privacidad.html', priority: '0.3', changefreq: 'yearly' },
+      { loc: '/terminos.html', priority: '0.3', changefreq: 'yearly' },
+      { loc: '/cookies.html', priority: '0.3', changefreq: 'yearly' },
+      { loc: '/whatsapp-business', priority: '0.3', changefreq: 'yearly' },
     ];
 
     let xml = `<?xml version="1.0" encoding="UTF-8"?>

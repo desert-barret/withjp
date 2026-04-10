@@ -61,19 +61,19 @@
           <a href="mailto:info@withjp.ai" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">info@withjp.ai</a>
         </p>
         <div class="flex items-center gap-3 flex-wrap">
-          <router-link to="/legal/privacidad" class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors underline underline-offset-2">
+          <a href="/privacidad.html" class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors underline underline-offset-2">
             {{ t('footer.privacy') }}
-          </router-link>
+          </a>
           <span class="text-slate-300 dark:text-slate-700">&middot;</span>
-          <router-link to="/legal/terminos" class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors underline underline-offset-2">
+          <a href="/terminos.html" class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors underline underline-offset-2">
             {{ t('footer.terms') }}
-          </router-link>
+          </a>
           <span class="text-slate-300 dark:text-slate-700">&middot;</span>
-          <router-link to="/legal/cookies" class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors underline underline-offset-2">
+          <a href="/cookies.html" class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors underline underline-offset-2">
             Cookies
-          </router-link>
+          </a>
           <span class="text-slate-300 dark:text-slate-700">&middot;</span>
-          <router-link to="/legal/whatsapp-policy" class="text-sm text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors underline underline-offset-2">
+          <router-link to="/whatsapp-business" class="text-sm text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors underline underline-offset-2">
             {{ t('footer.whatsapp_policy') }}
           </router-link>
         </div>
