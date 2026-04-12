@@ -690,26 +690,23 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Juan Pablo Guaman Rodriguez · Loja, Ecuador</span>
+        <span>&copy; <span id="year">2026</span> Juan Pablo Guaman Rodriguez · Loja, Ecuador</span>
         <span><a href="/privacidad.html">Privacidad</a> · <a href="/terminos.html">Términos</a> · <a href="/cookies.html">Cookies</a></span>
       </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const _yearEl = document.getElementById('year');
+    if (_yearEl) _yearEl.textContent = new Date().getFullYear();
 
     (function () {
       const stored = localStorage.getItem('withjp_theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const isDark = stored === 'dark' || (!stored && prefersDark);
-      if (isDark) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.getElementById('icon-sun').style.display = '';
-        document.getElementById('icon-moon').style.display = 'none';
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      document.getElementById('icon-sun').style.display = isDark ? '' : 'none';
+      document.getElementById('icon-moon').style.display = isDark ? 'none' : '';
     })();
 
     function toggleTheme() {
