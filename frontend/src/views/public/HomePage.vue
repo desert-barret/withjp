@@ -363,6 +363,19 @@ useHead({
   title: () => t('home.meta.title'),
   meta: [
     { name: 'description', content: () => t('home.meta.description') },
+    { name: 'keywords', content: 'Juan Pablo Guaman, Juan Pablo Guaman Rodriguez, Juan Pablo Guamán, Juan Pablo Guamán Rodríguez, withjp.ai, Backend Engineer, Software Architect, NestJS, Python, Flutter, WhatsApp Business API, Udemy, Ecuador' },
+    { name: 'author', content: 'Juan Pablo Guamán Rodríguez' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:title', content: () => t('home.meta.title') },
+    { property: 'og:description', content: () => t('home.meta.description') },
+    { property: 'og:url', content: 'https://withjp.ai/' },
+    { property: 'og:image', content: 'https://withjp.ai/og-image.jpg' },
+    { property: 'og:site_name', content: 'withjp.ai' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:site', content: '@jp_desertbarret' },
+    { name: 'twitter:title', content: () => t('home.meta.title') },
+    { name: 'twitter:description', content: () => t('home.meta.description') },
+    { name: 'twitter:image', content: 'https://withjp.ai/og-image.jpg' },
   ],
 });
 

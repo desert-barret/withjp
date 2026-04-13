@@ -126,9 +126,18 @@ useHead({
   title: () => translation.value?.title ? `${translation.value.title} | withjp.ai` : 'withjp.ai',
   meta: [
     { name: 'description', content: () => translation.value?.short_description || translation.value?.description || '' },
+    { name: 'keywords', content: () => `${translation.value?.title || 'Curso'}, Juan Pablo Guaman, Juan Pablo Guaman Rodriguez, Juan Pablo Guamán, Juan Pablo Guamán Rodríguez, withjp.ai, Udemy, curso online` },
+    { name: 'author', content: 'Juan Pablo Guamán Rodríguez' },
     { property: 'og:title', content: () => translation.value?.title || '' },
     { property: 'og:description', content: () => translation.value?.short_description || '' },
     { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: 'https://withjp.ai/og-image.jpg' },
+    { property: 'og:site_name', content: 'withjp.ai' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:site', content: '@jp_desertbarret' },
+    { name: 'twitter:title', content: () => translation.value?.title || '' },
+    { name: 'twitter:description', content: () => translation.value?.short_description || '' },
+    { name: 'twitter:image', content: 'https://withjp.ai/og-image.jpg' },
   ],
 });
 

@@ -49,9 +49,9 @@
           <h4 class="text-xs font-bold uppercase tracking-widest text-slate-300 mb-5">
             {{ t('footer.pages') }}
           </h4>
-          <div class="space-y-3">
+          <div class="flex flex-col gap-3">
             <router-link v-for="link in pageLinks" :key="link.to" :to="link.to"
-              class="block text-sm text-slate-400 hover:text-white transition-colors duration-150 link-underline">
+              class="text-sm text-slate-400 hover:text-white transition-colors duration-150 link-underline w-fit">
               {{ t(link.key) }}
             </router-link>
           </div>
@@ -61,17 +61,17 @@
           <h4 class="text-xs font-bold uppercase tracking-widest text-slate-300 mb-5">
             {{ t('footer.resources') }}
           </h4>
-          <div class="space-y-3">
+          <div class="flex flex-col gap-3">
             <router-link to="/blog"
-              class="block text-sm text-slate-400 hover:text-white transition-colors duration-150 link-underline">
+              class="text-sm text-slate-400 hover:text-white transition-colors duration-150 link-underline w-fit">
               Blog
             </router-link>
             <router-link to="/academia"
-              class="block text-sm text-slate-400 hover:text-white transition-colors duration-150 link-underline">
+              class="text-sm text-slate-400 hover:text-white transition-colors duration-150 link-underline w-fit">
               {{ t('nav.academia') }}
             </router-link>
             <a href="https://www.udemy.com/user/juan-pablo-guaman-rodriguez/" target="_blank" rel="noopener"
-              class="block text-sm text-slate-400 hover:text-white transition-colors duration-150 link-underline">
+              class="text-sm text-slate-400 hover:text-white transition-colors duration-150 link-underline w-fit">
               Udemy
             </a>
           </div>

@@ -170,7 +170,22 @@ useReveal();
 
 useHead({
   title: () => t('about.meta.title'),
-  meta: [{ name: 'description', content: () => t('about.meta.description') }],
+  meta: [
+    { name: 'description', content: () => t('about.meta.description') },
+    { name: 'keywords', content: 'Juan Pablo Guaman, Juan Pablo Guaman Rodriguez, Juan Pablo Guamán, Juan Pablo Guamán Rodríguez, withjp.ai, Sobre mí, About, Software Architect, Full Stack Developer, Ecuador, Loja' },
+    { name: 'author', content: 'Juan Pablo Guamán Rodríguez' },
+    { property: 'og:type', content: 'profile' },
+    { property: 'og:title', content: () => t('about.meta.title') },
+    { property: 'og:description', content: () => t('about.meta.description') },
+    { property: 'og:url', content: 'https://withjp.ai/about' },
+    { property: 'og:image', content: 'https://withjp.ai/og-image.jpg' },
+    { property: 'og:site_name', content: 'withjp.ai' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:site', content: '@jp_desertbarret' },
+    { name: 'twitter:title', content: () => t('about.meta.title') },
+    { name: 'twitter:description', content: () => t('about.meta.description') },
+    { name: 'twitter:image', content: 'https://withjp.ai/og-image.jpg' },
+  ],
 });
 
 const profile = computed(() => profileStore.profile);

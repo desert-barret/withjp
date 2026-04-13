@@ -88,9 +88,19 @@ useHead({
   title: () => t('courses_page.meta.title'),
   meta: [
     { name: 'description', content: () => t('courses_page.meta.description') },
+    { name: 'keywords', content: 'Cursos, Udemy, Juan Pablo Guaman, Juan Pablo Guaman Rodriguez, Juan Pablo Guamán, Juan Pablo Guamán Rodríguez, withjp.ai, NestJS, Flutter, Python, desarrollo web, Ecuador' },
+    { name: 'author', content: 'Juan Pablo Guamán Rodríguez' },
     { property: 'og:title', content: () => t('courses_page.meta.title') },
     { property: 'og:description', content: () => t('courses_page.meta.description') },
     { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://withjp.ai/cursos' },
+    { property: 'og:image', content: 'https://withjp.ai/og-image.jpg' },
+    { property: 'og:site_name', content: 'withjp.ai' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:site', content: '@jp_desertbarret' },
+    { name: 'twitter:title', content: () => t('courses_page.meta.title') },
+    { name: 'twitter:description', content: () => t('courses_page.meta.description') },
+    { name: 'twitter:image', content: 'https://withjp.ai/og-image.jpg' },
   ],
 });
 

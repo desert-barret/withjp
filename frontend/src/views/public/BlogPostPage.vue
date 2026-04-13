@@ -109,9 +109,18 @@ useHead({
   title: () => translation.value?.title ? `${translation.value.title} | withjp.ai` : 'Blog | withjp.ai',
   meta: [
     { name: 'description', content: () => translation.value?.excerpt || '' },
+    { name: 'keywords', content: () => `${translation.value?.title || 'Blog'}, Juan Pablo Guaman, Juan Pablo Guaman Rodriguez, Juan Pablo Guamán, Juan Pablo Guamán Rodríguez, withjp.ai` },
+    { name: 'author', content: 'Juan Pablo Guamán Rodríguez' },
     { property: 'og:title', content: () => translation.value?.title || '' },
     { property: 'og:description', content: () => translation.value?.excerpt || '' },
     { property: 'og:type', content: 'article' },
+    { property: 'og:image', content: 'https://withjp.ai/og-image.jpg' },
+    { property: 'og:site_name', content: 'withjp.ai' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:site', content: '@jp_desertbarret' },
+    { name: 'twitter:title', content: () => translation.value?.title || '' },
+    { name: 'twitter:description', content: () => translation.value?.excerpt || '' },
+    { name: 'twitter:image', content: 'https://withjp.ai/og-image.jpg' },
   ],
 });
 
